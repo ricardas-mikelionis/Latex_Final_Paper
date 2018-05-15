@@ -1,10 +1,10 @@
 from numpy import genfromtxt
 
-my_data = genfromtxt('C:\Bakalauras\Software Defect Prediction Scripts\Datasets\pc1.txt', delimiter=';')
+my_data = genfromtxt('/Users/ricardas_mikelionis_mac/Documents/GitHub/Latex_Final_Paper/Software Defect Prediction Scripts/Datasets/pc1.txt', delimiter=',')
 features = [row[:-1] for row in my_data]
 labels = [row[-1] for row in my_data]
 
-#testdata = genfromtxt('C:\Bakalauras\Software Defect Prediction Scripts\Datasets\cm1.csv', delimiter=';')
+#testdata = genfromtxt('C:\Bakalauras\Software Defect Prediction Scripts\Datasets\cm1.csv', delimiter=',')
 #t_features = [row[:-1] for row in testdata]
 #t_labels = [row[-1] for row in testdata]
 

@@ -1,0 +1,25 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'bakalaurinis.blg'
+[41] biber-darwin:313> INFO - === Sat May 12, 2018, 17:27:04
+[68] Biber.pm:371> INFO - Reading 'bakalaurinis.bcf'
+[155] Biber.pm:857> INFO - Found 11 citekeys in bib section 0
+[170] Biber.pm:3976> INFO - Processing section 0
+[180] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[181] bibtex.pm:1500> INFO - LaTeX decoding ...
+[192] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliografija.bib'
+[213] Utils.pm:193> WARN - I didn't find a database entry for 'PvzStraipsnLt' (section 0)
+[213] Utils.pm:193> WARN - I didn't find a database entry for 'PvzStraipsnEn' (section 0)
+[213] Utils.pm:193> WARN - I didn't find a database entry for 'PvzKonfLt' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzKonfEn' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzKnygLt' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzKnygEn' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzElPubLt' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzElPubEn' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzMagistrLt' (section 0)
+[214] Utils.pm:193> WARN - I didn't find a database entry for 'PvzPhdEn' (section 0)
+[222] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[222] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[222] Biber.pm:3804> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'lt-LT'
+[224] bbl.pm:617> INFO - Writing 'bakalaurinis.bbl' with encoding 'UTF-8'
+[225] bbl.pm:720> INFO - Output to bakalaurinis.bbl
+[225] Biber.pm:110> INFO - WARNINGS: 10

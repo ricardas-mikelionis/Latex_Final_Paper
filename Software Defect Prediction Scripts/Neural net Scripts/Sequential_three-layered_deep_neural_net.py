@@ -14,7 +14,7 @@ from sklearn.model_selection import cross_val_score
 from keras.utils import plot_model
 
 #duomenų nuskaitymas
-data = pd.read_csv("C:\Bakalauras\Software Defect Prediction Scripts\Datasets\pc1.csv")
+data = pd.read_csv("/Users/ricardas_mikelionis_mac/Documents/GitHub/Latex_Final_Paper/Software Defect Prediction Scripts/Datasets/pc1.csv")
 seed = 5
 np.random.seed(seed)
 

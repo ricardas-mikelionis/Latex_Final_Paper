@@ -23,11 +23,11 @@
 \author{Ričardas Mikelionis}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
 \supervisor{asist. dr. Vytautas Valaitis}
-\reviewer{doc. dr. Vardauskas Pavardauskas}
+\reviewer{partn. prof., dr. Aldas Glemža}
 \date{Vilnius – \the\year}
 
 % Nustatymai
-% \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
+\setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
 \bibliography{bibliografija}
 
 \begin{document}
@@ -55,40 +55,37 @@ Santrauka anglų kalba. Santraukos apimtis ne didesnė nei 0,5 puslapio.
 \tableofcontents
 
 \sectionnonum{Įvadas}
-Įvade nurodomas darbo tikslas ir uždaviniai, kuriais bus įgyvendinamas tikslas,
-aprašomas temos aktualumas, apibrėžiamas tiriamasis objektas akcentuojant
-neapibrėžtumą, kuris bus išspręstas darbe, aptariamos teorinės darbo prielaidos
-bei metodika, apibūdinami su tema susiję literatūros ar kitokie šaltiniai,
-temos analizės tvarka, darbo atlikimo aplinkybės, pateikiama žinių apie
-naudojamus instrumentus (programas ir kt., jei darbe yra eksperimentinė dalis).
-Darbo įvadas neturi būti dėstymo santrauka. Įvado apimtis 2–4 puslapiai.
+Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuoti daugiau per trumpesnį laiko tarpą. Paprastas sprendimas šiai problemai būtų be abejo nuolat besisukantis automatinių testų paketas, tačiau automatiniais testais padengti programinį kodą 100\% praktiškai neįmanoma. 100\% padengimas įmanomas tik pagal kokią nors specifinę metriką, o vaikytis tikrojo 100\% padengtumo testais pagal kiekvieną metriką ar funkcinę sritį prilygsta šviesos geičio vaikymuisi, kuo arčiau esame tikslo tuo daugiau pastangų ir resursų reikia pasistūmėti į priekį. Todėl, žinoma, vis dar išlieka poreikis rankiniam testavimui. Norint išleisti programinės įrangos versiją kuo dažniau ištestuoti visko kiekvieną kartą neįmanoma. Taip šis problemos sprendimas iškelia dar vieną, mažesnę, problemą: kaip efektyviai pasirinkti testavimo sritis kiekvienai naujai programos laidai (angl. release). Alan M. Davis \cite{Davis:1995:PSD:203406} tegia, jog pareto principą galima pritaikyti ir programinės įrangos testavime: čia 80\% kode esančių defektų surandami 20\% viso kodo.
 
-\section{Medžiagos darbo tema dėstymo skyriai}
-Medžiagos darbo tema dėstymo skyriuose išsamiai pateikiamos nagrinėjamos temos
-detalės: pradiniai duomenys, jų analizės ir apdorojimo metodai, sprendimų
-įgyvendinimas, gautų rezultatų apibendrinimas.
+Tobulame pasaulyje iteracijai pasirinktos testavimo sritys ir apims tuos 20\% problematiškojo kodo. Tačiau dažnai net remiantis visa turima istorine informacija testuotojui atsakingam už testavimo sričių parinkimą yra sunku efektyviai atrinkti testavimo sritis, kuriose atliktas darbas turės didžiausią įtaką programinės įrangos kokybei.
 
-Medžiaga turi būti dėstoma aiškiai, pateikiant argumentus. Tekste dėstomas
-trečiuoju asmeniu, t.y. rašoma ne „aš manau“, bet „autorius mano“, „autoriaus
-nuomone“. Reikėtų vengti informacijos nesuteikiančių frazių, pvz., „...kaip jau
-buvo minėta...“, „...kaip visiems žinoma...“ ir pan., vengti grožinės
-literatūros ar publicistinio stiliaus, gausių metaforų ar panašių meninės
-išraiškos priemonių.
+Sieniant sėkmingai įgyvendinti darbo tikslą siekiama įgyvendinti šiuos uždavinius:
+\begin{enumerate}
+\item Išrinkti metrikas darančias įtaką programinės įrangos sudėtingumui
+\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir neuroninio tinklo naudojant surinktus duomenis
+\item Atrinkti duomenis turinčius mažiausią įtaką galutiniam spėjimui
+\item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto neuroninio tinklo
+\end{enumerate}
+ 
+\section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
 
-Skyriai gali turėti poskyrius ir smulkesnes sudėtines dalis, kaip punktus ir
-papunkčius.
+\subsection{McCabe sudėtingumo metrikos}
 
-\subsection{Poskyris}
-Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
-keli šaltiniai \cite{PvzStraipsnEn, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
-PvzElPubLt, PvzElPubEn, PvzMagistrLt, PvzPhdEn}.
+\subsection{Halstead sudėtingumo metrikos}
 
-\subsubsection{Skirsnis}
-\subsubsubsection{Straipsnis}
-\subsubsection{Skirsnis}
-\section{Skyrius}
-\subsection{Poskyris}
-\subsection{Poskyris}
+\section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}
+
+\subsection{Sprendimų medžio metodu paremta besimokanti mašina}
+
+\subsection{Giliuoju neuroniniu tinklu paremta besimokanti mašina}
+
+\section{Duomenų atrinkimas}
+
+\subsection{Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}
+
+\subsection{Duomenų analizė naudojant įrankį Weka}
+
+\section{Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje išdėstomi pagrindiniai darbo rezultatai (kažkas
