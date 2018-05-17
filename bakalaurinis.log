@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  16 MAY 2018 23:59
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  17 MAY 2018 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,35 +1290,43 @@ ne 58.
 
 ]
 
-LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 71
+LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 5 undefined on input
+ line 73.
+
+
+LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 5 undefined on i
+nput line 73.
+
+
+LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 75
 .
 
 
 LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
- undefined on input line 71.
+ undefined on input line 75.
 
 [5
 
-] [6
-
-] [7
+] [6] [7
 
 ] [8
 
+] [9
+
 ]
 
-LaTeX Warning: Empty bibliography on input line 101.
+LaTeX Warning: Empty bibliography on input line 110.
 
-[9
+[10
 
-] [10
+] [11
 
 ]
 File: img/MLP.png Graphic file (type bmp)
 <img/MLP.png>
- [11
+ [12
 
-] [12
+] [13
 
 ] (./bakalaurinis.aux)
 
@@ -1336,10 +1344,10 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 Here is how much of TeX's memory you used:
  23857 strings out of 492970
  471483 string characters out of 6133939
- 958645 words of memory out of 5000000
+ 961645 words of memory out of 5000000
  27564 multiletter control sequences out of 15000+600000
  544815 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bakalaurinis.pdf (13 pages).
+Output written on bakalaurinis.pdf (14 pages).

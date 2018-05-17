@@ -1975,8 +1975,10 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">Davis:1995:PSD:203406</bcf:citekey>
-    <bcf:citekey order="2">Schroeder1999APG</bcf:citekey>
-    <bcf:citekey order="3">Metrics in Evaluating Software Defects:2013</bcf:citekey>
+    <bcf:citekey order="2">Halstead:1977:ESS:540137</bcf:citekey>
+    <bcf:citekey order="3">McCabe:1976:CM:800253.807712</bcf:citekey>
+    <bcf:citekey order="4">Schroeder1999APG</bcf:citekey>
+    <bcf:citekey order="5">Metrics in Evaluating Software Defects:2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
