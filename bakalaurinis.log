@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  12 MAY 2018 18:24
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  16 MAY 2018 23:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1255,83 +1255,13 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bakalaurinis.bbl' found.
-(./bakalaurinis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzElPubEn
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzElPubLt
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzKnygEn
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzKnygLt
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzKonfEn
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzKonfLt
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzMagistrLt
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzPhdEn
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzStraipsnEn
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                PvzStraipsnLt
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./bakalaurinis.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
 \c@lstlisting=\count428
 LaTeX Font Info:    Try loading font information for U+msa on input line 34.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 34.
@@ -1351,9 +1281,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [3
 
-] [4
+]
 
-] [5
+LaTeX Warning: Citation 'Davis:1995:PSD:203406' on page 4 undefined on input li
+ne 58.
+
+[4
+
+]
+
+LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 71
+.
+
+
+LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
+ undefined on input line 71.
+
+[5
 
 ] [6
 
@@ -1361,36 +1305,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [8
 
-] [9
-
 ]
 
-Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
-(biblatex)                Please use '\mkdaterangeiso'.
+LaTeX Warning: Empty bibliography on input line 101.
 
-[10
+[9
 
-] [11
+] [10
 
 ]
 File: img/MLP.png Graphic file (type bmp)
 <img/MLP.png>
- [12
+ [11
 
-] [13
+] [12
 
 ] (./bakalaurinis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                bakalaurinis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 \openout1 = `bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23879 strings out of 492970
- 472083 string characters out of 6133939
+ 23857 strings out of 492970
+ 471483 string characters out of 6133939
  958645 words of memory out of 5000000
- 27585 multiletter control sequences out of 15000+600000
- 544823 words of font info for 102 fonts, out of 8000000 for 9000
+ 27564 multiletter control sequences out of 15000+600000
+ 544815 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,11n,96p,10544b,5969s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bakalaurinis.pdf (14 pages).
+Output written on bakalaurinis.pdf (13 pages).

@@ -26,12 +26,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Rezultatai ir išvados}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{10}
+\contentsline {section}{Santrumpos}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{11}
+\contentsline {section}{\MakeUppercase {Priedai}}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{11}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Niauroninio tinklo struktūra}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Niauroninio tinklo struktūra}{12}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Eksperimentinio palyginimo rezultatai}{13}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Eksperimentinio palyginimo rezultatai}{12}
