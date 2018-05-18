@@ -81,6 +81,14 @@ Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų saky
 
 Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų kurios vykdomos kartu grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukšstesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
 
+Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/Cyclomatic_graph_1}
+    \caption{Programinio kodo atvaizdavimas grafu}
+    \label{img:Cyclomatic_graph_1}
+\end{figure}
 
 
 \subsection{Halstead sudėtingumo metrikos}
