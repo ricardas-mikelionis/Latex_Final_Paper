@@ -79,9 +79,13 @@ Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų saky
 \subsection{McCabe sudėtingumo metrikos}
 1976-aisiais Thomas J, McCabe išleido tyrimą kuriame pasiūlė naują programinės įrangos kodo sudėtingumo matavimo būdą, pavadintą Ciklomatiniu sudėtingumu (angl. Cyclomatic Complexity). Šis matavimo vienetas kiekybiškai matuoja nepriklausomų kelių per kodo elementus kiekį.
 
+Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tiesiškai nepriklausomų kelių kiekis. Pavyzdžiui jei kode nėra jokių eiliškumo kontrolės sakinių (angl. Control flow statements), kaip sąlygninai „if“ sakiniai, tuomet kodo ciklomatinis sudėtingumas būtų 1. Su vienu „if“ sąlyginiu sakiniu, po kurio įvykdymo galimi du keliai: jei grąžinta „TRUE“ bei jei grąžinta „FALSE“, kodo ciklomatinis sudėtingumas būtų 2. Du vieną sąlygą turintys „if“ sakiniai ar vienas toks sakinys su dviem salygomis sudarytų grafą kurio ciklomatinis sudėtingmas lygus 3. \cite{McCabe:1976:CM:800253.807712}
+
 Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų kurios vykdomos kartu grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukšstesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
 
-Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą
+Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule M = E - N + 2P. Kur E = grafo kraštinių kiekis, N = grafo viršūnių kiekis, o P = apjungtų komponentų kiekis. Dar cikomatinis sudėtingumas skaičiuojamas ir formule M = E - N + P. Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
+
+Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie sudaro vieną apjungtąjį komponentą, tai tokios programos ciklomatinis sudėtingumas būtų 9 - 8 + 2 * 1 = 3.
 
 \begin{figure}[H]
     \centering
@@ -89,6 +93,7 @@ Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas pras
     \caption{Programinio kodo atvaizdavimas grafu}
     \label{img:Cyclomatic_graph_1}
 \end{figure}
+
 
 
 \subsection{Halstead sudėtingumo metrikos}

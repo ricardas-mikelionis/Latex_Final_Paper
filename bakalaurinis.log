@@ -1,76 +1,86 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  17 MAY 2018 22:28
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.6.15)  18 MAY 2018 14:54
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**bakalaurinis.tex
-(./bakalaurinis.tex
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(./VUMIFPSbakalaurinis.cls
+**./bakalaurinis.tex
+(bakalaurinis.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+(VUMIFPSbakalaurinis.cls
 Document Class: VUMIFPSbakalaurinis 2015/02/03 1.0 VU MIF SE bachelor thesis cl
 ass
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
+\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo
+
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
+\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./LTPlius.sty
+) (LTPlius.sty
 Package: LTPlius 2014/12/24 1.4.0 Lithuanian language additions
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/polyglossia.sty
-Package: polyglossia 2018/04/07 v1.43 Alternative to Babel for XeLaTeX and LuaL
-aTeX
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\poly
+glossia\polyglossia.sty"
+Package: polyglossia 2015/03/25 v1.42.4 Alternative to Babel for XeLaTeX and Lu
+aLaTeX
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count88
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoo
+lbox\etoolbox.sty"
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count87
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/makecmds/makecmds.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\make
+cmds\makecmds.sty"
 Package: makecmds 2009/09/03 v1.0a extra command making commands
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkey
+val\xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xk
+eyval\xkeyval.tex"
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xk
+eyval\xkvutils.tex"
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count89
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xk
+eyval\keyval.tex"))
+\XKV@depth=\count88
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018/03/05 L3 programming layer (loader) 
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\font
+spec\fontspec.sty"
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3ke
+rnel\expl3.sty"
+Package: expl3 2017/05/29 L3 programming layer (loader) 
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018/03/05 L3 programming layer (code)
-\c_max_int=\count90
-\l_tmpa_int=\count91
-\l_tmpb_int=\count92
-\g_tmpa_int=\count93
-\g_tmpb_int=\count94
-\g__intarray_font_int=\count95
-\g__prg_map_int=\count96
-\c_log_iow=\count97
-\l_iow_line_count_int=\count98
-\l__iow_line_target_int=\count99
-\l__iow_one_indent_int=\count100
-\l__iow_indent_int=\count101
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3ke
+rnel\expl3-code.tex"
+Package: expl3 2017/05/29 L3 programming layer (code)
+\c_max_int=\count89
+\l_tmpa_int=\count90
+\l_tmpb_int=\count91
+\g_tmpa_int=\count92
+\g_tmpb_int=\count93
+\g__intarray_font_int=\count94
+\g__prg_map_int=\count95
+\c_log_iow=\count96
+\l_iow_line_count_int=\count97
+\l__iow_line_target_int=\count98
+\l__iow_one_indent_int=\count99
+\l__iow_indent_int=\count100
 \c_zero_dim=\dimen103
 \c_max_dim=\dimen104
 \l_tmpa_dim=\dimen105
@@ -89,72 +99,71 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l_tmpb_muskip=\muskip13
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count102
-\c__fp_leading_shift_int=\count103
-\c__fp_middle_shift_int=\count104
-\c__fp_trailing_shift_int=\count105
-\c__fp_big_leading_shift_int=\count106
-\c__fp_big_middle_shift_int=\count107
-\c__fp_big_trailing_shift_int=\count108
-\c__fp_Bigg_leading_shift_int=\count109
-\c__fp_Bigg_middle_shift_int=\count110
-\c__fp_Bigg_trailing_shift_int=\count111
-\l__sort_length_int=\count112
-\l__sort_min_int=\count113
-\l__sort_top_int=\count114
-\l__sort_max_int=\count115
-\l__sort_true_max_int=\count116
-\l__sort_block_int=\count117
-\l__sort_begin_int=\count118
-\l__sort_end_int=\count119
-\l__sort_A_int=\count120
-\l__sort_B_int=\count121
-\l__sort_C_int=\count122
-\l__tl_build_start_index_int=\count123
-\l__tl_build_index_int=\count124
-\l__tl_analysis_normal_int=\count125
-\l__tl_analysis_index_int=\count126
-\l__tl_analysis_nesting_int=\count127
-\l__tl_analysis_type_int=\count128
-\l__regex_internal_a_int=\count129
-\l__regex_internal_b_int=\count130
-\l__regex_internal_c_int=\count131
-\l__regex_balance_int=\count132
-\l__regex_group_level_int=\count133
-\l__regex_mode_int=\count134
-\c__regex_cs_in_class_mode_int=\count135
-\c__regex_cs_mode_int=\count136
-\l__regex_catcodes_int=\count137
-\l__regex_default_catcodes_int=\count138
-\c__regex_catcode_L_int=\count139
-\c__regex_catcode_O_int=\count140
-\c__regex_catcode_A_int=\count141
-\c__regex_all_catcodes_int=\count142
-\l__regex_show_lines_int=\count143
-\l__regex_min_state_int=\count144
-\l__regex_max_state_int=\count145
-\l__regex_left_state_int=\count146
-\l__regex_right_state_int=\count147
-\l__regex_capturing_group_int=\count148
-\l__regex_min_pos_int=\count149
-\l__regex_max_pos_int=\count150
-\l__regex_curr_pos_int=\count151
-\l__regex_start_pos_int=\count152
-\l__regex_success_pos_int=\count153
-\l__regex_curr_char_int=\count154
-\l__regex_curr_catcode_int=\count155
-\l__regex_last_char_int=\count156
-\l__regex_case_changed_char_int=\count157
-\l__regex_curr_state_int=\count158
-\l__regex_step_int=\count159
-\l__regex_min_active_int=\count160
-\l__regex_max_active_int=\count161
-\l__regex_replacement_csnames_int=\count162
-\l__regex_match_count_int=\count163
-\l__regex_min_submatch_int=\count164
-\l__regex_submatch_int=\count165
-\l__regex_zeroth_submatch_int=\count166
-\g__regex_trace_regex_int=\count167
+\l_keys_choice_int=\count101
+\c__fp_leading_shift_int=\count102
+\c__fp_middle_shift_int=\count103
+\c__fp_trailing_shift_int=\count104
+\c__fp_big_leading_shift_int=\count105
+\c__fp_big_middle_shift_int=\count106
+\c__fp_big_trailing_shift_int=\count107
+\c__fp_Bigg_leading_shift_int=\count108
+\c__fp_Bigg_middle_shift_int=\count109
+\c__fp_Bigg_trailing_shift_int=\count110
+\l__sort_length_int=\count111
+\l__sort_min_int=\count112
+\l__sort_top_int=\count113
+\l__sort_max_int=\count114
+\l__sort_true_max_int=\count115
+\l__sort_block_int=\count116
+\l__sort_begin_int=\count117
+\l__sort_end_int=\count118
+\l__sort_A_int=\count119
+\l__sort_B_int=\count120
+\l__sort_C_int=\count121
+\l__tl_build_start_index_int=\count122
+\l__tl_build_index_int=\count123
+\l__tl_analysis_normal_int=\count124
+\l__tl_analysis_index_int=\count125
+\l__tl_analysis_nesting_int=\count126
+\l__tl_analysis_type_int=\count127
+\l__regex_internal_a_int=\count128
+\l__regex_internal_b_int=\count129
+\l__regex_internal_c_int=\count130
+\l__regex_balance_int=\count131
+\l__regex_group_level_int=\count132
+\l__regex_mode_int=\count133
+\c__regex_cs_in_class_mode_int=\count134
+\c__regex_cs_mode_int=\count135
+\l__regex_catcodes_int=\count136
+\l__regex_default_catcodes_int=\count137
+\c__regex_catcode_L_int=\count138
+\c__regex_catcode_O_int=\count139
+\c__regex_catcode_A_int=\count140
+\c__regex_all_catcodes_int=\count141
+\l__regex_show_lines_int=\count142
+\l__regex_min_state_int=\count143
+\l__regex_max_state_int=\count144
+\l__regex_left_state_int=\count145
+\l__regex_right_state_int=\count146
+\l__regex_capturing_group_int=\count147
+\l__regex_min_pos_int=\count148
+\l__regex_max_pos_int=\count149
+\l__regex_current_pos_int=\count150
+\l__regex_start_pos_int=\count151
+\l__regex_success_pos_int=\count152
+\l__regex_current_char_int=\count153
+\l__regex_current_catcode_int=\count154
+\l__regex_last_char_int=\count155
+\l__regex_case_changed_char_int=\count156
+\l__regex_current_state_int=\count157
+\l__regex_step_int=\count158
+\l__regex_min_active_int=\count159
+\l__regex_max_active_int=\count160
+\l__regex_replacement_csnames_int=\count161
+\l__regex_match_count_int=\count162
+\l__regex_min_submatch_int=\count163
+\l__regex_submatch_int=\count164
+\l__regex_zeroth_submatch_int=\count165
 \c_empty_box=\box26
 \l_tmpa_box=\box27
 \l_tmpb_box=\box28
@@ -196,258 +205,260 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l__coffin_scaled_total_height_dim=\dimen132
 \l__coffin_scaled_width_dim=\dimen133
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3ke
+rnel\l3xdvipdfmx.def"
 File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count168
+\g__driver_image_int=\count166
+\l__driver_tmp_box=\box41
 ))
-Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count169
-\g__xparse_grabber_int=\count170
-\l__xparse_m_args_int=\count171
-\l__xparse_mandatory_args_int=\count172
-\l__xparse_v_nesting_int=\count173
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3pa
+ckages\xparse\xparse.sty"
+Package: xparse 2017/05/29 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count167
+\g__xparse_grabber_int=\count168
+\l__xparse_m_args_int=\count169
+\l__xparse_mandatory_args_int=\count170
+\l__xparse_v_nesting_int=\count171
 )
-Package: fontspec 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTeX
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\font
+spec\fontspec-xetex.sty"
+Package: fontspec-xetex 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count174
-\l__fontspec_language_int=\count175
-\l__fontspec_strnum_int=\count176
-\l__fontspec_tmp_int=\count177
-\l__fontspec_em_int=\count178
-\l__fontspec_emdef_int=\count179
-\l__fontspec_strong_int=\count180
-\l__fontspec_strongdef_int=\count181
+\l__fontspec_script_int=\count172
+\l__fontspec_language_int=\count173
+\l__fontspec_strnum_int=\count174
+\l__fontspec_tmp_int=\count175
+\l__fontspec_em_int=\count176
+\l__fontspec_emdef_int=\count177
+\l__fontspec_strong_int=\count178
+\l__fontspec_strongdef_int=\count179
 \l__fontspec_tmpa_dim=\dimen134
 \l__fontspec_tmpb_dim=\dimen135
 \l__fontspec_tmpc_dim=\dimen136
 \g__file_internal_ior=\read1
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
+\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/tuenc.def
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
+\tuenc.def"
 File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 ))
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \fontspec with sig. 'O{}mO{}' on line 542.
+. Defining command \fontspec with sig. 'O{}mO{}' on line 472.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmainfont with sig. 'O{}mO{}' on line 546.
+. Defining command \setmainfont with sig. 'O{}mO{}' on line 483.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setsansfont with sig. 'O{}mO{}' on line 550.
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 503.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmonofont with sig. 'O{}mO{}' on line 554.
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 523.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathrm with sig. 'O{}mO{}' on line 558.
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 543.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 562.
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 547.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathsf with sig. 'O{}mO{}' on line 566.
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 555.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathtt with sig. 'O{}mO{}' on line 570.
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 563.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setromanfont with sig. 'O{}mO{}' on line 574.
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 571.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 578.
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 586.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontface with sig. 'mO{}mO{}' on line 582.
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 603.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \defaultfontfeatures with sig. 't+om' on line 586.
+. Defining command \defaultfontfeatures with sig. 't+om' on line 614.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeatures with sig. 'm' on line 590.
+. Defining command \addfontfeatures with sig. 'm' on line 645.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeature with sig. 'm' on line 594.
+. Defining command \newfontfeature with sig. 'mm' on line 672.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfeature with sig. 'mm' on line 598.
+. Defining command \newAATfeature with sig. 'mmmm' on line 686.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newAATfeature with sig. 'mmmm' on line 602.
+. Defining command \newopentypefeature with sig. 'mmm' on line 700.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newopentypefeature with sig. 'mmm' on line 606.
+. Defining command \newICUfeature with sig. 'mmm' on line 720.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newICUfeature with sig. 'mmm' on line 610.
+. Defining command \aliasfontfeature with sig. 'mm' on line 724.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeature with sig. 'mm' on line 614.
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 745.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 618.
+. Defining command \newfontscript with sig. 'mm' on line 778.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontscript with sig. 'mm' on line 622.
+. Defining command \newfontlanguage with sig. 'mm' on line 782.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontlanguage with sig. 'mm' on line 626.
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 786.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareFontsExtensions with sig. 'm' on line 630.
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 797.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 634.
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3438.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCommand with sig. 'mO{}m' on line 3632.
+. Defining command \EncodingAccent with sig. 'mm' on line 3444.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingAccent with sig. 'mm' on line 3638.
+. Defining command \EncodingSymbol with sig. 'mm' on line 3450.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingSymbol with sig. 'mm' on line 3644.
+. Defining command \EncodingComposite with sig. 'mmm' on line 3456.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingComposite with sig. 'mmm' on line 3650.
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3462.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3656.
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3487.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3681.
+. Defining command \UndeclareSymbol with sig. 'm' on line 3493.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareSymbol with sig. 'm' on line 3687.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \UndeclareAccent with sig. 'm' on line 3693.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \UndeclareCommand with sig. 'm' on line 3699.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \UndeclareComposite with sig. 'mm' on line 3706.
+. Defining command \UndeclareComposite with sig. 'mm' on line 3501.
 .................................................
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 3891.
-LaTeX Info: Redefining \slshape on input line 3896.
-LaTeX Info: Redefining \scshape on input line 3901.
-LaTeX Info: Redefining \upshape on input line 3906.
-LaTeX Info: Redefining \em on input line 3936.
-LaTeX Info: Redefining \emph on input line 3961.
-LaTeX Info: Redefining \- on input line 4015.
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\font
+spec\fontspec.cfg")
+LaTeX Info: Redefining \itshape on input line 3686.
+LaTeX Info: Redefining \slshape on input line 3691.
+LaTeX Info: Redefining \scshape on input line 3696.
+LaTeX Info: Redefining \upshape on input line 3701.
+LaTeX Info: Redefining \em on input line 3731.
+LaTeX Info: Redefining \emph on input line 3756.
+LaTeX Info: Redefining \- on input line 3807.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \oldstylenums with sig. 'm' on line 4110.
+. Redefining command \oldstylenums with sig. 'm' on line 3902.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \liningnums with sig. 'm' on line 4114.
+. Defining command \liningnums with sig. 'm' on line 3906.
 .................................................
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\if
+xetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \xpg@normalclass=\XeTeXcharclass1
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\poly
+glossia\gloss-lithuanian.ldf"
 File: gloss-lithuanian.ldf polyglossia: module for lithuanian
 )
 Package polyglossia Info: Default language is lithuanian.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
+
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\poly
+glossia\gloss-english.ldf"
 File: gloss-english.ldf polyglossia: module for english
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/indentfirst.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tool
+s\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/was/icomma.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\
+icomma.sty"
 Package: icomma 2002/03/10 v2.0 (WaS)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\capt
+ion\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\capt
+ion\caption3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen137
@@ -458,9 +469,9 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen142
 \caption@hangindent=\dimen143
 )
-\c@ContinuedFloat=\count182
+\c@ContinuedFloat=\count180
 ))
-\g__fontspec_family_texgyretermes_int=\count183
+\g__fontspec_family_texgyretermes_int=\count181
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -496,22 +507,26 @@ ext;"
 .................................................
 LaTeX Info: Redefining \rmfamily on input line 28.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sets
+pace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2018/03/24 v5.7 Page Geometry
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geom
+etry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\ifpdf.sty"
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count184
-\Gm@cntv=\count185
-\c@Gm@tempcnt=\count186
+\Gm@cnth=\count182
+\Gm@cntv=\count183
+\c@Gm@tempcnt=\count184
 \Gm@bindingoffset=\dimen144
 \Gm@wd@mp=\dimen145
 \Gm@odd@mp=\dimen146
@@ -521,10 +536,13 @@ Package ifvtex Info: VTeX not detected.
 \Gm@layouthoffset=\dimen150
 \Gm@layoutvoffset=\dimen151
 \Gm@dimlist=\toks16
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
-Package tocloft Info: The document has section divisions on input line 51.
+
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\xelatex\xe
+texconfig\geometry.cfg"))
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocl
+oft\tocloft.sty"
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 44.
 \cftparskip=\skip49
 \cftbeforetoctitleskip=\skip50
 \cftaftertoctitleskip=\skip51
@@ -551,17 +569,18 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip72
 \cftfigindent=\skip73
 \cftfignumwidth=\skip74
-\c@lofdepth=\count187
-\c@lotdepth=\count188
+\c@lofdepth=\count185
+\c@lotdepth=\count186
 \cftbeforelottitleskip=\skip75
 \cftafterlottitleskip=\skip76
 \cftbeforetabskip=\skip77
 \cfttabindent=\skip78
 \cfttabnumwidth=\skip79
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
-s
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fanc
+yhdr\fancyhdr.sty"
+Package: fancyhdr 2016/10/11 v3.9 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip80
 \f@nch@O@elh=\skip81
 \f@nch@O@erh=\skip82
@@ -572,41 +591,46 @@ s
 \f@nch@O@olf=\skip87
 \f@nch@O@orf=\skip88
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/silence/silence.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sile
+nce\silence.sty"
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
 sages
-\sl@Save=\count189
-\sl@StateNumber=\count190
-\sl@MessageCount=\count191
-\sl@Casualties=\count192
+\sl@Save=\count187
+\sl@StateNumber=\count188
+\sl@MessageCount=\count189
+\sl@Casualties=\count190
 \sl@Filter=\toks17
 \sl@Message=\toks18
 \sl@UnexpandedMessage=\toks19
 \sl@Mess@ge=\toks20
-\sl@WarningCount=\count193
-\sl@WarningNumber=\count194
-\sl@WarningCasualties=\count195
+\sl@WarningCount=\count191
+\sl@WarningNumber=\count192
+\sl@WarningCasualties=\count193
 \sl@TempBOW=\toks21
 \sl@BankOfWarnings=\toks22
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count196
-\sl@ErrorNumber=\count197
-\sl@ErrorCasualties=\count198
+\sl@ErrorCount=\count194
+\sl@ErrorNumber=\count195
+\sl@ErrorCasualties=\count196
 \sl@TempBOE=\toks23
 \sl@BankOfErrors=\toks24
 LaTeX Info: Redefining \GenericError on input line 601.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\biblatex.sty"
+Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -615,79 +639,88 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ober
+diek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
+erdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\logr
+eq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count199
+\lrq@indent=\count197
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\logr
+eq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
+\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\
+url.sty"
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xstr
+ing\xstring.sty"
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xs
+tring\xstring.tex"
 \@xs@message=\write3
-\integerpart=\count266
-\decimalpart=\count267
+\integerpart=\count198
+\decimalpart=\count199
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count268
-\c@listtotal=\count269
-\c@listcount=\count270
-\c@liststart=\count271
-\c@liststop=\count272
-\c@citecount=\count273
-\c@citetotal=\count274
-\c@multicitecount=\count275
-\c@multicitetotal=\count276
-\c@instcount=\count277
-\c@maxnames=\count278
-\c@minnames=\count279
-\c@maxitems=\count280
-\c@minitems=\count281
-\c@citecounter=\count282
-\c@savedcitecounter=\count283
-\c@uniquelist=\count284
-\c@uniquename=\count285
-\c@refsection=\count286
-\c@refsegment=\count287
-\c@maxextratitle=\count288
-\c@maxextratitleyear=\count289
-\c@maxextradate=\count290
-\c@maxextraalpha=\count291
-\c@abbrvpenalty=\count292
-\c@highnamepenalty=\count293
-\c@lownamepenalty=\count294
-\c@maxparens=\count295
-\c@parenlevel=\count296
-\blx@tempcnta=\count297
-\blx@tempcntb=\count298
-\blx@tempcntc=\count299
-\blx@maxsection=\count300
-\blx@maxsegment@0=\count301
-\blx@notetype=\count302
-\blx@parenlevel@text=\count303
-\blx@parenlevel@foot=\count304
-\blx@sectionciteorder@0=\count305
+\c@tabx@nest=\count266
+\c@listtotal=\count267
+\c@listcount=\count268
+\c@liststart=\count269
+\c@liststop=\count270
+\c@citecount=\count271
+\c@citetotal=\count272
+\c@multicitecount=\count273
+\c@multicitetotal=\count274
+\c@instcount=\count275
+\c@maxnames=\count276
+\c@minnames=\count277
+\c@maxitems=\count278
+\c@minitems=\count279
+\c@citecounter=\count280
+\c@savedcitecounter=\count281
+\c@uniquelist=\count282
+\c@uniquename=\count283
+\c@refsection=\count284
+\c@refsegment=\count285
+\c@maxextratitle=\count286
+\c@maxextratitleyear=\count287
+\c@maxextrayear=\count288
+\c@maxextraalpha=\count289
+\c@abbrvpenalty=\count290
+\c@highnamepenalty=\count291
+\c@lownamepenalty=\count292
+\c@maxparens=\count293
+\c@parenlevel=\count294
+\blx@tempcnta=\count295
+\blx@tempcntb=\count296
+\blx@tempcntc=\count297
+\blx@maxsection=\count298
+\blx@maxsegment@0=\count299
+\blx@notetype=\count300
+\blx@parenlevel@text=\count301
+\blx@parenlevel@foot=\count302
+\blx@sectionciteorder@0=\count303
 \labelnumberwidth=\skip89
 \labelalphawidth=\skip90
 \biblabelsep=\skip91
@@ -698,152 +731,149 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip96
 \blx@bcfin=\read2
 \blx@bcfout=\write4
-\c@mincomprange=\count306
-\c@maxcomprange=\count307
-\c@mincompwidth=\count308
+\c@mincomprange=\count304
+\c@maxcomprange=\count305
+\c@mincompwidth=\count306
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
-)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\blx-dm.def")
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'trad-alpha.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count309
-\c@savedafterword=\count310
-\c@annotator=\count311
-\c@savedannotator=\count312
-\c@author=\count313
-\c@savedauthor=\count314
-\c@bookauthor=\count315
-\c@savedbookauthor=\count316
-\c@commentator=\count317
-\c@savedcommentator=\count318
-\c@editor=\count319
-\c@savededitor=\count320
-\c@editora=\count321
-\c@savededitora=\count322
-\c@editorb=\count323
-\c@savededitorb=\count324
-\c@editorc=\count325
-\c@savededitorc=\count326
-\c@foreword=\count327
-\c@savedforeword=\count328
-\c@holder=\count329
-\c@savedholder=\count330
-\c@introduction=\count331
-\c@savedintroduction=\count332
-\c@namea=\count333
-\c@savednamea=\count334
-\c@nameb=\count335
-\c@savednameb=\count336
-\c@namec=\count337
-\c@savednamec=\count338
-\c@translator=\count339
-\c@savedtranslator=\count340
-\c@shortauthor=\count341
-\c@savedshortauthor=\count342
-\c@shorteditor=\count343
-\c@savedshorteditor=\count344
-\c@labelname=\count345
-\c@savedlabelname=\count346
-\c@institution=\count347
-\c@savedinstitution=\count348
-\c@lista=\count349
-\c@savedlista=\count350
-\c@listb=\count351
-\c@savedlistb=\count352
-\c@listc=\count353
-\c@savedlistc=\count354
-\c@listd=\count355
-\c@savedlistd=\count356
-\c@liste=\count357
-\c@savedliste=\count358
-\c@listf=\count359
-\c@savedlistf=\count360
-\c@location=\count361
-\c@savedlocation=\count362
-\c@organization=\count363
-\c@savedorganization=\count364
-\c@origlocation=\count365
-\c@savedoriglocation=\count366
-\c@origpublisher=\count367
-\c@savedorigpublisher=\count368
-\c@publisher=\count369
-\c@savedpublisher=\count370
-\c@language=\count371
-\c@savedlanguage=\count372
-\c@origlanguage=\count373
-\c@savedoriglanguage=\count374
-\c@pageref=\count375
-\c@savedpageref=\count376
+\c@afterword=\count307
+\c@savedafterword=\count308
+\c@annotator=\count309
+\c@savedannotator=\count310
+\c@author=\count311
+\c@savedauthor=\count312
+\c@bookauthor=\count313
+\c@savedbookauthor=\count314
+\c@commentator=\count315
+\c@savedcommentator=\count316
+\c@editor=\count317
+\c@savededitor=\count318
+\c@editora=\count319
+\c@savededitora=\count320
+\c@editorb=\count321
+\c@savededitorb=\count322
+\c@editorc=\count323
+\c@savededitorc=\count324
+\c@foreword=\count325
+\c@savedforeword=\count326
+\c@holder=\count327
+\c@savedholder=\count328
+\c@introduction=\count329
+\c@savedintroduction=\count330
+\c@namea=\count331
+\c@savednamea=\count332
+\c@nameb=\count333
+\c@savednameb=\count334
+\c@namec=\count335
+\c@savednamec=\count336
+\c@translator=\count337
+\c@savedtranslator=\count338
+\c@shortauthor=\count339
+\c@savedshortauthor=\count340
+\c@shorteditor=\count341
+\c@savedshorteditor=\count342
+\c@labelname=\count343
+\c@savedlabelname=\count344
+\c@institution=\count345
+\c@savedinstitution=\count346
+\c@lista=\count347
+\c@savedlista=\count348
+\c@listb=\count349
+\c@savedlistb=\count350
+\c@listc=\count351
+\c@savedlistc=\count352
+\c@listd=\count353
+\c@savedlistd=\count354
+\c@liste=\count355
+\c@savedliste=\count356
+\c@listf=\count357
+\c@savedlistf=\count358
+\c@location=\count359
+\c@savedlocation=\count360
+\c@organization=\count361
+\c@savedorganization=\count362
+\c@origlocation=\count363
+\c@savedoriglocation=\count364
+\c@origpublisher=\count365
+\c@savedorigpublisher=\count366
+\c@publisher=\count367
+\c@savedpublisher=\count368
+\c@language=\count369
+\c@savedlanguage=\count370
+\c@pageref=\count371
+\c@savedpageref=\count372
 \shorthandwidth=\skip97
 \shortjournalwidth=\skip98
 \shortserieswidth=\skip99
 \shorttitlewidth=\skip100
 \shortauthorwidth=\skip101
 \shorteditorwidth=\skip102
-\locallabelnumberwidth=\skip103
-\locallabelalphawidth=\skip104
-\localshorthandwidth=\skip105
-\localshortjournalwidth=\skip106
-\localshortserieswidth=\skip107
-\localshorttitlewidth=\skip108
-\localshortauthorwidth=\skip109
-\localshorteditorwidth=\skip110
-Package biblatex Info: Trying to load enhanced support for Unicode engines...
-Package biblatex Info: ... file 'blx-unicode.def' found.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-unicode.def)
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\blx-compat.def"
+File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count377
-\c@textcitetotal=\count378
-\c@textcitemaxnames=\count379
-\c@biburlnumpenalty=\count380
-\c@biburlucpenalty=\count381
-\c@biburllcpenalty=\count382
-\c@smartand=\count383
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\biblatex.def"
+File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count373
+\c@textcitetotal=\count374
+\c@textcitemaxnames=\count375
+\c@biburlnumpenalty=\count376
+\c@biburlucpenalty=\count377
+\c@biburllcpenalty=\count378
+\c@smartand=\count379
 )
 Package biblatex Info: Trying to load bibliography style 'trad-alpha'...
 Package biblatex Info: ... file 'trad-alpha.bbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex-trad/trad-alpha.bbx
-File: trad-alpha.bbx 2018/02/17 v0.4a biblatex-trad alpha bibliograhy style
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex-trad\trad-alpha.bbx"
+File: trad-alpha.bbx 2016/06/26 v0.3 biblatex-trad
 Package biblatex Info: Trying to load bibliography style 'trad-standard'...
 Package biblatex Info: ... file 'trad-standard.bbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex-trad/trad-standard.bbx
-File: trad-standard.bbx 2018/02/17 v0.4a biblatex-trad base bibliography style
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex-trad\trad-standard.bbx"
+File: trad-standard.bbx 2016/06/26 v0.3 biblatex-trad
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count384
-\c@bbx:relatedtotal=\count385
-)))
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\bbx\standard.bbx"
+File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count380
+\c@bbx:relatedtotal=\count381
+)
+
+Package biblatex Warning: Macro 'in:' already defined.
+(biblatex)                Using \renewbibmacro.
+
+))
 Package biblatex Info: Trying to load citation style 'trad-alpha'...
 Package biblatex Info: ... file 'trad-alpha.cbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex-trad/trad-alpha.cbx
-File: trad-alpha.cbx 2018/02/17 v0.4a biblatex-trad alpha citation style
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex-trad\trad-alpha.cbx"
+File: trad-alpha.cbx 2016/06/26 v0.3 biblatex-trad
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
-File: alphabetic.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\cbx\alphabetic.cbx"
+File: alphabetic.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -858,86 +888,96 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\biblatex.cfg"
 File: biblatex.cfg 
 )
 
-Package biblatex Warning: 'iso8601' date format specifier is deprecated.
-(biblatex)                Use 'iso' instead.
+Package biblatex Warning: 'iso8601' date format specifier is deprecated, use 'e
+dtf' instead.
 
 
-Package biblatex Warning: 'iso8601' date format specifier is deprecated.
-(biblatex)                Use 'iso' instead.
+Package biblatex Warning: 'iso8601' date format specifier is deprecated, use 'e
+dtf' instead.
 
 
-Package biblatex Warning: 'iso8601' date format specifier is deprecated.
-(biblatex)                Use 'iso' instead.
+Package biblatex Warning: 'iso8601' date format specifier is deprecated, use 'e
+dtf' instead.
 
 
-Package biblatex Warning: 'iso8601' date format specifier is deprecated.
-(biblatex)                Use 'iso' instead.
+Package biblatex Warning: 'iso8601' date format specifier is deprecated, use 'e
+dtf' instead.
 
 
-Package biblatex Warning: 'iso8601' date format specifier is deprecated.
-(biblatex)                Use 'iso' instead.
+Package biblatex Warning: 'iso8601' date format specifier is deprecated, use 'e
+dtf' instead.
 
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
-\csq@reset=\count386
-\csq@gtype=\count387
-\csq@glevel=\count388
-\csq@qlevel=\count389
-\csq@maxlvl=\count390
-\csq@tshold=\count391
+)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csqu
+otes\csquotes.sty"
+Package: csquotes 2017/03/11 v5.2b context-sensitive quotations (JAW)
+\csq@reset=\count382
+\csq@gtype=\count383
+\csq@glevel=\count384
+\csq@qlevel=\count385
+\csq@maxlvl=\count386
+\csq@tshold=\count387
 \csq@ltx@everypar=\toks25
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csqu
+otes\csquotes.def"
+File: csquotes.def 2017/03/11 v5.2b csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(./csquotes.cfg
+ (csquotes.cfg
 File: csquotes.cfg 
 )
 Package csquotes Info: Disabling multilingual quotes.
 Package csquotes Info: Redefining alias 'default' -> 'lithuanian'.
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algo
+rithmicx\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count392
-\c@ALG@rem=\count393
-\c@ALG@nested=\count394
-\ALG@tlm=\skip111
-\ALG@thistlm=\skip112
-\c@ALG@Lnr=\count395
-\c@ALG@blocknr=\count396
-\c@ALG@storecount=\count397
-\c@ALG@tmpcounter=\count398
-\ALG@tmplength=\skip113
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/algorithms/algorithm.sty
+\c@ALG@line=\count388
+\c@ALG@rem=\count389
+\c@ALG@nested=\count390
+\ALG@tlm=\skip103
+\ALG@thistlm=\skip104
+\c@ALG@Lnr=\count391
+\c@ALG@blocknr=\count392
+\c@ALG@storecount=\count393
+\c@ALG@tmpcounter=\count394
+\ALG@tmplength=\skip105
+)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algo
+rithms\algorithm.sty"
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\floa
+t\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count399
+\c@float@type=\count395
 \float@exts=\toks26
-\float@box=\box41
+\float@box=\box42
 \@float@everytoks=\toks27
-\@floatcapt=\box42
+\@floatcapt=\box43
 )
 \@float@every@algorithm=\toks28
-\c@algorithm=\count400
+\c@algorithm=\count396
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algo
+rithmicx\algpseudocode.sty"
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsf
+onts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks29
 \symAMSa=\mathgroup4
@@ -945,50 +985,56 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip114
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
+ath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip106
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
+ath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
+ath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks30
 \ex@=\dimen152
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
+ath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen153
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
+ath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count401
+\inf@bad=\count397
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count402
-\leftroot@=\count403
+\uproot@=\count398
+\leftroot@=\count399
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count404
-\DOTSCASE@=\count405
+\classnum@=\count400
+\DOTSCASE@=\count401
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box43
-\strutbox@=\box44
+\Mathstrutbox@=\box44
+\strutbox@=\box45
 \big@size=\dimen154
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count406
-\c@MaxMatrixCols=\count407
+\macc@depth=\count402
+\c@MaxMatrixCols=\count403
 \dotsspace@=\muskip17
-\c@parentequation=\count408
-\dspbrk@lvl=\count409
+\c@parentequation=\count404
+\dspbrk@lvl=\count405
 \tag@help=\toks31
-\row@=\count410
-\column@=\count411
-\maxfields@=\count412
+\row@=\count406
+\column@=\count407
+\maxfields@=\count408
 \andhelp@=\toks32
 \eqnshift@=\dimen155
 \alignsep@=\dimen156
@@ -997,13 +1043,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen159
 \lineht@=\dimen160
 \@envbody=\toks33
-\multlinegap=\skip115
-\multlinetaggap=\skip116
+\multlinegap=\skip107
+\multlinetaggap=\skip108
 \mathdisplay@stack=\toks34
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/bm.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tool
+s\bm.sty"
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
@@ -1011,27 +1058,35 @@ Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 147.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics-def\xetex.def"
+File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
+JK)
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
+hics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
@@ -1039,54 +1094,59 @@ Package graphics Info: Driver file: xetex.def on input line 99.
 \Gin@req@height=\dimen161
 \Gin@req@width=\dimen162
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count413
-\lst@gtempboxa=\box45
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\list
+ings\listings.sty"
+\lst@mode=\count409
+\lst@gtempboxa=\box46
 \lst@token=\toks35
-\lst@length=\count414
+\lst@length=\count410
 \lst@currlwidth=\dimen163
-\lst@column=\count415
-\lst@pos=\count416
+\lst@column=\count411
+\lst@pos=\count412
 \lst@lostspace=\dimen164
 \lst@width=\dimen165
-\lst@newlines=\count417
-\lst@lineno=\count418
+\lst@newlines=\count413
+\lst@lineno=\count414
 \lst@maxwidth=\dimen166
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\list
+ings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count419
-\lst@skipnumbers=\count420
-\lst@framebox=\box46
+\c@lstnumber=\count415
+\lst@skipnumbers=\count416
+\lst@framebox=\box47
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\list
+ings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/subfig/subfig.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subf
+ig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count421
-\sf@farskip=\skip117
+\c@KVtest=\count417
+\sf@farskip=\skip109
 \sf@captopadj=\dimen167
-\sf@capskip=\skip118
-\sf@nearskip=\skip119
-\c@subfigure=\count422
-\c@subfigure@save=\count423
-\c@subtable=\count424
-\c@subtable@save=\count425
-\sf@top=\skip120
-\sf@bottom=\skip121
+\sf@capskip=\skip110
+\sf@nearskip=\skip111
+\c@subfigure=\count418
+\c@subfigure@save=\count419
+\c@subtable=\count420
+\c@subtable@save=\count421
+\sf@top=\skip112
+\sf@bottom=\skip113
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrap
+fig\wrapfig.sty"
 \wrapoverhang=\dimen168
 \WF@size=\dimen169
-\c@WF@wrappedlines=\count426
-\WF@box=\box47
+\c@WF@wrappedlines=\count422
+\WF@box=\box48
 \WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
 )
-\g__fontspec_family_Palemonas_int=\count427
+\g__fontspec_family_Palemonas_int=\count423
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1112,22 +1172,22 @@ LaTeX Info: Redefining \rmfamily on input line 30.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bibl
+atex\lbx\english.lbx"
+File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
 Package biblatex Info: Trying to load language 'lithuanian'...
 Package biblatex Info: ... file 'lithuanian.lbx' found.
-
-(./lithuanian.lbx
-File: lithuanian.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)$Id: lithuan
-ian.lbx,v 1.0 2015/02/05 20:21:28 niekas stable $
+ (lithuanian.lbx
+File: lithuanian.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)$Id: lithu
+anian.lbx,v 1.0 2015/02/05 20:21:28 niekas stable $
 )
 
 Package biblatex Warning: Conflicting options.
-(biblatex)                'date=iso' requires 'seconds=true'.
+(biblatex)                'date=edtf' requires 'seconds=true'.
 (biblatex)                Setting 'seconds=true' on input line 33.
 
-(./bakalaurinis.aux)
+(bakalaurinis.aux)
 \openout1 = `bakalaurinis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1213,10 +1273,9 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-*geometry* driver: auto-detecting
-*geometry* detected driver: xetex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: xetex
+* driver: pdftex
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1255,27 +1314,28 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bakalaurinis.bbl' found.
-(./bakalaurinis.bbl)
+(bakalaurinis.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
-\c@lstlisting=\count428
+\c@lstlisting=\count424
 LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsf
+onts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Users\Ricardas.Mikelionis\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsf
+onts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [1
 
-]
-[2
+] [2
 
-] (./bakalaurinis.toc)
+] (bakalaurinis.toc)
 \tf@toc=\write5
 \openout5 = `bakalaurinis.toc'.
 
@@ -1305,9 +1365,19 @@ LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 75
 LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
  undefined on input line 75.
 
+
+LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 5 undefined on i
+nput line 82.
+
 [5
 
-] [6] [7
+]
+
+LaTeX Warning: Citation 'img:Cyclomatic_graph_1' on page 6 undefined on input l
+ine 88.
+
+File: img/Cyclomatic_graph_1.jpg Graphic file (type QTm)
+<use  "img/Cyclomatic_graph_1.jpg" > [6] [7
 
 ] [8
 
@@ -1315,20 +1385,19 @@ LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 110.
+LaTeX Warning: Empty bibliography on input line 123.
 
 [10
 
 ] [11
 
 ]
-File: img/MLP.png Graphic file (type bmp)
-<img/MLP.png>
- [12
+File: img/MLP.png Graphic file (type QTm)
+ <use  "img/MLP.png" > [12
 
 ] [13
 
-] (./bakalaurinis.aux)
+] (bakalaurinis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1342,12 +1411,12 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23857 strings out of 492970
- 471483 string characters out of 6133939
- 961645 words of memory out of 5000000
- 27564 multiletter control sequences out of 15000+600000
- 544815 words of font info for 101 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23096 strings out of 427834
+ 448671 string characters out of 3145855
+ 939983 words of memory out of 3000000
+ 26788 multiletter control sequences out of 15000+200000
+ 544815 words of font info for 101 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 67i,11n,96p,10503b,3426s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bakalaurinis.pdf (14 pages).
