@@ -1,0 +1,35 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Programinio kodo sudėtingumo ir defektyvumo sąsajos}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}McCabe sudėtingumo metrikos}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Halstead sudėtingumo metrikos}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti mašina}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Duomenų atrinkimas}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.}Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Rezultatai ir išvados}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Santrumpos}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\MakeUppercase {Priedai}}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{2 priedas.\nobreakspace {}Eksperimentinio palyginimo rezultatai}{16}

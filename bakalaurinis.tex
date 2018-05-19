@@ -65,29 +65,33 @@ Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuot
 
 Tobulame pasaulyje iteracijai pasirinktos testavimo sritys ir apims tuos 20\% problematiškojo kodo. Tačiau dažnai net remiantis visa turima istorine informacija testuotojui atsakingam už testavimo sričių parinkimą yra sunku efektyviai atrinkti testavimo sritis, kuriose atliktas darbas turės didžiausią įtaką programinės įrangos kokybei.
 
-Sieniant sėkmingai įgyvendinti darbo tikslą siekiama įgyvendinti šiuos uždavinius:
+--
+
+Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
-\item Išrinkti metrikas darančias įtaką programinės įrangos sudėtingumui
+\item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui
 \item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir neuroninio tinklo naudojant surinktus duomenis
-\item Atrinkti duomenis turinčius mažiausią įtaką galutiniam spėjimui
+\item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui
 \item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto neuroninio tinklo
 \end{enumerate}
  
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
-Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programiniės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. Reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu.
+Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programinės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. 
 
-Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduotii: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
+Visų pirma reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduotii: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
 
 Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{Metrics in Evaluating Software Defects:2013}.
+
+Tokių metrikų pasirinkimas paremtas tuo, jog jų rinkimas, net atliekamas nuolat nereikalauja daug papildomo laiko, išteklių ar pastangų. Tai statinės kodo metrikos, kurias gana paprasta surinkti su kodo analizės įrankiais ir kurios sąlyginai tikliai parodo kodo defektyvumą.
 
 Šiame dokumente aprašomame tyrime bus naudojamos visos Halstead ir McCabe metrikos kartu, bei keletas šių atributų poaibių susiaurintų tiek rankiniu būdų tiek duomenų analizės įrankiais.
 
 \subsection{McCabe sudėtingumo metrikos}
 1976-aisiais Thomas J, McCabe išleido tyrimą kuriame pasiūlė naują programinės įrangos kodo sudėtingumo matavimo būdą, pavadintą Ciklomatiniu sudėtingumu (angl. Cyclomatic Complexity). Šis matavimo vienetas kiekybiškai matuoja nepriklausomų kelių per kodo elementus kiekį.
 
-Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tiesiškai nepriklausomų kelių kiekis. Pavyzdžiui jei kode nėra jokių eiliškumo kontrolės sakinių (angl. Control flow statements), kaip sąlygninai „if“ sakiniai, tuomet kodo ciklomatinis sudėtingumas būtų 1. Su vienu „if“ sąlyginiu sakiniu, po kurio įvykdymo galimi du keliai: jei grąžinta „TRUE“ bei jei grąžinta „FALSE“, kodo ciklomatinis sudėtingumas būtų 2. Du vieną sąlygą turintys „if“ sakiniai ar vienas toks sakinys su dviem salygomis sudarytų grafą kurio ciklomatinis sudėtingmas lygus 3. \cite{McCabe:1976:CM:800253.807712}
+Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tiesiškai nepriklausomų kelių kiekis. Pavyzdžiui jei kode nėra jokių eiliškumo kontrolės sakinių (angl. Control flow statements), kaip sąlygninai „if“ sakiniai, tuomet kodo ciklomatinis sudėtingumas būtų 1. Su vienu „if“ sąlyginiu sakiniu, po kurio įvykdymo galimi du keliai: jei grąžinta „TRUE“ bei jei grąžinta „FALSE“, kodo ciklomatinis sudėtingumas būtų 2. Du vieną sąlygą turintys „if“ sakiniai ar vienas toks sakinys su dviem salygomis sudarytų grafą kurio ciklomatinis sudėtingmas būtų lygus 3 ir t.t. \cite{McCabe:1976:CM:800253.807712}
 
-Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų kurios vykdomos kartu grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukšstesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
+Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą, kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų, kurios vykdomos kartu, grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukštesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
 
 Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \(M = E - N + 2P\). Kur šios metrikos atvaizduojamos taip:
 \begin{description}  
@@ -97,7 +101,7 @@ Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \(M = E - N 
 \end{description} 
 Dar cikomatinis sudėtingumas skaičiuojamas ir formule \(M = E - N + P\). Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
 
-Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie sudaro vieną apjungtąjį komponentą, tai tokios programos ciklomatinis sudėtingumas būtų \(9 - 8 + 2 * 1 = 3\).
+Pavyzdžiui, turint programą, kaip pavaizduota pav. \ref{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą galime panaudoti McCabe formulę ir apskaičiuoti kodo ciklomatinį sudėtingumą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie kartu sudaro vieną apjungtąjį komponentą, tuomet tokios programos ciklomatinis sudėtingumas būtų \(9 - 8 + 2 * 1 = 3\).
 
 \begin{figure}[H]
     \centering
@@ -109,7 +113,7 @@ Pavyzdžiui, turint programą \cite{img:Cyclomatic_graph_1} kurios veikimas pras
 
 
 \subsection{Halstead sudėtingumo metrikos}
-1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to kaip kodas parašytas ir skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead Kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos.\cite{Halstead:1977:ESS:540137}
+1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to, kaip kodas parašytas ir yra skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos.\cite{Halstead:1977:ESS:540137}
 
 Halstead metrikos paremtos šiais matavimo vienetais:
 \begin{description}  
@@ -132,12 +136,48 @@ Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei opera
 
 \section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}
 
-Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina.
+Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: Sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytą neuroninį tinklą.
 
+Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai mašinai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
+\begin{description} 
+\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
+\item ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
+\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
+\item v - Skaitinė reikšmė. Halstead programos apimtis.
+\item l - Skaitinė reikšmė. Halstead programos ilgis.
+\item d - Skaitinė reikšmė Halstead sudėtingumas.
+\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item e - Skaitinė reikšmė. Halstead pastangos.
+\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
+\item lOCode - Skaitinė reikšmė. Halstead kodo eilučių kiekis.
+\item lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
+\item lOBlank - Skaitinė reikšmė. Halstead tuščių eilučių kiekis.
+\item lOCodeAndComment - Skaitinė reikšmė. Komentarų bei kodo eilučių kiekių sumą.
+\item uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
+\item uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
+\item total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
+\item total\_Opnd - Skaitinė reikšmė. Visų operandų kiekis.
+\item branchCount - Skaitinė reikšmė. Grafu atvaizduojamo kodo kelių kiekis.
+\item defects - Binarinė reikšmė. True arba False.
+\end{description} 
+
+Tyrimo tikslui pasiekti buvo nuspręsta panaudoti keletą jau surinktų duomenų rinkinių. Siekiant surinkti pakankamą kiekį prasmingų duomenų (500-1000 skirtingų testuotų programinės įrangos versijų (angl. build)) šio tyrimo kontekste užimtų per daug laiko. Tyrime bus naudojami  „CM1“ bei „PC1“ duomenų rinkiniai iš  „Promise“ duomeų rinkinių duomenų bazės \cite{Sayyad-Shirabad+Menzies:2005}. Tiek „CM1“, tiek „PC1“ pateikti NASA ir sudaryti jų 2004-aisiais vykdytos „NASA Metrics Data Program“ progamos, skirtos kurti defektus nuspėjančią programinę įrangą, metu.
+
+PC1 duomenų rinkinys sudarytas iš 1109 duomenų eilučių, surinktų iš kodo parašyto C programavimo kalba. Programinė įranga iš kurios surinkti šie duomenys skirta orbitoje skraidančiam palydovui kontroliuoti. Duomenų rinkinys pasidalina į 6.94\% duomenų eilučių kurios atspindi atvejį, kai užfiksuotas vienas ar daugiau defektų bei 93.06\% duomenų eilučių atspindinčių, kai nebuvo užfiksuota defektų.
+
+CM1 duomenų rinkinys sudarytas iš 498 duomenų eilučių, surinktų iš kodo parašyto C programavimo kalba. Programinė įranga iš kurios surinkti šie duomenys yra pagalbinė įranga vienam iš NASA erdvėlaivių. Duomenų rinkinys pasidalina į 90.16\% duomenų eilučių kurios atspindi atvejį, kai užfiksuotas vienas ar daugiau defektų bei 9.83\% duomenų eilučių atspindinčių, kai nebuvo užfiksuota defektų.
 
 \subsection{Sprendimų medžio metodu paremta besimokanti mašina}
+Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas pav. \ref{img:tree} pirmame priede. 
 
-\subsection{Giliuoju neuroniniu tinklu paremta besimokanti mašina}
+Įprastai sprendimų medžio prediktyvusis modelis naudojamas 
+
+CM1 duomenų rinkinio atveju medžio tikslumas buvo 99.5\% - 100\%, o PC1 - 98\% - 99.6\%. 
+
+\subsection{Daugiasluoksnis perceptronas}
 
 \section{Duomenų atrinkimas}
 
@@ -179,8 +219,8 @@ santrumpos.
 \section{Sprendimų medžio besimokanti mašina}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0. 5]{img/tree}
-    \caption{Sprendimų medžio tipo besimokanti mašina}
+    \includegraphics[scale=0.118, angle=90]{img/tree}
+    \caption{Sprendimų medžio tipo besimokanti mašina sudaryta naudojant PC1 duomenų rinkinio poaibį}
     \label{img:tree}
 \end{figure}
 

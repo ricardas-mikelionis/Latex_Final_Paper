@@ -17,18 +17,19 @@ classifier = KNeighborsClassifier()
 
 '''
 from sklearn import tree
-classifier = tree.DecisionTreeClassifier()
+classifier = tree.ExtraTreeClassifier()
 
 
 classifier.fit(features, labels)
-
+'''
 from sklearn.externals.six import StringIO
 import pydotplus as pydot
 dot_data = StringIO()
-tree.export_graphviz(classifier, out_file=dot_data, feature_names = ["loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOblank", "lOCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount"], class_names = ["true", "false"], filled = True, rounded= True, impurity= False)
+KNeighborsClassifier.export_graphviz(classifier, out_file=dot_data, feature_names = ["loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOblank", "lOCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount"], class_names = ["true", "false"], filled = True, rounded= True, impurity= False)
 
 graph = pydot.graph_from_dot_data(dot_data.getvalue())
 graph.write_pdf("tree.pdf")
+'''
 
 predictions = classifier.predict(features_test)
 
