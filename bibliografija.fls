@@ -1,6 +1,0 @@
-PWD /Users/ricardas_mikelionis_mac/Documents/GitHub/Latex_Final_Paper
-INPUT /usr/local/texlive/2018/texmf.cnf
-INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT bibliografija.bib
-OUTPUT bibliografija.log
