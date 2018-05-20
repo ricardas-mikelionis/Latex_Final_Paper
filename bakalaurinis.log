@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  20 MAY 2018 14:27
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 00:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1321,6 +1321,10 @@ LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
 LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 6 undefined on i
 nput line 92.
 
+
+LaTeX Warning: Reference `img:Cyclomatic_graph_1' on page 6 undefined on input 
+line 104.
+
 File: img/Cyclomatic_graph_1.jpg Graphic file (type bmp)
 <img/Cyclomatic_graph_1.jpg>
 [6]
@@ -1335,28 +1339,85 @@ nput line 167.
 
 [8
 
-] [9] [10] [11
+]
 
-] [12
+LaTeX Warning: Reference `img:tree' on page 9 undefined on input line 174.
+
+
+LaTeX Warning: Citation 'scikit-learn' on page 9 undefined on input line 182.
+
+[9]
+
+LaTeX Warning: Reference `tab:Tree_result' on page 10 undefined on input line 2
+07.
+
+
+LaTeX Warning: Citation 'JMLR:v15:srivastava14a' on page 10 undefined on input 
+line 212.
+
+
+LaTeX Warning: Reference `img:dropout' on page 10 undefined on input line 212.
+
+File: img/dropout.png Graphic file (type bmp)
+<img/dropout.png>
+[10]
+
+LaTeX Warning: Reference `img:model' on page 11 undefined on input line 221.
+
+File: img/model.png Graphic file (type bmp)
+<img/model.png>
+[11]
+
+LaTeX Warning: Citation 'chollet2015keras' on page 12 undefined on input line 2
+32.
+
+
+LaTeX Warning: Reference `tab:MLP_result' on page 12 undefined on input line 24
+9.
+
+[12] [13
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 227.
+LaTeX Warning: Citation 'hall09:_weka_data_minin_softw' on page 14 undefined on
+ input line 285.
 
-[13
 
-] [14
+Overfull \hbox (20.39098pt too wide) in paragraph at lines 295--301
+ [][] 
+ []
+
+
+Overfull \hbox (11.4437pt too wide) in paragraph at lines 307--313
+ [][] 
+ []
+
+[14] [15] [16
+
+]
+
+LaTeX Warning: Empty bibliography on input line 385.
+
+[17
+
+] [18
 
 ]
 File: img/tree.jpg Graphic file (type bmp)
 <img/tree.jpg>
- [15
+ [19
 
-] [16
+]
+File: img/model_adjusted.png Graphic file (type bmp)
+<img/model_adjusted.png>
+ [20
 
 ] (./bakalaurinis.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1368,12 +1429,12 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24143 strings out of 492970
- 476365 string characters out of 6133939
+ 24160 strings out of 492970
+ 476652 string characters out of 6133939
  969017 words of memory out of 5000000
- 27843 multiletter control sequences out of 15000+600000
+ 27857 multiletter control sequences out of 15000+600000
  544815 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bakalaurinis.pdf (17 pages).
+Output written on bakalaurinis.pdf (21 pages).

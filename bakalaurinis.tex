@@ -179,7 +179,9 @@ Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, gin
 
 Įprastai sprendimų medžio prediktyvusis modelis naudojamas salyginai paprastų duomenų rinkinių problemoms spręsti. Žemo lygio klasifikatoriams bei prediktyviesiems modeliams, kaip Iriso gėlės skirtingų rūšių klasifikavimo problema.
 
-Rezultatai apskaičiuojami keletu formulių:
+Šio tyrimo metu sprendimų medžio modelis ir klasifikatorius buvo aprašyti ir įgyvedinti Python kalba paraštu scriptu naudojant medžio biblioteką pateiktą Scikit-learn \cite{scikit-learn}.
+
+Rezultatai taip pat buvo apskaičiuoti keletu scikit-learn pateiktų bibliotekų, kurių viduje jie apskaičiuojami keletu formulių:
 \begin{description} 
 \item \(Precision = \frac{\Sigma Tikras pozityvas}{\Sigma Tikras pozityvas + \Sigma Netikras pozityvas}\)
 \item \(Accuracy = \frac{\Sigma Tikras pozityvas + \Sigma Tikras negatyvas}{\Sigma Tikras pozityvas  + \Sigma Tikras nNegatyvas + \Sigma Netikras pozityvas + \Sigma Netikas negatyvas}\)
@@ -204,17 +206,173 @@ Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų 
 
 Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikšmes gautas iš sprendimų medžiu paremto modelio. Modeliui apmokyti ir testuoti abiem atvejais buvo panaudotas visas duomenų rinkinys su 21 atributu, kur 50\% atsitiktinai atrinktų reikšmių buvo panaudotos, kaip mokomieji duomenys, o kiti 50\%, kaip testiniai.
 
-Sprenimo medžiu paremtas prediktyvus modelis daug nežada. Su CM1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais duomenimis galima hauti gerensius rezultatus naudojant kitokį klasifikatorių.
+Sprenimo medžiu paremtas prediktyvus modelis daug nežada. Su CM1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
+Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio perceptrono klasifikatoriumi. Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą dešinėje pav. \ref{img:dropout}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/dropout}
+    \caption{„Dropout“ sluoksnių efektas daugiasluoksniam perceptronui.}
+    \label{img:dropout}
+\end{figure}
+
+Toliau šiame tyrime naudojamas daugiasluoksnio perceptrono modelis atrodys taip, kaip vaizduojama pav. \ref{img:model}, kur įvesties (angl. input) sluoksnyje turime 21 atributą, kaip ir duomenų rinkinyje, toliau du užslėptus sluoksnius, su trečdaliu mažiau įvesčių siekiant sukurti glaudesnius ir prasmingenius ryšius tarp modelio viršūnių, kas kart apmažinant ryšių kiekį siekiant išvengti modelio permokymo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/model}
+    \caption{Daugiasluoksnio perceptrono struktūra}
+    \label{img:model}
+\end{figure}
+
+Daugiasluoksnis perceptronas taip pat dažnai naudojamas paprastų duomenų rinkinių, atvaizduojamų lentele, analizei. Šio tyrimo kontekste toks neuroninis tinklas tinkamiausias, nes daugeliu kitų atvejų, pavyzdžiui konvoliucinio neuroninio tinklo, kuris savo struktūra yra sudėtingesnis bei daugeliu atvejų efektyvesnis, reikėtų adaptuoti bei transformuoti duomenų rinkinį, to buvo siekiama išvengti kuo tikslesniam palyginimui su sprendimų medžio modeliu.
+
+Daugiasluoksnis perceptronas buvo aprašytas Python programavimo kalbą pasinaudojus „Tensorflow“ paremtu python bibliotekų rinkiniu skirtu darbui su sekvenciniais neuroniniais tinklais „Keras“ \cite{chollet2015keras}. Kaip ir sprendimų medžio atveju buvo skaičiuojamos reikšmės matuojančios neuroninio tinklo accuracy, precision ir recall reikšmes.
+
+Neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kartą naudojant PC1 duomenų rinkinį, kitą kartą naudojant CM1. Abiejais atvejais buvo panaudotas pilnas duomenų rinkinys su 21 atributu, kur 30\% duomenų buvo skiriama apmokyto modelio testavimui, o 70\% duomenų buvo skirta modelio apmokymui.
+
+\begin{table}[H]\footnotesize
+\centering
+\caption{Daugiasluoksnio perceptrono rezultatai}
+\label{tab:MLP_result}
+\begin{tabular}{lllll}
+\cline{1-4}
+\multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
+\multicolumn{1}{|l}{PC1}              & 93.06\%   & 92.98\%     & \multicolumn{1}{l|}{92.94\%} &  \\
+\multicolumn{1}{|l}{CM1}              & 90.16\%    & 89.88\%     & \multicolumn{1}{l|}{89.86\%}  &  \\ \cline{1-4}
+                                      &          &           &                             & 
+\end{tabular}
+\end{table}
+
+Taigi, lentelė \ref{tab:MLP_result} atvaizduoja abiejų eksperimentų su pilnų duomenų rinkiniu rezultatus, ir iš karto galime pamatyti, jog jau vien accuracy reikšmė keletu procentų aukštesnė, nei sprendimų medžio, abejais atvejais, Tačiau abi pasirinktosios metrikos naudojamos šiame tyrime turi nemažai tiesiogiai vieni kitiems proporcingų reikšmių, kurias pašalinus būtų galima dar labiau padidinti neuroninio tinklo efektyvumą sukuriant glaudesnius ryšius tarp mažesnio atributų skaičiaus.
 
 \section{Duomenų atrinkimas}
 
+Neatrūšiuoti duomenys skirti apmokyti neuroninius tinklus, sudaryti iš didelės įvairovės atributų, kurių tik dalis daro įtaką. Atributų atrinkimas (angl. feature selection) yra dažna praktika skirta padidinti neuroninio tinklo efektyvumą bei išvengti tinklo permokymo.
+
+Tęsiant tyrimą bus vykdomi du skirtingi atributų atrinkimo metodai. Pradedant su pilnu duomenų rinkiniu susidedančiu iš 21 atributo rankinius būdu bus atrinkti atributai, kurie tiesiogiai susiję su kitais, t.y. jei Halstead metrikos išvedamos naudojant unikalių operandų bei operatorių kiekius, šie abu atributai bus išimami iš duomenų rinkinio, o palikti tik iš jų abiejų išvesti duomenys.
+
+Kitas duomenų atrinkimo metodas bus atliktas automatiškai, naudojant duomenų analizės įrankį „Weka“. Išbandžius keletą atrinkimo metodų bei algoritmų bus sudaryti nauji duomenų rinkiniai - senojo poiaibiai.
+
 \subsection{Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}
+
+Duomenų atrinkimas buvo pradėtas nuo Halstead reikšmių, kurios nors ir pateikia mums empirines metrikas kodui yra išvestinės, t.y. keturios metrikos apibūdinančios operandų kiekį kode yra kombinuojamos tarpusavyje gauti kitoms todėl jos yra tiesiogiai proporcingos ir perteklinės neuroninio tinklo mokymo kontekste, todėl gali vesti permokymo link. Taip pat išimtos reikšmės tiesiogiai darančios įtaką kodo skaitomumui, tačiau neturinčios jokios esminės įtakos kodo vykdyme, kaip komentarų eilučių kiekis ar tuščių eilučių kiekis.
+
+Taip pat išimtos visos žemesnio lygio reikšmės skirtos apskaičiuoti tiek McCabe metrikas tiek papildomai pridėtos duomenų rinkinyje. Taip paliekant 10-ies atributų duomenų rinkinį sudarytą vien iš išvestinių reikšmių, kurios buvo tiesiogiai proporcingos nuo išimtųjų, tačiau tarpusavyje tokio ryšio neturi.
+
+Po šio duomenų atrinkimo metodo duomenų rinkinio atributai atrodo taip:
+\begin{description} 
+\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
+\item ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
+\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item v - Skaitinė reikšmė. Halstead programos apimtis.
+\item d - Skaitinė reikšmė Halstead sudėtingumas.
+\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item e - Skaitinė reikšmė. Halstead pastangos.
+\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
+\item defects - Binarinė reikšmė. True arba False.
+\end{description} 
+
 
 \subsection{Duomenų analizė naudojant įrankį Weka}
 
+Weka tai darbo su dideliais duomenų rinkiniais įrankis, savyje turintis mašininio mokymosi algoritmų duomenų analizės užtuotims vykdyti. Šie algoritmai gali būti pritaikyti tiesiai duomenų rinkinius atidarius per Weka grafinę sąsają, arba iškviesti Java kodu ir apdoroti naudojantis Weka bibliotekomis.
+
+Duomenų analizės įrankis Weka \cite{hall09:_weka_data_minin_softw} turi daug su duomenų analize susijusių paskirčių, kaip vizualus duomenų lentelių atvaizdavimas, duomenų atrinkimas ir kt. Tyrimo kontekste bus panauodoti keletas Weka viduje esančių atributų atrinkimo algoritmų, kuriuos apžvelgus bus atrinkti nauji, sumažinti, duomenų rinkinai.
+
+Iš leidžiamų pasirinkti atributų įvertinimo algoritmų šiam tyrimui tinkamiausi du: „CorrelationAttributeEval“ algoritmas kiekvieną reiškmę imantis kaip „pagrindinę“ ir lygindamas ją su kitomis grąžina koreliacijos tarp tos reikšmės bei galutinio reultato koeficientą, bei „InfoGainAttribute“ algoritmas palygindamas viso duomenų rinkinio atributų reikšmes grąžina kiekvienio atributo koeficientą reiškiantį informacijos tame atribute svarbą.
+
+Panaudojus abu algoritmus buvo gauti tokie rezultatai:
+
+\begin{table}[H]
+\centering
+\caption{Duomenų rinkinių analizės įrankiu Weka rezultatai I}
+\label{tab:weka_1}
+\begin{tabular}{lllllllll}
+\hline
+\multicolumn{1}{|l}{}                         & loc    & v(g)   & ev(g) & iv(g)  & n      & v      & l      & \multicolumn{1}{l|}{d}      \\ \hline
+\multicolumn{1}{|l}{CorrelationAttributeEval} & 0.2465 & 0.1668 & 0.105 & 0.2026 & 0.214  & 0.2066 & 0.1326 & \multicolumn{1}{l|}{0.1682} \\
+\multicolumn{1}{|l}{InfoGainEval}             & 0.0457 & 0.0274 & 0     & 0.0431 & 0.0426 & 0.0452 & 0.0291 & \multicolumn{1}{l|}{0.0306} \\ \hline                     
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Duomenų rinkinių analizės įrankiu Weka rezultatai II}
+\label{tab:weka_2}
+\begin{tabular}{|llllllll|}
+\hline
+i & e & b & t & lOCode & lOComment & lOBlank & locCodeAndComment \\ \hline
+0.2678 & 0.0978 & 0.2152 & 0.0978 & 0.063 & 0.3016 & 0.1735 & 0.0475 \\
+0.0461 & 0.0391 & 0.0493 & 0.0391 & 0.02 & 0.0559 & 0.0398 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Duomenų rinkinių analizės įrankiu Weka rezultatai III}
+\label{tab:weka_2}
+\begin{tabular}{|lllll|}
+\hline
+uniq\_op & uniq\_opnd & total\_op & total\_opnd & branchCount \\ \hline
+0.2493   & 0.2616     & 0.2141    & 0.212       & 0.1697      \\
+0.0493   & 0.0499     & 0.0432    & 0.0362      & 0.0281      \\ \hline
+\end{tabular}
+\end{table}
+Koreliacijos algoritmui renkantis reikšmes iki 0.2, o informacijos svarbos algoritmui iki 0.04 galima atrinkti ir palyginti reikšmes. Abejais atvejais gaunamas gana panašus duomenų rinkinys. Kuriuos apjungus gaunami 10 svarbiausių atributų.
+
+Galutiniai duomenų rinkiniai bus sudaryti iš viso iš 11 stulpelių, kur paskutiniame saugomi rezultatai, o kti 10 yra pradinio duomenų rinkinio poaibis ir atrodo taip:
+\begin{description} 
+\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
+\item v - Skaitinė reikšmė. Halstead programos apimtis.
+\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
+\item uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
+\item uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
+\item total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
+\item defects - Binarinė reikšmė. True arba False.
+\end{description}
+
+Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Čia kaip matome didelę svarbą vis tiek turi eilučių, komentarų skaičiai, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio, todėl geriausia būtų naudoti šių dviejų technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
+
 \section{Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
+
+Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
+
+Rezultatams gerinti priimtas sprendimas atlikti atributų išrinkimą dviem būdais. Pirmasis būdas buvo skirtas išrinkti duomenis kurie tarpusavyje neturi koreliacijos ir yra visiškai individualios reikšmės palyginus su kitais atributais. Kadangi duomenų rinkiniai sudaryti pagal McCabe ir Halstead metrikas išimti pradiniai atributai iš kurių išvestos reikšmės, taip pašalinant beveik puse visų buvusių atributų tokių kaip unikalių operandų kiekis ar kodo eilučių kiekis. Antrasis būdas buvo įvykdytas automatiškai, duomenų rinkinį įkėlus į duomenų analizės programą ir pasirinkus analizės algoritmą, kurio rezultatas svarbos reikšmės kiekvienam iš atributų. Taip pasirenkant apytiksliai puse vsų buvusių atributų.
+
+Iš viso gavome keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadinkime PC1\_R bei CM1\_R, kur R reiškia, jog duomenų rinkiniai buvo analizuoti rankiniu metodu bei PC1\_A bei CM1\_A, kur A reiškia, jog duomenų rinkinys buvo sugeneruotas automatiškai atrinkus atributus.
+
+\begin{table}[H]\footnotesize
+\centering
+\caption{Daugiasluoksnio perceptrono rezultatai, naudojant rankiniu būdu atrinktus atributus}
+\label{tab:MLP_result}
+\begin{tabular}{lllll}
+\cline{1-4}
+\multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
+\multicolumn{1}{|l}{PC1\_R}              & 93.54\%   &93.32\%     & \multicolumn{1}{l|}{93.27\%} &  \\
+\multicolumn{1}{|l}{CM1\_R}              & 90.45\%    & 90.39\%     & \multicolumn{1}{l|}{90.28\%}  &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\footnotesize
+\centering
+\caption{Daugiasluoksnio perceptrono rezultatai, naudojant atributus atrinktus automatiškai Weka programa}
+\label{tab:MLP_result}
+\begin{tabular}{lllll}
+\cline{1-4}
+\multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
+\multicolumn{1}{|l}{PC1\_A}              & 94.02\%   & 93.86\%     & \multicolumn{1}{l|}{93.79\%} &  \\
+\multicolumn{1}{|l}{CM1\_A}              & 91.05\%    & 90.89\%     & \multicolumn{1}{l|}{90.78\%}  &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje išdėstomi pagrindiniai darbo rezultatai (kažkas
@@ -254,19 +412,12 @@ santrumpos.
 \end{figure}
 
 
-\section{Eksperimentinio palyginimo rezultatai}
-% tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX
-\begin{table}[H]\footnotesize
-  \centering
-  \caption{Lentelės pavyzdys}
-  {\begin{tabular}{|l|c|c|} \hline
-    Algoritmas & $\bar{x}$ & $\sigma^{2}$ \\
-    \hline
-    Algoritmas A  & 1.6335    & 0.5584       \\
-    Algoritmas B  & 1.7395    & 0.5647       \\
-    \hline
-  \end{tabular}}
-  \label{tab:table example}
-\end{table}
+\section{Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.9]{img/model_adjusted}
+    \caption{Daugiasluoksnio perceptrono struktūra atnaujinta atrinktiems atributams}
+    \label{img:model_adj}
+\end{figure}
 
 \end{document}

@@ -16,20 +16,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Duomenų atrinkimas}{11}
+\contentsline {section}{\numberline {3.}Duomenų atrinkimas}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}{11}
+\contentsline {subsection}{\numberline {3.1.}Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{11}
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{12}
+\contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{13}
+\contentsline {section}{Rezultatai ir išvados}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{14}
+\contentsline {section}{Santrumpos}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{14}
+\contentsline {section}{\MakeUppercase {Priedai}}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{15}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Eksperimentinio palyginimo rezultatai}{16}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{20}

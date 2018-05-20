@@ -1982,6 +1982,10 @@
     <bcf:citekey order="6">McCabe:1976:CM:800253.807712</bcf:citekey>
     <bcf:citekey order="7">Halstead:1977:ESS:540137</bcf:citekey>
     <bcf:citekey order="8">Sayyad-Shirabad+Menzies:2005</bcf:citekey>
+    <bcf:citekey order="9">scikit-learn</bcf:citekey>
+    <bcf:citekey order="10">JMLR:v15:srivastava14a</bcf:citekey>
+    <bcf:citekey order="11">chollet2015keras</bcf:citekey>
+    <bcf:citekey order="12">hall09:_weka_data_minin_softw</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
