@@ -69,7 +69,9 @@ Pagrindiniai kriteriai pagal kuriuos dabar įparstai prioritetizuojami programin
 
 Dažnai turint mažai laiko testuoti, modulių prioritetiavimas sueikvoja nemažą dalį laiko, kurį būtų galima testuoti, taip pat dažnai tenka palikti daug aukšto prioriteto modulių nepilnai ištestuotus ar visai netestuotus. Tai didina programinės įrangos riziką būti nekokybiška. Ypač kai defektai lieka nesurasti keletą laidų (angl. release) ir po to tenka aiškintis ar defektas reiškia įvykusią regresiją ar jis visuomet egzistavo testuotame modulyje.
 
-Darbo tikslas pateikti laiką ir pastangas taupantį testuojamų sričių atrinkimo sprendimą pasitelkiant kodo analizės metodus bei kompiuterinius neuroninius tinklus.
+Tyrimui atlikti naudojama programinė įranga Weka skirta duomenų analizei bei darbui su duomenimis, Keras bei Scikit-Learn python bibliotekų paketai skirti besimokančių mašinų modeliams aprašyti.
+
+Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrinkimo sprendimą pasitelkiant kodo analizės metodus bei kompiuterinius neuroninius tinklus.
 
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
@@ -78,6 +80,14 @@ Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai
 \item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui
 \item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto neuroninio tinklo
 \end{enumerate}
+
+Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
+\begin{itemize}
+\item 1-ame skyriuje bus apžvelgiama keletas programinės įrangos matavimo būdų stengiantis rasti ar pagrįsti ryšį su programinės įrangos defektyvumu.
+\item 2-ame skyriuje programinės įrangos metrikos turinčios ryšį su programų defektyvumu apdorojomos keletu skirtingų besimokančių mašinų ir palyginami jų tikslumo rezultatai.
+\item 3-iame skyriuje duomenų rinkiniams atliekami duomenų atrinkimo procesai siekiant pašalinti besimokančioms mašinoms efekto neturinčius duomenis.
+\item 4-ame skyriuje pateikiami rezultatai naujų besimokančių mašinų pritaikytų dirbti su atnaujintais duomenų rinkiniais bei palyginami jų rezultatai.
+\end{itemize}
  
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
 Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programinės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 02:17
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 02:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1301,104 +1301,104 @@ ne 64.
 
 [4
 
-]
+] [5]
 
-LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 5 undefined on input
- line 85.
-
-
-LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 5 undefined on i
-nput line 85.
+LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 6 undefined on input
+ line 95.
 
 
-LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 87
+LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 6 undefined on i
+nput line 95.
+
+
+LaTeX Warning: Citation 'Schroeder1999APG' on page 6 undefined on input line 97
 .
 
 
-LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
- undefined on input line 87.
+LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 6
+ undefined on input line 97.
 
-[5
+[6
 
 ]
 
-LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 6 undefined on i
-nput line 96.
+LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 7 undefined on i
+nput line 106.
 
 File: img/Cyclomatic_graph_1.jpg Graphic file (type bmp)
 <img/Cyclomatic_graph_1.jpg>
-[6]
-
-LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 7 undefined on input
- line 120.
-
 [7]
 
-LaTeX Warning: Citation 'Sayyad-Shirabad+Menzies:2005' on page 8 undefined on i
-nput line 171.
+LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 8 undefined on input
+ line 130.
 
-[8
+[8]
+
+LaTeX Warning: Citation 'Sayyad-Shirabad+Menzies:2005' on page 9 undefined on i
+nput line 181.
+
+[9
 
 ]
 
-LaTeX Warning: Citation 'scikit-learn' on page 9 undefined on input line 186.
+LaTeX Warning: Citation 'scikit-learn' on page 10 undefined on input line 196.
 
-[9]
+[10]
 
-LaTeX Warning: Citation 'JMLR:v15:srivastava14a' on page 10 undefined on input 
-line 216.
+LaTeX Warning: Citation 'JMLR:v15:srivastava14a' on page 11 undefined on input 
+line 226.
 
 File: img/dropout.png Graphic file (type bmp)
 <img/dropout.png>
-[10]
+[11]
 File: img/model.png Graphic file (type bmp)
 <img/model.png>
- [11]
+ [12]
 
-LaTeX Warning: Citation 'chollet2015keras' on page 12 undefined on input line 2
-36.
+LaTeX Warning: Citation 'chollet2015keras' on page 13 undefined on input line 2
+46.
 
-[12] [13
+[13] [14
 
 ]
 
-LaTeX Warning: Citation 'hall09:_weka_data_minin_softw' on page 14 undefined on
- input line 289.
+LaTeX Warning: Citation 'hall09:_weka_data_minin_softw' on page 15 undefined on
+ input line 299.
 
 
-Overfull \hbox (20.39098pt too wide) in paragraph at lines 299--305
+Overfull \hbox (20.39098pt too wide) in paragraph at lines 309--315
  [][] 
  []
 
 
-Overfull \hbox (11.4437pt too wide) in paragraph at lines 311--317
+Overfull \hbox (11.4437pt too wide) in paragraph at lines 321--327
  [][] 
  []
 
-[14] [15] [16
+[15] [16] [17
 
 ]
 
-LaTeX Warning: Reference `tab:MLB_result' on page 17 undefined on input line 39
+LaTeX Warning: Reference `tab:MLB_result' on page 18 undefined on input line 40
 5.
 
-[17]
+[18]
 
-LaTeX Warning: Empty bibliography on input line 410.
+LaTeX Warning: Empty bibliography on input line 420.
 
-[18
+[19
 
-] [19
+] [20
 
 ]
 File: img/tree.jpg Graphic file (type bmp)
 <img/tree.jpg>
- [20
+ [21
 
 ]
 File: img/model_adjusted.png Graphic file (type bmp)
 <img/model_adjusted.png>
- [21
+ [22
 
 ] (./bakalaurinis.aux)
 
@@ -1417,12 +1417,12 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24163 strings out of 492970
- 476704 string characters out of 6133939
+ 24164 strings out of 492970
+ 476727 string characters out of 6133939
  969017 words of memory out of 5000000
- 27860 multiletter control sequences out of 15000+600000
+ 27861 multiletter control sequences out of 15000+600000
  544815 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bakalaurinis.pdf (22 pages).
+Output written on bakalaurinis.pdf (23 pages).

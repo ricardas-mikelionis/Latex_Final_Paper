@@ -4,32 +4,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.}Programinio kodo sudėtingumo ir defektyvumo sąsajos}{5}
+\contentsline {section}{\numberline {1.}Programinio kodo sudėtingumo ir defektyvumo sąsajos}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}McCabe sudėtingumo metrikos}{6}
+\contentsline {subsection}{\numberline {1.1.}McCabe sudėtingumo metrikos}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.}Halstead sudėtingumo metrikos}{7}
+\contentsline {subsection}{\numberline {1.2.}Halstead sudėtingumo metrikos}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}{8}
+\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti mašina}{9}
+\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti mašina}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{10}
+\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Duomenų atrinkimas}{13}
+\contentsline {section}{\numberline {3.}Duomenų atrinkimas}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}{13}
+\contentsline {subsection}{\numberline {3.1.}Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{14}
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{16}
+\contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{18}
+\contentsline {section}{Rezultatai ir išvados}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{19}
+\contentsline {section}{Santrumpos}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{19}
+\contentsline {section}{\MakeUppercase {Priedai}}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{20}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{21}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{22}
