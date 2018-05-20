@@ -20,7 +20,7 @@ from sklearn import tree
 classifier = tree.ExtraTreeClassifier()
 
 
-classifier.fit(features, labels)
+classifier.fit(features_train, labels_train)
 '''
 from sklearn.externals.six import StringIO
 import pydotplus as pydot
@@ -35,3 +35,9 @@ predictions = classifier.predict(features_test)
 
 from sklearn.metrics import accuracy_score
 print(accuracy_score(labels_test, predictions))
+
+from sklearn.metrics import precision_score
+print(precision_score(labels_test, predictions))
+
+from sklearn.metrics import recall_score
+print(recall_score(labels_test, predictions))

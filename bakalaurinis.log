@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  19 MAY 2018 20:11
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  20 MAY 2018 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,24 +1335,24 @@ nput line 167.
 
 [8
 
-] [9] [10
+] [9] [10] [11
 
-] [11
+] [12
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 198.
+LaTeX Warning: Empty bibliography on input line 227.
 
-[12
+[13
 
-] [13
+] [14
 
 ]
 File: img/tree.jpg Graphic file (type bmp)
 <img/tree.jpg>
- [14
+ [15
 
-] [15] [16
+] [16
 
 ] (./bakalaurinis.aux)
 
@@ -1368,10 +1368,10 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24142 strings out of 492970
- 476348 string characters out of 6133939
+ 24143 strings out of 492970
+ 476365 string characters out of 6133939
  969017 words of memory out of 5000000
- 27842 multiletter control sequences out of 15000+600000
+ 27843 multiletter control sequences out of 15000+600000
  544815 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,11n,96p,10544b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s

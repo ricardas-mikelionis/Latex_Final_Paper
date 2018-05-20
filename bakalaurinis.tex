@@ -173,9 +173,38 @@ CM1 duomenų rinkinys sudarytas iš 498 duomenų eilučių, surinktų iš kodo p
 \subsection{Sprendimų medžio metodu paremta besimokanti mašina}
 Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas pav. \ref{img:tree} pirmame priede. 
 
-Įprastai sprendimų medžio prediktyvusis modelis naudojamas 
+Su tradiciniais duomenų rinkiniais sprendimų medis turi nemažai privalumų. Sprendimo medžiai yra lengvai suprantami, net daug techninių žinių neturintiems žmonėms ir pateikus sprendimų medį grafiškai pačiam galima pereiti per viršūnes tikrinant duomenų rinkinio eilutės grąžinamą rezultatą. Taip pat palyginus su kitais prediktyviaisiais modeliais sprendimo medžiai reikalauja salyginai nedidelio kiekio duomenų pertvarkymo prieš naudojant juos šiame modelyje. Iki tam tikro laipsnio smarkiai išsiskiriančios reikšmės ar trūstami įrašai nedaro didelės įtakos sprendimų medžiams. Sprendimų medžiai neskiria ir gali priimti tiek skaitines tiek logines reikšmes, todėl galima naudoti didesnę įvairovę duomenų rinkinių.
 
-CM1 duomenų rinkinio atveju medžio tikslumas buvo 99.5\% - 100\%, o PC1 - 98\% - 99.6\%. 
+Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, ginčytinai, paprasčiausias besimokančios mašinos modelis jis yra ir pats netiksliausias. Modelio paprastumas su dideliais duomenų rinkiniais gali privesti prie per sudėtingo medžio sugeneravimo, kuomet nebeatpažystami ryšiai tarp atributų bei galutinio rezultato. Tai dažnai vadinama permokymu (angl. overfitting).
+
+Įprastai sprendimų medžio prediktyvusis modelis naudojamas salyginai paprastų duomenų rinkinių problemoms spręsti. Žemo lygio klasifikatoriams bei prediktyviesiems modeliams, kaip Iriso gėlės skirtingų rūšių klasifikavimo problema.
+
+Rezultatai apskaičiuojami keletu formulių:
+\begin{description} 
+\item \(Precision = \frac{\Sigma Tikras pozityvas}{\Sigma Tikras pozityvas + \Sigma Netikras pozityvas}\)
+\item \(Accuracy = \frac{\Sigma Tikras pozityvas + \Sigma Tikras negatyvas}{\Sigma Tikras pozityvas  + \Sigma Tikras nNegatyvas + \Sigma Netikras pozityvas + \Sigma Netikas negatyvas}\)
+\item \(Recall = \frac{\Sigma Tikras pozityvas}{\Sigma Tikras pozityvas + \Sigma Netikras negatyvas}\)
+\end{description}
+kur „Tikrasis pozityvas“ yra teisingai nustatyta pozityvi reikšmė, „Tikrasis negatyvas“ yra teisingai nustatyta negatyvi reikšmė, „Netikras pozityvas“ yra klaidingai nustatyta pozityvi reikšmė, o „Netikras negatyvas“ yra neteisingai nustatyta negatyvi reiškmė.
+
+Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų spėtų reikšmių buvo atspėta teisinga reikšmė. Precision parodo kiek iš atspėtų teigiamų reikšmių yra tikrų pozityvų, t.y. teisingai nuspėtų teigiamių reikšmių. O Recall parodo kiek tarp iš viso buvusių teigiamų reikšmių jų buvo atspėta.
+
+\begin{table}[H]\footnotesize
+\centering
+\caption{Sprendimų medžio mašinos rezultatai}
+\label{tab:Tree_result}
+\begin{tabular}{lllll}
+\cline{1-4}
+\multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
+\multicolumn{1}{|l}{PC1}              & 90\%   & 30\%     & \multicolumn{1}{l|}{35\%} &  \\
+\multicolumn{1}{|l}{CM1}              & 84\%    & 13.3\%     & \multicolumn{1}{l|}{21\%}  &  \\ \cline{1-4}
+                                      &          &           &                             & 
+\end{tabular}
+\end{table}
+
+Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikšmes gautas iš sprendimų medžiu paremto modelio. Modeliui apmokyti ir testuoti abiem atvejais buvo panaudotas visas duomenų rinkinys su 21 atributu, kur 50\% atsitiktinai atrinktų reikšmių buvo panaudotos, kaip mokomieji duomenys, o kiti 50\%, kaip testiniai.
+
+Sprenimo medžiu paremtas prediktyvus modelis daug nežada. Su CM1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais duomenimis galima hauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
 
@@ -219,7 +248,7 @@ santrumpos.
 \section{Sprendimų medžio besimokanti mašina}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.118, angle=90]{img/tree}
+    \includegraphics[scale=0.115, angle=90]{img/tree}
     \caption{Sprendimų medžio tipo besimokanti mašina sudaryta naudojant PC1 duomenų rinkinio poaibį}
     \label{img:tree}
 \end{figure}
