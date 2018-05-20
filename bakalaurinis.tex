@@ -348,12 +348,22 @@ Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, vi
 
 Rezultatams gerinti priimtas sprendimas atlikti atributų išrinkimą dviem būdais. Pirmasis būdas buvo skirtas išrinkti duomenis kurie tarpusavyje neturi koreliacijos ir yra visiškai individualios reikšmės palyginus su kitais atributais. Kadangi duomenų rinkiniai sudaryti pagal McCabe ir Halstead metrikas išimti pradiniai atributai iš kurių išvestos reikšmės, taip pašalinant beveik puse visų buvusių atributų tokių kaip unikalių operandų kiekis ar kodo eilučių kiekis. Antrasis būdas buvo įvykdytas automatiškai, duomenų rinkinį įkėlus į duomenų analizės programą ir pasirinkus analizės algoritmą, kurio rezultatas svarbos reikšmės kiekvienam iš atributų. Taip pasirenkant apytiksliai puse vsų buvusių atributų.
 
-Iš viso gavome keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadinkime PC1\_R bei CM1\_R, kur R reiškia, jog duomenų rinkiniai buvo analizuoti rankiniu metodu bei PC1\_A bei CM1\_A, kur A reiškia, jog duomenų rinkinys buvo sugeneruotas automatiškai atrinkus atributus.
+Iš viso buvo gauti keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadinkime PC1\_R bei CM1\_R bei PC1\_A bei CM1\_A. Čia R reiškia, jog duomenų rinkiniai buvo analizuoti rankiniu metodu, o A reiškia, jog duomenų rinkinys buvo sugeneruotas automatiškai atrinkus bei atmetus neefektyvius ir įtakos nedarančius atributus.
+
+Tęsiant tyrimą nebenaudosime sprendimų medžio metodo, nes vien su mažiau efektyviu, pertekliniu, duomenų rinkiniu neuroninis tinklas ne tik, kad nebuvo permokytas, tačiau ir apskritai grąžino labai gerus rezultatus. Tolesnis eksperimentas bus skirtas pagerinti jau egzistuojantį neuroninio tinklo efektyvumą, taip sumažinant riziką, jog programinės įrangos versija bus neteisingai įvertinta, kaip defektyvi ir įtraukta į testavimo ciklą.
+
+Tiesiogiai daugiasluoksnio perceptrono tinklo modeliui pritaikyti naujų duomenų rinkinių negalima. Eksperimentui su pilnu duomenų rinkiniu sukurtas daugiasluoksnis perceptronas priima tik pilną duomenų rinkinį. t.y. duomenų eilutes sudarytas iš 21 atributo. Tokiu atveju reikia atnaujinti visą modelį.
+
+Eksperimento kontekste, norint palyginti dvi reikšmes, jos turėtu turėti tą patį pradą, t.y. būti sugeneruotos to paties modelio. Šiuo atveju modelį reikia keisti, tačiau tik pirmąjį, įvesties, sluoksnį. Pakeitus šį sluoksnį ir pritaikius naujiesiems duomenų rinkiniams eksperimentas bus vykdomas su modeliu vaizduojamu pav. \ref{img:model_adj} esančiame priede nr. 2.
+
+Didžiausia šio modelio problema kurią realiame gyvenime galima būtų ištaisyti, tačiau tyrimo kontekste reikia palikti modelyje esantį išsiplėtimą iš 10-ies į 14-a reikšmių tarp įvesties ir pirmojo paslėpto sluoknsių. Siekiant dar geresnio modelio efektyvumo antrajame sluoksnyje galima būtų sumažinti įvesčių kiekį iki 10 ar mažiau, tačiau tokiu atveju tai būtų jau visiškai kitoks modelis, ir rezultatų palyginimas tarp 21 atributo modelio bei modelio skirto 10 atributų būtų neteisingas.
+
+Pirma atnaujintas modelis buvo apmokytas ir ištestuotas naudojant duomenų rinkinius atrinktus rankiniu būdu, t.y. PC1\_R bei CM1\_R. Kaip ir su pilnu duomenų rinkiniu tas pat duomenų rinkinys skaidomas į dvi dalis: vieną skirtą apmokyti modelį, sudarančią 70\% viso duomenų rinkinio, o kitą - jam testuoti sudarančio 30\% viso duomenų rinkinio.
 
 \begin{table}[H]\footnotesize
 \centering
 \caption{Daugiasluoksnio perceptrono rezultatai, naudojant rankiniu būdu atrinktus atributus}
-\label{tab:MLP_result}
+\label{tab:MLP_result_1}
 \begin{tabular}{lllll}
 \cline{1-4}
 \multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
@@ -362,10 +372,14 @@ Iš viso gavome keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadink
 \end{tabular}
 \end{table}
 
+Eksperimento rezultatai vaizduojami pav. \ref{tab:MLP_result_1}, kaip ir tikėtasi yra geresni, nei naudojant pilną duomenų rinkinį. Tačiau tikslumo pagerėjimas nėra akivaizdus ir siekia vos mažą dalelytę, galima sakyti rezultatai bene tokie pat, kaip pirmo eksperimento metu, kaip pavaizduoti pav. \ref{tab:MLP_result}.
+
+Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM1\_A. Čia taip pat duomenys dalijami į dvi dalis, 70\% apimties poaibį skirtą modelio apmokymui bei 30\% poaibį skirtą modelio testavimui.
+
 \begin{table}[H]\footnotesize
 \centering
 \caption{Daugiasluoksnio perceptrono rezultatai, naudojant atributus atrinktus automatiškai Weka programa}
-\label{tab:MLP_result}
+\label{tab:MLP_result_2}
 \begin{tabular}{lllll}
 \cline{1-4}
 \multicolumn{1}{|l}{Duomenų rinkinys} & accuracy & precision & \multicolumn{1}{l|}{recall} &  \\ \cline{1-4}
@@ -374,13 +388,20 @@ Iš viso gavome keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadink
 \end{tabular}
 \end{table}
 
+Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su pav. \ref{tab:MLB_result}. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
+
 \sectionnonum{Rezultatai ir išvados}
-Rezultatų ir išvadų dalyje išdėstomi pagrindiniai darbo rezultatai (kažkas
-išanalizuota, kažkas sukurta, kažkas įdiegta), toliau pateikiamos išvados
-(daromi nagrinėtų problemų sprendimo metodų palyginimai, siūlomos
-rekomendacijos, akcentuojamos naujovės). Rezultatai ir išvados pateikiami
-sunumeruotų (gali būti hierarchiniai) sąrašų pavidalu. Darbo rezultatai turi
-atitikti darbo tikslą.
+
+
+1.
+
+2.
+
+3.
+
+4.
+
+
 
 \printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų

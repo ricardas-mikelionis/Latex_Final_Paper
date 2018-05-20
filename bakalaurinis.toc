@@ -24,12 +24,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.}Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{17}
+\contentsline {section}{Rezultatai ir išvados}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{18}
+\contentsline {section}{Santrumpos}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{18}
+\contentsline {section}{\MakeUppercase {Priedai}}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{19}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{20}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{21}
