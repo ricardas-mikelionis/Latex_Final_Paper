@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 02:04
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 02:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1304,49 +1304,49 @@ ne 64.
 ]
 
 LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 5 undefined on input
- line 83.
+ line 85.
 
 
 LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 5 undefined on i
-nput line 83.
+nput line 85.
 
 
-LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 85
+LaTeX Warning: Citation 'Schroeder1999APG' on page 5 undefined on input line 87
 .
 
 
 LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 5
- undefined on input line 85.
+ undefined on input line 87.
 
 [5
 
 ]
 
 LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 6 undefined on i
-nput line 94.
+nput line 96.
 
 File: img/Cyclomatic_graph_1.jpg Graphic file (type bmp)
 <img/Cyclomatic_graph_1.jpg>
 [6]
 
 LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 7 undefined on input
- line 118.
+ line 120.
 
 [7]
 
 LaTeX Warning: Citation 'Sayyad-Shirabad+Menzies:2005' on page 8 undefined on i
-nput line 169.
+nput line 171.
 
 [8
 
 ]
 
-LaTeX Warning: Citation 'scikit-learn' on page 9 undefined on input line 184.
+LaTeX Warning: Citation 'scikit-learn' on page 9 undefined on input line 186.
 
 [9]
 
 LaTeX Warning: Citation 'JMLR:v15:srivastava14a' on page 10 undefined on input 
-line 214.
+line 216.
 
 File: img/dropout.png Graphic file (type bmp)
 <img/dropout.png>
@@ -1356,22 +1356,22 @@ File: img/model.png Graphic file (type bmp)
  [11]
 
 LaTeX Warning: Citation 'chollet2015keras' on page 12 undefined on input line 2
-34.
+36.
 
 [12] [13
 
 ]
 
 LaTeX Warning: Citation 'hall09:_weka_data_minin_softw' on page 14 undefined on
- input line 287.
+ input line 289.
 
 
-Overfull \hbox (20.39098pt too wide) in paragraph at lines 297--303
+Overfull \hbox (20.39098pt too wide) in paragraph at lines 299--305
  [][] 
  []
 
 
-Overfull \hbox (11.4437pt too wide) in paragraph at lines 309--315
+Overfull \hbox (11.4437pt too wide) in paragraph at lines 311--317
  [][] 
  []
 
@@ -1380,11 +1380,11 @@ Overfull \hbox (11.4437pt too wide) in paragraph at lines 309--315
 ]
 
 LaTeX Warning: Reference `tab:MLB_result' on page 17 undefined on input line 39
-3.
+5.
 
 [17]
 
-LaTeX Warning: Empty bibliography on input line 408.
+LaTeX Warning: Empty bibliography on input line 410.
 
 [18
 
