@@ -107,13 +107,13 @@ Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tie
 
 Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą, kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų, kurios vykdomos kartu, grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukštesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
 
-Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \(M = E - N + 2P\). Kur šios metrikos atvaizduojamos taip:
+Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \[M = E - N + 2P\]. Kur šios metrikos atvaizduojamos taip:
 \begin{description}  
 \item E = grafo kraštinių kiekis,
 \item N = grafo viršūnių kiekis,
 \item P = apjungtų komponentų kiekis.
 \end{description} 
-Dar cikomatinis sudėtingumas skaičiuojamas ir formule \(M = E - N + P\). Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
+Dar cikomatinis sudėtingumas skaičiuojamas ir formule \[M = E - N + P\]. Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
 
 Pavyzdžiui, turint programą, kaip pavaizduota pav. \ref{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą galime panaudoti McCabe formulę ir apskaičiuoti kodo ciklomatinį sudėtingumą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie kartu sudaro vieną apjungtąjį komponentą, tuomet tokios programos ciklomatinis sudėtingumas būtų \(9 - 8 + 2 * 1 = 3\).
 

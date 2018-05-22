@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  21 MAY 2018 02:35
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.5.9)  22 MAY 2018 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1325,8 +1325,8 @@ LaTeX Warning: Citation 'Metrics in Evaluating Software Defects:2013' on page 6
 LaTeX Warning: Citation 'McCabe:1976:CM:800253.807712' on page 7 undefined on i
 nput line 106.
 
-File: img/Cyclomatic_graph_1.jpg Graphic file (type bmp)
-<img/Cyclomatic_graph_1.jpg>
+File: img/Cyclomatic_graph_1.png Graphic file (type bmp)
+<img/Cyclomatic_graph_1.png>
 [7]
 
 LaTeX Warning: Citation 'Halstead:1977:ESS:540137' on page 8 undefined on input
@@ -1391,8 +1391,8 @@ LaTeX Warning: Empty bibliography on input line 420.
 ] [20
 
 ]
-File: img/tree.jpg Graphic file (type bmp)
-<img/tree.jpg>
+File: img/tree.png Graphic file (type bmp)
+<img/tree.png>
  [21
 
 ]
@@ -1417,8 +1417,8 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24164 strings out of 492970
- 476727 string characters out of 6133939
+ 24162 strings out of 492970
+ 476719 string characters out of 6133939
  969017 words of memory out of 5000000
  27861 multiletter control sequences out of 15000+600000
  544815 words of font info for 101 fonts, out of 8000000 for 9000
