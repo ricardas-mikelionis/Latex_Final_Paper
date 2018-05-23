@@ -77,7 +77,7 @@
 \RequirePackage[
     alldates=iso8601,
     autolang=other,
-    backend=biber,
+    backend=bibtex,
     sortcites=true,
     style=trad-alpha,
     abbreviate=true,

@@ -1,0 +1,437 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{anyt/global//global/global}
+  \entry{chollet2015keras}{misc}{}
+    \true{moreauthor}
+    \name{author}{1}{}{%
+      {{hash=CF}{%
+         family={Chollet},
+         familyi={C\bibinitperiod},
+         given={Fran\c{c}ois},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CF+1}
+    \strng{fullhash}{CF+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Cho\textsuperscript {+}15}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{howpublished}{https://keras.io}
+    \field{title}{Keras}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Davis:1995:PSD:203406}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DAM}{%
+         family={Davis},
+         familyi={D\bibinitperiod},
+         given={Alan\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {McGraw-Hill, Inc.}%
+    }
+    \strng{namehash}{DAM1}
+    \strng{fullhash}{DAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dav95}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{isbn}{0-07-015840-1}
+    \field{title}{201 Principles of Software Development}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{1995}
+  \endentry
+
+  \entry{Halstead:1977:ESS:540137}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HMH}{%
+         family={Halstead},
+         familyi={H\bibinitperiod},
+         given={Maurice\bibnamedelima H.},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Science Inc.}%
+    }
+    \strng{namehash}{HMH1}
+    \strng{fullhash}{HMH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Hal77}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{isbn}{0444002057}
+    \field{title}{Elements of Software Science (Operating and Programming
+  Systems Series)}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{1977}
+  \endentry
+
+  \entry{MetricsinEvaluatingSoftwareDefects:2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=hCC}{%
+         prefix={huei},
+         prefixi={h\bibinitperiod},
+         family={Chou},
+         familyi={C\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{hCC1}
+    \strng{fullhash}{hCC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{hCh13}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{note}{Full text available}
+    \field{number}{3}
+    \field{pages}{23\bibrangedash 29}
+    \field{title}{Article: Metrics in Evaluating Software Defects}
+    \field{volume}{63}
+    \field{journaltitle}{International Journal of Computer Applications}
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{hall09:_weka_data_minin_softw}{article}{}
+    \name{author}{6}{}{%
+      {{hash=HM}{%
+         family={Hall},
+         familyi={H\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Frank},
+         familyi={F\bibinitperiod},
+         given={Eibe},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Pfahringer},
+         familyi={P\bibinitperiod},
+         given={Bernhard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Reutemann},
+         familyi={R\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WIH}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Ian\bibnamedelima H.},
+         giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HMFEHGPBRPWIH1}
+    \strng{fullhash}{HMFEHGPBRPWIH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{HFHPRW09}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{1}
+    \field{pages}{10\bibrangedash 18}
+    \field{title}{The {WEKA} data mining software: an update}
+    \field{volume}{11}
+    \field{journaltitle}{SIGKDD Explorations}
+    \field{year}{2009}
+  \endentry
+
+  \entry{McCabe:1976:CM:800253.807712}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=MTJ}{%
+         family={McCabe},
+         familyi={M\bibinitperiod},
+         given={Thomas\bibnamedelima J.},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE Computer Society Press}%
+    }
+    \keyw{Basis, Complexity measure, Control flow, Decomposition, Graph theory,
+  Independence, Linear, Modularization, Programming, Reduction, Software,
+  Testing}
+    \strng{namehash}{MTJ1}
+    \strng{fullhash}{MTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{McC76}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Proceedings of the 2Nd International Conference on
+  Software Engineering}
+    \field{pages}{407\bibrangedash }
+    \field{series}{ICSE '76}
+    \field{title}{A Complexity Measure}
+    \verb{url}
+    \verb http://dl.acm.org/citation.cfm?id=800253.807712
+    \endverb
+    \list{location}{1}{%
+      {San Francisco, California, USA}%
+    }
+    \field{year}{1976}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{scikit-learn}{article}{}
+    \name{author}{16}{}{%
+      {{hash=PF}{%
+         family={Pedregosa},
+         familyi={P\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=VG}{%
+         family={Varoquaux},
+         familyi={V\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gramfort},
+         familyi={G\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Michel},
+         familyi={M\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TB}{%
+         family={Thirion},
+         familyi={T\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GO}{%
+         family={Grisel},
+         familyi={G\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Blondel},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Prettenhofer},
+         familyi={P\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DV}{%
+         family={Dubourg},
+         familyi={D\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=VJ}{%
+         family={Vanderplas},
+         familyi={V\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Passos},
+         familyi={P\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cournapeau},
+         familyi={C\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Brucher},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Perrot},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DE}{%
+         family={Duchesnay},
+         familyi={D\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PFVGGAMV+1}
+    \strng{fullhash}{PFVGGAMVTBGOBMPPWRDVVJPACDBMPMDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{PVGM\textsuperscript {+}11}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{2825\bibrangedash 2830}
+    \field{title}{Scikit-learn: Machine Learning in {P}ython}
+    \field{volume}{12}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Schroeder1999APG}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=SM}{%
+         family={Schroeder},
+         familyi={S\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Henderson},
+         familyi={H\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMHB1}
+    \strng{fullhash}{SMHB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SH99}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{A Practical Guide to Object-Oriented Metrics}
+    \field{year}{1999}
+  \endentry
+
+  \entry{JMLR:v15:srivastava14a}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SN}{%
+         family={Srivastava},
+         familyi={S\bibinitperiod},
+         given={Nitish},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hinton},
+         familyi={H\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Krizhevsky},
+         familyi={K\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Sutskever},
+         familyi={S\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Salakhutdinov},
+         familyi={S\bibinitperiod},
+         given={Ruslan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNHGKASISR1}
+    \strng{fullhash}{SNHGKASISR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SHKSS14}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{1929\bibrangedash 1958}
+    \field{title}{Dropout: A Simple Way to Prevent Neural Networks from
+  Overfitting}
+    \verb{url}
+    \verb http://jmlr.org/papers/v15/srivastava14a.html
+    \endverb
+    \field{volume}{15}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Sayyad-Shirabad+Menzies:2005}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=SSJ}{%
+         family={Sayyad\bibnamedelima Shirabad},
+         familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Menzies},
+         familyi={M\bibinitperiod},
+         given={T.J.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SSJMT1}
+    \strng{fullhash}{SSJMT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SSM05}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{howpublished}{School of Information Technology and Engineering,
+  University of Ottawa, Canada}
+    \field{title}{The {PROMISE} Repository of Software Engineering Databases.}
+    \verb{url}
+    \verb http://promise.site.uottawa.ca/SERepository
+    \endverb
+    \field{year}{2005}
+  \endentry
+\enddatalist
+\endinput

@@ -5,7 +5,6 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{bm}
-\usepackage{biblatex}
 \usepackage{caption}
 \usepackage{color}
 \usepackage{float}
@@ -71,22 +70,22 @@ Dažnai turint mažai laiko testuoti, modulių prioritetiavimas sueikvoja nemaž
 
 Tyrimui atlikti naudojama programinė įranga Weka skirta duomenų analizei bei darbui su duomenimis, Keras bei Scikit-Learn python bibliotekų paketai skirti besimokančių mašinų modeliams aprašyti.
 
-Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrinkimo sprendimą pasitelkiant kodo analizės metodus bei kompiuterinius neuroninius tinklus.
+Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrinkimo sprendimą pasitelkiant kodo analizės metodus bei dirbtinius neuroninius tinklus.
 
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
 \item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui
-\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir neuroninio tinklo naudojant surinktus duomenis
+\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir dirbtinio neuroninio tinklo naudojant surinktus duomenis
 \item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui
-\item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto neuroninio tinklo
+\item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti dirbtinį neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto direbtinio neuroninio tinklo
 \end{enumerate}
 
 Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
 \begin{itemize}
-\item 1-ame skyriuje bus apžvelgiama keletas programinės įrangos matavimo būdų stengiantis rasti ar pagrįsti ryšį su programinės įrangos defektyvumu.
-\item 2-ame skyriuje programinės įrangos metrikos turinčios ryšį su programų defektyvumu apdorojomos keletu skirtingų besimokančių mašinų ir palyginami jų tikslumo rezultatai.
-\item 3-iame skyriuje duomenų rinkiniams atliekami duomenų atrinkimo procesai siekiant pašalinti besimokančioms mašinoms efekto neturinčius duomenis.
-\item 4-ame skyriuje pateikiami rezultatai naujų besimokančių mašinų pritaikytų dirbti su atnaujintais duomenų rinkiniais bei palyginami jų rezultatai.
+\item[] 1-ame skyriuje bus apžvelgiama keletas programinės įrangos matavimo būdų stengiantis rasti ar pagrįsti ryšį su programinės įrangos defektyvumu.
+\item[] 2-ame skyriuje programinės įrangos metrikos turinčios ryšį su programų defektyvumu apdorojomos keletu skirtingų besimokančių mašinų ir palyginami jų tikslumo rezultatai.
+\item[] 3-iame skyriuje duomenų rinkiniams atliekami duomenų atrinkimo procesai siekiant pašalinti besimokančioms mašinoms efekto neturinčius duomenis.
+\item[] 4-ame skyriuje pateikiami rezultatai naujų besimokančių mašinų pritaikytų dirbti su atnaujintais duomenų rinkiniais bei palyginami jų rezultatai.
 \end{itemize}
  
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
@@ -94,7 +93,7 @@ Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, je
 
 Visų pirma reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduotii: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
 
-Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{Metrics in Evaluating Software Defects:2013}.
+Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{MetricsinEvaluatingSoftwareDefects:2013}.
 
 Tokių metrikų pasirinkimas paremtas tuo, jog jų rinkimas, net atliekamas nuolat nereikalauja daug papildomo laiko, išteklių ar pastangų. Tai statinės kodo metrikos, kurias gana paprasta surinkti su kodo analizės įrankiais ir kurios sąlyginai tikliai parodo kodo defektyvumą.
 
@@ -150,7 +149,7 @@ Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei opera
 
 \section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}
 
-Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: Sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytą neuroninį tinklą.
+Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: Sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytą dirbtinį neuroninį tinklą.
 
 Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai mašinai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
 \begin{description} 
@@ -241,11 +240,11 @@ Toliau šiame tyrime naudojamas daugiasluoksnio perceptrono modelis atrodys taip
     \label{img:model}
 \end{figure}
 
-Daugiasluoksnis perceptronas taip pat dažnai naudojamas paprastų duomenų rinkinių, atvaizduojamų lentele, analizei. Šio tyrimo kontekste toks neuroninis tinklas tinkamiausias, nes daugeliu kitų atvejų, pavyzdžiui konvoliucinio neuroninio tinklo, kuris savo struktūra yra sudėtingesnis bei daugeliu atvejų efektyvesnis, reikėtų adaptuoti bei transformuoti duomenų rinkinį, to buvo siekiama išvengti kuo tikslesniam palyginimui su sprendimų medžio modeliu.
+Daugiasluoksnis perceptronas taip pat dažnai naudojamas paprastų duomenų rinkinių, atvaizduojamų lentele, analizei. Šio tyrimo kontekste toks dirbtinis neuroninis tinklas tinkamiausias, nes daugeliu kitų atvejų, pavyzdžiui konvoliucinio neuroninio tinklo, kuris savo struktūra yra sudėtingesnis bei daugeliu atvejų efektyvesnis, reikėtų adaptuoti bei transformuoti duomenų rinkinį, to buvo siekiama išvengti kuo tikslesniam palyginimui su sprendimų medžio modeliu.
 
-Daugiasluoksnis perceptronas buvo aprašytas Python programavimo kalbą pasinaudojus „Tensorflow“ paremtu python bibliotekų rinkiniu skirtu darbui su sekvenciniais neuroniniais tinklais „Keras“ \cite{chollet2015keras}. Kaip ir sprendimų medžio atveju buvo skaičiuojamos reikšmės matuojančios neuroninio tinklo accuracy, precision ir recall reikšmes.
+Daugiasluoksnis perceptronas buvo aprašytas Python programavimo kalbą pasinaudojus „Tensorflow“ paremtu python bibliotekų rinkiniu skirtu darbui su sekvenciniais neuroniniais tinklais „Keras“ \cite{chollet2015keras}. Kaip ir sprendimų medžio atveju buvo skaičiuojamos reikšmės matuojančios dirbtinio neuroninio tinklo accuracy, precision ir recall reikšmes.
 
-Neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kartą naudojant PC1 duomenų rinkinį, kitą kartą naudojant CM1. Abiejais atvejais buvo panaudotas pilnas duomenų rinkinys su 21 atributu, kur 30\% duomenų buvo skiriama apmokyto modelio testavimui, o 70\% duomenų buvo skirta modelio apmokymui.
+Dirbtiniam neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kartą naudojant PC1 duomenų rinkinį, kitą kartą naudojant CM1. Abiejais atvejais buvo panaudotas pilnas duomenų rinkinys su 21 atributu, kur 30\% duomenų buvo skiriama apmokyto modelio testavimui, o 70\% duomenų buvo skirta modelio apmokymui.
 
 \begin{table}[H]\footnotesize
 \centering
@@ -260,19 +259,19 @@ Neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kartą naudojan
 \end{tabular}
 \end{table}
 
-Taigi, lentelė \ref{tab:MLP_result} atvaizduoja abiejų eksperimentų su pilnų duomenų rinkiniu rezultatus, ir iš karto galime pamatyti, jog jau vien accuracy reikšmė keletu procentų aukštesnė, nei sprendimų medžio, abejais atvejais, Tačiau abi pasirinktosios metrikos naudojamos šiame tyrime turi nemažai tiesiogiai vieni kitiems proporcingų reikšmių, kurias pašalinus būtų galima dar labiau padidinti neuroninio tinklo efektyvumą sukuriant glaudesnius ryšius tarp mažesnio atributų skaičiaus.
+Taigi, lentelė \ref{tab:MLP_result} atvaizduoja abiejų eksperimentų su pilnų duomenų rinkiniu rezultatus, ir iš karto galime pamatyti, jog jau vien accuracy reikšmė keletu procentų aukštesnė, nei sprendimų medžio, abejais atvejais, Tačiau abi pasirinktosios metrikos naudojamos šiame tyrime turi nemažai tiesiogiai vieni kitiems proporcingų reikšmių, kurias pašalinus būtų galima dar labiau padidinti dirbtinio neuroninio tinklo efektyvumą sukuriant glaudesnius ryšius tarp mažesnio atributų skaičiaus.
 
-\section{Duomenų atrinkimas}
+\section{Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}
 
-Neatrūšiuoti duomenys skirti apmokyti neuroninius tinklus, sudaryti iš didelės įvairovės atributų, kurių tik dalis daro įtaką. Atributų atrinkimas (angl. feature selection) yra dažna praktika skirta padidinti neuroninio tinklo efektyvumą bei išvengti tinklo permokymo.
+Neatrūšiuoti duomenys skirti apmokyti dirbtinius neuroninius tinklus, sudaryti iš didelės įvairovės atributų, kurių tik dalis daro įtaką. Atributų atrinkimas (angl. feature selection) yra dažna praktika skirta padidinti dirbtinio neuroninio tinklo efektyvumą bei išvengti tinklo permokymo.
 
 Tęsiant tyrimą bus vykdomi du skirtingi atributų atrinkimo metodai. Pradedant su pilnu duomenų rinkiniu susidedančiu iš 21 atributo rankinius būdu bus atrinkti atributai, kurie tiesiogiai susiję su kitais, t.y. jei Halstead metrikos išvedamos naudojant unikalių operandų bei operatorių kiekius, šie abu atributai bus išimami iš duomenų rinkinio, o palikti tik iš jų abiejų išvesti duomenys.
 
 Kitas duomenų atrinkimo metodas bus atliktas automatiškai, naudojant duomenų analizės įrankį „Weka“. Išbandžius keletą atrinkimo metodų bei algoritmų bus sudaryti nauji duomenų rinkiniai - senojo poiaibiai.
 
-\subsection{Rankiniu būdu ieškant atributų kurie yra tiesiogiai proporcingi kitiems atributams}
+\subsection{Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}
 
-Duomenų atrinkimas buvo pradėtas nuo Halstead reikšmių, kurios nors ir pateikia mums empirines metrikas kodui yra išvestinės, t.y. keturios metrikos apibūdinančios operandų kiekį kode yra kombinuojamos tarpusavyje gauti kitoms todėl jos yra tiesiogiai proporcingos ir perteklinės neuroninio tinklo mokymo kontekste, todėl gali vesti permokymo link. Taip pat išimtos reikšmės tiesiogiai darančios įtaką kodo skaitomumui, tačiau neturinčios jokios esminės įtakos kodo vykdyme, kaip komentarų eilučių kiekis ar tuščių eilučių kiekis.
+Duomenų atrinkimas buvo pradėtas nuo Halstead reikšmių, kurios nors ir pateikia mums empirines metrikas kodui yra išvestinės, t.y. keturios metrikos apibūdinančios operandų kiekį kode yra kombinuojamos tarpusavyje gauti kitoms todėl jos yra tiesiogiai proporcingos ir perteklinės dirbtinio neuroninio tinklo mokymo kontekste, todėl gali vesti permokymo link. Taip pat išimtos reikšmės tiesiogiai darančios įtaką kodo skaitomumui, tačiau neturinčios jokios esminės įtakos kodo vykdyme, kaip komentarų eilučių kiekis ar tuščių eilučių kiekis.
 
 Taip pat išimtos visos žemesnio lygio reikšmės skirtos apskaičiuoti tiek McCabe metrikas tiek papildomai pridėtos duomenų rinkinyje. Taip paliekant 10-ies atributų duomenų rinkinį sudarytą vien iš išvestinių reikšmių, kurios buvo tiesiogiai proporcingos nuo išimtųjų, tačiau tarpusavyje tokio ryšio neturi.
 
@@ -329,7 +328,7 @@ i & e & b & t & lOCode & lOComment & lOBlank & locCodeAndComment \\ \hline
 \begin{table}[H]
 \centering
 \caption{Duomenų rinkinių analizės įrankiu Weka rezultatai III}
-\label{tab:weka_2}
+\label{tab:weka_3}
 \begin{tabular}{|lllll|}
 \hline
 uniq\_op & uniq\_opnd & total\_op & total\_opnd & branchCount \\ \hline
@@ -354,17 +353,17 @@ Galutiniai duomenų rinkiniai bus sudaryti iš viso iš 11 stulpelių, kur pasku
 \item defects - Binarinė reikšmė. True arba False.
 \end{description}
 
-Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Čia kaip matome didelę svarbą vis tiek turi eilučių, komentarų skaičiai, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio, todėl geriausia būtų naudoti šių dviejų technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
+Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Čia kaip matome didelę svarbą vis tiek turi eilučių, komentarų skaičiai, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti dirbtinio neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio, todėl geriausia būtų naudoti šių dviejų technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
 
-\section{Neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
+\section{Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
 
-Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
+Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu dirbtiniu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
 
 Rezultatams gerinti priimtas sprendimas atlikti atributų išrinkimą dviem būdais. Pirmasis būdas buvo skirtas išrinkti duomenis kurie tarpusavyje neturi koreliacijos ir yra visiškai individualios reikšmės palyginus su kitais atributais. Kadangi duomenų rinkiniai sudaryti pagal McCabe ir Halstead metrikas išimti pradiniai atributai iš kurių išvestos reikšmės, taip pašalinant beveik puse visų buvusių atributų tokių kaip unikalių operandų kiekis ar kodo eilučių kiekis. Antrasis būdas buvo įvykdytas automatiškai, duomenų rinkinį įkėlus į duomenų analizės programą ir pasirinkus analizės algoritmą, kurio rezultatas svarbos reikšmės kiekvienam iš atributų. Taip pasirenkant apytiksliai puse vsų buvusių atributų.
 
 Iš viso buvo gauti keturis naujus duomenų rinkinus, kuriuos dėl aiškumo pavadinkime PC1\_R bei CM1\_R bei PC1\_A bei CM1\_A. Čia R reiškia, jog duomenų rinkiniai buvo analizuoti rankiniu metodu, o A reiškia, jog duomenų rinkinys buvo sugeneruotas automatiškai atrinkus bei atmetus neefektyvius ir įtakos nedarančius atributus.
 
-Tęsiant tyrimą nebenaudosime sprendimų medžio metodo, nes vien su mažiau efektyviu, pertekliniu, duomenų rinkiniu neuroninis tinklas ne tik, kad nebuvo permokytas, tačiau ir apskritai grąžino labai gerus rezultatus. Tolesnis eksperimentas bus skirtas pagerinti jau egzistuojantį neuroninio tinklo efektyvumą, taip sumažinant riziką, jog programinės įrangos versija bus neteisingai įvertinta, kaip defektyvi ir įtraukta į testavimo ciklą.
+Tęsiant tyrimą nebenaudosime sprendimų medžio metodo, nes vien su mažiau efektyviu, pertekliniu, duomenų rinkiniu dirbtinis neuroninis tinklas ne tik, kad nebuvo permokytas, tačiau ir apskritai grąžino labai gerus rezultatus. Tolesnis eksperimentas bus skirtas pagerinti jau egzistuojantį dirbtinio neuroninio tinklo efektyvumą, taip sumažinant riziką, jog programinės įrangos versija bus neteisingai įvertinta, kaip defektyvi ir įtraukta į testavimo ciklą.
 
 Tiesiogiai daugiasluoksnio perceptrono tinklo modeliui pritaikyti naujų duomenų rinkinių negalima. Eksperimentui su pilnu duomenų rinkiniu sukurtas daugiasluoksnis perceptronas priima tik pilną duomenų rinkinį. t.y. duomenų eilutes sudarytas iš 21 atributo. Tokiu atveju reikia atnaujinti visą modelį.
 
@@ -402,20 +401,58 @@ Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM
 \end{tabular}
 \end{table}
 
-Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su pav. \ref{tab:MLB_result}. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
+Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su pav. \ref{tab:MLB_result}. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins dirbtinio neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
 
 \sectionnonum{Rezultatai ir išvados}
 
 
-1.
+1. Išrinktas kodo metrikų rinkinys. Atlikus literatūros analizę pasirinktios Halstead bei McCabe kodo metrikos, matuojančios kodo sudėtingumą tiek logine prasme, McCabe kelių per grafu vaizduojamą kodą kiekis, tiek kodo skaitomumo prasme Halstead metrikose. Pasirinktos būtent šios dvi metrikos, nes šios metrikos gali būti surinktos ir paskaičiuotos statinės analizės metu, todėl jas salyginai lengva surinkti ir su jomis eksperimentuoti.
 
-2.
+Padaryta išvada, jog esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau pritaikyti esamai situacijai. 
 
-3.
+2. Atlikti du eksperimentai. Su surinktomis kodo metrikomis bei apskaičiuotomis sudėtingumo reikšmėmis buvo apmokytos dvi besimokančios mašinos viena paremta sprendimų medžio modeliu, kita daugiasluoksnio perceptrono dirbtiniu neuroniniu tinklu. Accuracy metrikos visais atvejais, kaip vaizduojama \ref{img:chart} ir \ref{img:chart2} pav., aukštos, tačiau palyginus gautuosius rezultatus matome, jog naudojantis abejais duomenų rinkiniais sprendimų medžio atveju įvyko persimokymo reiškinys, kai padavus naujų duomenų rinkinį modelis nebesugeba atspėti reikšmės.
 
-4.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/chart}
+    \caption{Rezultatų palyginimas su duomenų rinkinu PC1}
+    \label{img:chart}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/chart-2}
+    \caption{Rezultatų palyginimas su duomenų rinkinu CM1}
+    \label{img:chart2}
+\end{figure}
+
+Padaryta išvada, jog sprendimų medžio modelis tokiam uždaviniui spręsti nėra tinkamas, jeigu turima duomenų rinkiniai su daug atributų, šiuo atveju 21.
+
+3. Atlikta duomenų analizė siekiant sumažinti perteklinių, tiesiogiai proporcinų bei kitų neigiamą įtaką dirbtiniam neuroniniam tinkkui galinčių padaryti reikšmių kiekį. Duomenims atrinkti naudoti du metodai: rankinis atrinkimas remiantis Halstead ir McCabe metrikų formulėmis, kai duomenų rinkinyje paliekamos tik išvestosios reikšmės, o metrikų iš kurių tos reikšmės išvedamos stulpeliai pašalinami bei duomenų atrinkimas naudojantis duomenų analizės įrankiu Weka, kai reikšmės paskirstomos pagal jų daromą įtaką galutiniam rezultatui.
+
+Padaryta išvada, jog kombinuojant visas Halstead bei McCabe metrikas gauname daugybe panašių, bei tiesiogiai proporcingų vienų kitoms metrikų, kurios nors ir padeda susidaryti geresnį įspūdį apie kodo kokybę metrikas peržiūrint, tačiau tik apkrauna dirbtinį neuroninį tinklą pertekliniais duomenimis, kurie gali privesti prie persimokymo.
+
+4. Atlikti du eksperimentai, naudojant šiek tiek pakeistą dirbtinį neuroninį tinklą, kuriame buvo atnaujintas įvesties sluoksnis, pritaikytas mažesniam atributų kiekiui. Eksperimento metu lyginti dirbtinio neuroninio tinklo mokymosi bei reikšmių nuspėjimo rezultatai naudojantis du modifikuotus duomenų rinkinius. Kur pirmuoju atveju, PC1\_R bei CM1\_R, iš duomenų rinkinio išimti visi atributai simbolizuojantys reikšmes iš kurių išvedamos Halstead bei McCabe reikšmės, ir paliktos tik išvestosios. Antruoju atveju, PC1\_A bei CM1\_A, duomenys atrinkti automatiškai, naudojant duomenų analizės įrankį Weka, pasirinkus algoritmą atributus paskirstantį pagal galutiniam rezultatui daromą įtaką.
 
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/chart-3}
+    \caption{Rezultatų palyginimas su duomenų rinkinu CM1}
+    \label{img:chart3}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/chart-4}
+    \caption{Rezultatų palyginimas su duomenų rinkinu CM1}
+    \label{img:chart4}
+\end{figure}
+
+Padaryta Išvada, kad abejais atvejais tiek accuracy tiek precision bei recall savybės dirbtiniame neuroniniame tinkle pagerėjo turint kuruotą duomenų rinkinį, tačiau didelę įtaką darančio skirtumo tarp rankiniu būdu atrinktų atributų, bei išanalizuotų tam skirtu įrankiu nėra, kaip vaizduojama \ref{img:chart3} ir \ref{img:chart4} pav.. Geresnis sprendimas būtų užuot renkantis vieną iš metodų duomenų atrinkimą rankiniu būdų kombinuoti su duomenų analize tam specializuotais įrankiais, priklausomai nuo duomenų rinkinio. 
+
+Galiausiai, atlikus keletą eksperimentų, galima teigti, jog programinės įrangos testavimo prioritetų parinkimas renkant duomenis kodo statine analize bei juos panaudojant apmokant bei atliekant spėjimus dirbtiniu neuroniniu tinklu yra įgyvendinamas sprendimas. Toks procesas padės prioritetizuoti testuotinus programinės įrangos modulius, kai aukšto prioriteto modulių yra daug ir neįmanoma jų visų įtraukti į testavimo ciklą, taip smarkiai pagerinant kuriamos programinės įrangos kokybę.
 
 \printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų

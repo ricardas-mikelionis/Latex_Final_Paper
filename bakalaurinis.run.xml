@@ -41,10 +41,11 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>bakalaurinis.bcf</file>
+      <file>bakalaurinis.aux</file>
+      <file>bakalaurinis-blx.bib</file>
     </provides>
     <requires type="dynamic">
       <file>bakalaurinis.bbl</file>
@@ -53,6 +54,7 @@
       <file>blx-dm.def</file>
       <file>blx-unicode.def</file>
       <file>blx-compat.def</file>
+      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>trad-standard.bbx</file>
@@ -64,14 +66,15 @@
       <file>lithuanian.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
-    <generic>biber</generic>
+  <external package="biblatex" priority="5" active="0">
+    <generic>bibtex</generic>
     <cmdline>
-      <binary>biber</binary>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
       <infile>bakalaurinis</infile>
     </cmdline>
     <input>
-      <file>bakalaurinis.bcf</file>
+      <file>bakalaurinis.aux</file>
     </input>
     <output>
       <file>bakalaurinis.bbl</file>
@@ -80,10 +83,14 @@
       <file>bakalaurinis.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>bakalaurinis.bcf</file>
+      <file>bakalaurinis.aux</file>
+      <file>bakalaurinis-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>bibliografija.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>

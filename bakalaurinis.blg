@@ -1,48 +1,64 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: bakalaurinis.aux
-I found no \citation commands---while reading file bakalaurinis.aux
-I found no \bibdata command---while reading file bakalaurinis.aux
-I found no \bibstyle command---while reading file bakalaurinis.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 498 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bakalaurinis-blx.bib
+Database file #2: bibliografija.bib
+Biblatex version: 3.8
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 11 entries,
+            6268 wiz_defined-function locations,
+            1253 strings with 10912 characters,
+and the built_in function-call counts, 73897 in all, are:
+= -- 5111
+> -- 1559
+< -- 505
++ -- 2055
+- -- 650
+* -- 5522
+:= -- 7709
 add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+call.type$ -- 11
+change.case$ -- 264
+chr.to.int$ -- 33
+cite$ -- 20
+duplicate$ -- 8162
+empty$ -- 6445
+format.name$ -- 1063
+if$ -- 15023
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 26
 missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+newline$ -- 431
+num.names$ -- 588
+pop$ -- 3734
+preamble$ -- 1
+purify$ -- 320
 quote$ -- 0
-skip$ -- 0
+skip$ -- 2290
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
+substring$ -- 8282
+swap$ -- 1915
+text.length$ -- 403
+text.prefix$ -- 20
+top$ -- 1
+type$ -- 362
 warning$ -- 0
-while$ -- 0
+while$ -- 971
 width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+write$ -- 421
