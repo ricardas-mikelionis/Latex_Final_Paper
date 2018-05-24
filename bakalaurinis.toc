@@ -10,28 +10,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.}Halstead sudėtingumo metrikos}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią sistemą}{10}
+\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią sistemą}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti sistema}{11}
+\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti sistema}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{13}
+\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}{16}
+\contentsline {section}{\numberline {3.}Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{16}
+\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{17}
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{19}
+\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{21}
+\contentsline {section}{Rezultatai ir išvados}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{24}
+\contentsline {section}{Literatūra}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{25}
+\contentsline {section}{Santrumpos}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{25}
+\contentsline {section}{\MakeUppercase {Priedai}}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti sistema}{26}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti sistema}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{27}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{28}

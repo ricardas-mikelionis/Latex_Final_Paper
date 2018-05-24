@@ -46,16 +46,18 @@
 % \end{center}
 
 \sectionnonumnocontent{Santrauka}
-Glaustai aprašomas darbo turinys: pristatoma nagrinėta problema ir padarytos
-išvados. Santraukos apimtis ne didesnė nei 0,5 puslapio. Santraukų gale
-nurodomi darbo raktiniai žodžiai. 
+Darbe analizuojamas dirbtinio neuroninio tinklo, apmokyto nuspėti programinės įrangos defektyvumą, kaip įrankio testavimo procese efektyvumas.
+
+Darbas susideda iš keturių esminių dalių. Pirmoje apžvelgiamos kodo matavimo metrikos bei jų ryšys su programinio kodo defektuvumu. Toliau vykdomas eksperimentas bei palyginami rezultatai apmokant bei testuojant sprendimų medžio modelio besimokančią sistemą bei daugiasluoksnio perceptrono dirbtinį neuroninį tinklą naudojantis pirmoje dalyje apžvelgtas metrikas, kaip įvestį. Siekiant pagerinti tinklo efektyvumą peržvelgiamos metrikos siekiant sudaryti glaustesnį duomenų rinkinį be perteklinių reikšmių. Tam padaryti vykdomi du eksperimentai: vieno metu duomenų rinkinys analizuojamas rankiniu būdų, o kito - naudojant duomenų analizės programinę įrangą. Galiausiai naudojantis naujai sudarytais duomenų rinkiniais adaptuojami bei testuojami daugiasluoksnio perceptrono tipo neuroniniai tinklai.
 % Nurodomi iki 5 svarbiausių temos raktinių žodžių (terminų).
 % Vienas terminas gali susidėti iš kelių žodžių.
-\raktiniaizodziai{raktinis žodis 1, raktinis žodis 2, raktinis žodis 3, raktinis žodis 4, raktinis žodis 5}   
+\raktiniaizodziai{dirbtiniai neuroniniai tinklai, Halstead, McCabe, daugiasluoksnis perceptronas}   
 
 \sectionnonumnocontent{Summary}
-Santrauka anglų kalba. Santraukos apimtis ne didesnė nei 0,5 puslapio.
-\keywords{keyword 1, keyword 2, keyword 3, keyword 4, keyword 5}
+The paper analyzes the viability of a artificial neural network trained to predict software defects as a tool in software testing process.
+
+The paper consists of four main parts. Firstly an an overview of code measures and their relation to software defect proneness is conducted. After collecting the data an experiment is conducted where the results of several learning machines are compared. Mainly using dataset described in the first part two models are trained and tested, one basen on a decision tree the other one on a multilayer perceptron artificial neural network. Next are data analysis and feature selection. Two types of data analyses are carried out, one manually by removing redundant and directly proportionate values from dataset, the other one is done automatically by using a data analysis tool Weka. Finally the newly formed datasets are used to traina and test modified versions of the multilayer perceptron artificial network and the results are compared.
+\keywords{artificial neural network, Halstead, McCabe, multilayer perceptron}
 
 \tableofcontents
 
@@ -141,7 +143,33 @@ Halstead metrikos paremtos kodo įsivaizdavimo kaip įvykių seką, kur kiekvien
 \item[]\(N_1\) - visų operatorių kiekis,
 \item[]\(N_2\) - visų operandų kiekis.
 \end{itemize} 
-Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, reiškiantis unikalių operatoriu bei operandų kiekį, \[N = N_1 + N_2\]formule skaičiuojamas programos dydis, reiškiantis visų operatorių ir operandų kiekį, \[V = N * log_2n\]formule skaičiuojama programos apimtis, tai programos informacinis turinys išmatuotas matematiškai, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule skaičiuojamas programos sudėtingumas, dar reiškiantis galimą defektyvumą, o formule \[E = D * V\] - pastangos skirtos skaityti ar suprasti kodą. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
+Halstead publikacijoje aprašomos šios metrikos apskaičiuojamos naudojant operandų kiekį, bei kitas kodo metrikas:
+\begin{itemize}  
+\item[] programos ilgis N,
+\item[] programos žodynas n,
+\item[] programos apimtis V,
+\item[] programos sudėtingumas D,
+\item[] programos lygis L,
+\item[] programos pastangos E,
+\item[] programos implementavimo laikas T,
+\item[] programos defektų kiekis B.
+\end{itemize} 
+
+Programos dydis N, dar vadinamas programos ilgiu tai visų operatorių ir operandų programoje kiekis ir apskaičiuojamas formule\[N = N_1 + N_2.\]
+
+Programos žodynas n, tai visų unikalių operatorių bei operandų kiekis programoje, kuris apskaičiuojamas formule  \[n =  n_1 + n_2.\]
+
+Programos apimtis V, tai programos informacinis turinys apskaičiuotas matematiškai. Ši metrika glaudžiai siejama su programos dydžiu bei žodynu ir apskaičiuojama formule \[V = N * log_2n.\] Halstead programos apimtis matuoja operacijų bei operatorių kiekį aprašytame algoritme. Statistiškai vienos funkcijos apimtis turėtų būti tarp 20 ir 1000. Vienos eilutės funkcijos be parametrų apimtis apytiksliai 20, o 1000 ir didesnė apimtis rodo, kad matuojama funkcija daro per daug.
+
+Programos sudėtingumas D, dar vadinamas polinkiu į defektus, tai reikšmė parodanti, kaip sunku skaityti ar modifikuoti programos kodą. Ši metrika yra proporcinga unikalių operatorių kiekiui ir apskaičiuojama formule \[D = \frac{n_1}{2} * \frac{N_1}{n_2}.\]
+
+Progrmos lygis L iš esmės metrika atvirkščia polinkiui į defektus. Kitaip tariant aukšto lygio programa yra atsparesnė defektams, nei žemo lygio. Ši metrika apskaičiuojama formule \[L = \frac{1}{D}.\]
+
+Programos pastangos E, tai metrika parodanti kaip sunku, t.y. kiek pastangų reikalauja, kodo skaitymas ar implementavimas. Metrika proporcinga programos apimčiai bei sudėtingumo metrikai ir apskaičiuojama formule \[E = D * V.\]
+
+Programos implementavimo laikas T, tai metrika parodanti kiek laiko užtruks suprasti ir implementuoti programą. Metrika yra proporcinga su programos pastangomis. Metrika gali būti kalibruojama priklausomai nuo situacijos, tačiau Halstead rekomenduoja daliklį parinkti 18, taip gaunant laiką sekundėmis. Metrika apskaičiuojama formule \[T = \frac{E}{18}.\]
+
+Programos defektų kiekis B, tai metrika kuri apytiksliai pasako kiek defektų bus tam tikros implementacijos programoje. Pasak Halstead defektų kiekis C programavimo kalba parašytame faile turėtų būti apie 2, tačiau statistiškai tas kiekis būna žymiai didesnis. Defektų kiekis programoje tai metrika proporcinga programos pastangoms ir apskaičiojama formule  \[B = \frac{E^\frac{2}{3}}{3000} .\]
 
 Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei operandų nustatymo būdų, dažnai kritikos susilaukia ir tai, jog matuojamas tekstu pagrįstas sudėtingumas, t.y. kaip sunku skaityti kodą, o ne sudėtingumas pagrįstas kodo struktūra ar logika.
 
@@ -225,7 +253,22 @@ Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas daugiasluoksio percep
 
 Kadangi nėra taisyklių ar geriausių praktikų daugiasluoksnių perceptronų, ar kitų dirbtinių neuroninių tinklų aprašymui pasirinkta ieškoti salyginai efektyviausio tinklo modelio pasirinktiems duomenų rinkiniams atliekant keletą eksperimentų. Visų pirma pasirinkta vieno paslėpto sluoksnio modelio struktūra bei pasirinktas 100 epochų kiekis modelio treniravimui. Epocha - viena iteracija per visą duomenų rinkinį. Taip treniruotas modelis turėjo accuracy reikšmę 89.76\% treniravimui bei testavimui naudojant CM1 duomenų rinkinį. Toliau toks pat eksperimentas atlikas su 1000 epochų treniravimo ciklu, tačiau galutinis accuracy rezultatas grąžintas nepasikeitęs. Toliau modelis buvo atnaujintas paslėptąjį sluoksnį sumažinant trečdaliu, t.y. iki 14 viršūnių. Treniruojant tokį modelį tiek 100 epochų, tiek 1000 epochų buvo gautas tas pat accuracy rezultatas - 89.98\%. Remiantis šiais rezultatais pasirinktas daugiasluoksnio perceptrono modelis su dviem paslėptais sluoksniais.
 
-Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
+\begin{table}[H]
+\centering
+\caption{Eksperimentų su daugiasluoksnio perceptrono modeliu rezultatai}
+\label{tab:MLP_experiment}
+\begin{tabular}{|lll|}
+\hline
+ & Epochų kiekis & Accuracy \\ \hline
+Vienas sluoksnis (21 viršūnė) & 100 & 89.76\% \\
+Vienas sluoksnis (21 viršūnė) & 1000 & 89.76\% \\
+Vienas sluoksnis (14 viršūnių) & 100 & 89.98\% \\
+Vienas sluoksnis (14 viršūnių) & 1000 & 89.98\% \\
+Du sluoksniai (14 ir 7 viršūnės) & 100 & 90.16\% \\ \hline
+\end{tabular}
+\end{table}
+
+Siekiant didelio efektyvumo šiame modelyje pridėti du paslėpti sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Pasirinktos reikšmės 14 viršūnių pirmam paslėptam skluoksniui bei 7 viršūbės antrajam. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
 
 \begin{figure}[H]
     \centering
@@ -277,6 +320,10 @@ Kitas duomenų atrinkimo metodas bus atliktas automatiškai, naudojant duomenų 
 \subsection{Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}
 
 Duomenų atrinkimas buvo pradėtas nuo Halstead reikšmių, kurios nors ir pateikia mums empirines metrikas kodui yra išvestinės, t.y. keturios metrikos apibūdinančios operandų kiekį kode yra kombinuojamos tarpusavyje gauti kitoms todėl jos yra tiesiogiai proporcingos ir perteklinės dirbtinio neuroninio tinklo mokymo kontekste, todėl gali vesti permokymo link. Taip pat išimtos reikšmės tiesiogiai darančios įtaką kodo skaitomumui, tačiau neturinčios jokios esminės įtakos kodo vykdyme, kaip komentarų eilučių kiekis ar tuščių eilučių kiekis.
+
+Pašalinta n - Halstead visų operatorių bei operandų suma, metrika iš esmės parodanti tą pat, kaip ir eilučių kode kiekis, todėl keletas tokio pat tipo metrikų sukurtų perteklinės informacijos dėl šios priežasties išimtos ir kitos kodo metrikos matuojančios tiesiog kodo apimtį, kaip lOCode - kodo eilučių kiekis, lOComment - komentarų eilučių kiekis, lOBlank - tuščių eilučių kiekis bei lOCodeAndComment - bendras komentarų bei kodo eilučių kiekis.
+
+Pašalintos operandų metrikos: uniq\_Op, uniq\_Opnd, total\_Op bei total\_Opnd, nes dirbtinio neuroninio tinklo konrtekste jos nesuteikia daug vertės ir tik gali privesti prie tinklo permokymo, nes yra perteklinės reikšmės, tiesiogiai proporcingos nuo kitų ir naudojamos apskaičiuoti visas Halstead reikšmes.
 
 Taip pat išimtos visos žemesnio lygio reikšmės skirtos apskaičiuoti tiek McCabe metrikas tiek papildomai pridėtos duomenų rinkinyje. Taip paliekant 10-ies atributų duomenų rinkinį sudarytą vien iš išvestinių reikšmių, kurios buvo tiesiogiai proporcingos nuo išimtųjų, tačiau tarpusavyje tokio ryšio neturi.
 
@@ -455,7 +502,7 @@ Kombinuojant visas Halstead bei McCabe metrikas gauname daugybe panašių, bei t
     \label{img:chart4}
 \end{figure}
 
-Abejais atvejais tiek accuracy tiek precision bei recall savybės dirbtiniame neuroniniame tinkle pagerėjo turint kuruotą duomenų rinkinį, tačiau didelę įtaką darančio skirtumo tarp rankiniu būdu atrinktų atributų, bei išanalizuotų tam skirtu įrankiu nėra, kaip vaizduojama \ref{img:chart3} ir \ref{img:chart4} pav.. Geresnis sprendimas būtų užuot renkantis vieną iš metodų duomenų atrinkimą rankiniu būdų kombinuoti su duomenų analize tam specializuotais įrankiais, priklausomai nuo duomenų rinkinio. 
+Abejais atvejais tiek accuracy tiek precision bei recall savybės dirbtiniame neuroniniame tinkle pagerėjo turint kuruotą duomenų rinkinį, tačiau didelę įtaką darančio skirtumo tarp rankiniu būdu atrinktų atributų, bei išanalizuotų tam skirtu įrankiu nėra, kaip vaizduojama \ref{img:chart3} ir \ref{img:chart4} pav.. Vykdyti atributų atrinkimą yra verta ypač turint duomenų rinkinį turintį galybę perteklinių atributų, tačiau, geresnis sprendimas būtų užuot renkantis vieną iš metodų duomenų atrinkimą rankiniu būdų kombinuoti su duomenų analize tam specializuotais įrankiais, priklausomai nuo duomenų rinkinio. 
 
 Galiausiai, atlikus keletą eksperimentų, galima teigti, jog programinės įrangos testavimo prioritetų parinkimas renkant duomenis kodo statine analize bei juos panaudojant apmokant bei atliekant spėjimus dirbtiniu neuroniniu tinklu yra įgyvendinamas sprendimas. Toks procesas padės prioritetizuoti testuotinus programinės įrangos modulius, kai aukšto prioriteto modulių yra daug ir neįmanoma jų visų įtraukti į testavimo ciklą, taip smarkiai pagerinant kuriamos programinės įrangos kokybę.
 

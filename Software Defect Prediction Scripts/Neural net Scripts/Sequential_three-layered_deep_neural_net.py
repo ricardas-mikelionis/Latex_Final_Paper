@@ -49,7 +49,7 @@ def create_model():
 #Vertiname modelį standartizuotais duomenimis. 
 estimators = []
 estimators.append(('standardize', StandardScaler()))
-estimators.append(('mlp', KerasClassifier(build_fn=create_model, epochs=100, batch_size=5, verbose=1)))
+estimators.append(('mlp', KerasClassifier(build_fn=create_model, epochs=1000, batch_size=5, verbose=1)))
 pipeline = Pipeline(estimators)
 kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
 results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)

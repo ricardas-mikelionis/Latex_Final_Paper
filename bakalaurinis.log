@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  24 MAY 2018 19:52
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  24 MAY 2018 23:21
  restricted system commands enabled.
  file:line:error style messages enabled.
 **bakalaurinis.tex
@@ -36,7 +36,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.188 seconds
+luaotfload | main : initialization completed in 0.103 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./VUMIFPSbakalaurinis.cls
 Document Class: VUMIFPSbakalaurinis 2015/02/03 1.0 VU MIF SE bachelor thesis cla
@@ -486,12 +486,12 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
 File: gloss-lithuanian.ldf polyglossia: module for lithuanian
 Module polyglossia Info: Language data for lithuanian
-(polyglossia)            synonyms	table: 0x7f8375b4dfa0
 (polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-lt.tex
-(polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-lt.pat.txt
 (polyglossia)            lefthyphenmin	2
+(polyglossia)            patterns	hyph-lt.pat.txt
+(polyglossia)            synonyms	table: 0x7fc018956bb0
+(polyglossia)            righthyphenmin	2
 (polyglossia)            patterns: hyph-lt.pat.txt on input line 8
 Module polyglossia Info: Language lithuanian was not yet loaded; created with id
  4 on input line 8
@@ -1450,62 +1450,62 @@ ne 3
 <img/Cyclomatic_graph_1.png, id=26, 512.66531pt x 241.65282pt>
 File: img/Cyclomatic_graph_1.png Graphic file (type png)
 <use img/Cyclomatic_graph_1.png>
-Package luatex.def Info: img/Cyclomatic_graph_1.png  used on input line 123.
+Package luatex.def Info: img/Cyclomatic_graph_1.png  used on input line 125.
 (luatex.def)             Requested size: 307.60155pt x 144.9928pt.
- [7] [8<./img/Cyclomatic_graph_1.png>] [9] [10
+ [7] [8<./img/Cyclomatic_graph_1.png>] [9] [10] [11
 
-] [11] [12]
-<img/dropout.png, id=50, 846.16125pt x 452.69125pt>
+] [12] [13]
+<img/dropout.png, id=54, 846.16125pt x 452.69125pt>
 File: img/dropout.png Graphic file (type png)
 <use img/dropout.png>
-Package luatex.def Info: img/dropout.png  used on input line 232.
+Package luatex.def Info: img/dropout.png  used on input line 275.
 (luatex.def)             Requested size: 423.07959pt x 226.34506pt.
- [13<./img/dropout.png>]
-<img/model.png, id=55, 329.23pt x 629.35126pt>
+ [14]
+<img/model.png, id=58, 329.23pt x 629.35126pt>
 File: img/model.png Graphic file (type png)
 <use img/model.png>
-Package luatex.def Info: img/model.png  used on input line 241.
+Package luatex.def Info: img/model.png  used on input line 284.
 (luatex.def)             Requested size: 164.6146pt x 314.67485pt.
- [14<./img/model.png>] [15]
-[16
+ [15<./img/dropout.png><./img/model.png>]
+[16] [17
 
 ]
-Overfull \hbox (20.39098pt too wide) in paragraph at lines 313--319
+Overfull \hbox (20.39098pt too wide) in paragraph at lines 360--366
  [][] 
  []
 
 
-Overfull \hbox (11.4437pt too wide) in paragraph at lines 325--331
+Overfull \hbox (11.4437pt too wide) in paragraph at lines 372--378
  [][] 
  []
 
-[17] [18] [19
+[18] [19] [20
 
-] [20]
-<img/chart.png, id=79, 602.25pt x 372.39125pt>
+] [21]
+<img/chart.png, id=83, 602.25pt x 372.39125pt>
 File: img/chart.png Graphic file (type png)
 <use img/chart.png>
-Package luatex.def Info: img/chart.png  used on input line 424.
+Package luatex.def Info: img/chart.png  used on input line 471.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
-<img/chart-2.png, id=80, 602.25pt x 372.39125pt>
+<img/chart-2.png, id=84, 602.25pt x 372.39125pt>
 File: img/chart-2.png Graphic file (type png)
 <use img/chart-2.png>
-Package luatex.def Info: img/chart-2.png  used on input line 431.
+Package luatex.def Info: img/chart-2.png  used on input line 478.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
- [21
+ [22
 
 <./img/chart.png><./img/chart-2.png>]
-<img/chart-3.png, id=84, 602.25pt x 372.39125pt>
+<img/chart-3.png, id=88, 602.25pt x 372.39125pt>
 File: img/chart-3.png Graphic file (type png)
 <use img/chart-3.png>
-Package luatex.def Info: img/chart-3.png  used on input line 446.
+Package luatex.def Info: img/chart-3.png  used on input line 493.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
-<img/chart-4.png, id=85, 602.25pt x 372.39125pt>
+<img/chart-4.png, id=89, 602.25pt x 372.39125pt>
 File: img/chart-4.png Graphic file (type png)
 <use img/chart-4.png>
-Package luatex.def Info: img/chart-4.png  used on input line 453.
+Package luatex.def Info: img/chart-4.png  used on input line 500.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
- [22<./img/chart-3.png>] [23<./img/chart-4.png>]
+ [23<./img/chart-3.png>] [24<./img/chart-4.png>]
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1552,34 +1552,31 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[24
+[25
 
-] [25
+] [26
 
 ]
-<img/tree.png, id=100, 2601.72pt x 1803.3774pt>
+<img/tree.png, id=104, 2601.72pt x 1803.3774pt>
 File: img/tree.png Graphic file (type png)
 <use img/tree.png>
-Package luatex.def Info: img/tree.png  used on input line 486.
+Package luatex.def Info: img/tree.png  used on input line 533.
 (luatex.def)             Requested size: 624.42557pt x 432.81943pt.
- [26
+ [27
 
 <./img/tree.png>]
-<img/model_adjusted.png, id=104, 329.23pt x 629.35126pt>
+<img/model_adjusted.png, id=108, 329.23pt x 629.35126pt>
 File: img/model_adjusted.png Graphic file (type png)
 <use img/model_adjusted.png>
-Package luatex.def Info: img/model_adjusted.png  used on input line 495.
+Package luatex.def Info: img/model_adjusted.png  used on input line 542.
 (luatex.def)             Requested size: 296.30424pt x 566.41089pt.
- [27
+ [28
 
 <./img/model_adjusted.png>]
 (./bakalaurinis.aux
 Module polyglossia Info: Language lithuanian already loaded; id is 4 on input li
 ne 9
 )
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 
 \openout1 = bakalaurinis.run.xml
@@ -1588,10 +1585,10 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 Here is how much of LuaTeX's memory you used:
  25168 strings out of 494413
  125171,1144653 words of node,token memory allocated
- 719 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 17 attribute, 95 glue_spec, 17 attr
+ 731 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 20 attribute, 95 glue_spec, 20 attr
 ibute_list, 1 write nodes
-   avail lists: 1:2,2:662,3:161,4:61,5:271,6:31,7:4408,8:66,9:193,10:35,11:733
+   avail lists: 1:2,2:662,3:161,4:69,5:272,6:31,7:4408,8:66,9:187,10:35,11:733
  28433 multiletter control sequences out of 65536+600000
  112 fonts using 19969487 bytes
  67i,12n,99p,1199b,2552s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -1601,12 +1598,13 @@ kelionis_mac/Library/Fonts/Palem-bd.ttf></Users/ricardas_mikelionis_mac/Library/
 Fonts/Palem-nm.ttf></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb>
-Output written on bakalaurinis.pdf (28 pages, 2890502 bytes).
+/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb>
+Output written on bakalaurinis.pdf (29 pages, 2903639 bytes).
 
-PDF statistics: 148 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+PDF statistics: 155 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
