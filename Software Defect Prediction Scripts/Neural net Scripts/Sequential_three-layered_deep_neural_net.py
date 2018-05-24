@@ -36,13 +36,13 @@ encoded_Y = encoder.transform(Y)
 def create_model():
 	#modelio sukūrimas
 	model = Sequential()
-	model.add(Dense(21,input_dim=10, kernel_initializer='normal', activation='relu'))
-	#model.add(Dropout(0.5))
-	#model.add(Dense(7, kernel_initializer='normal', activation='relu'))
-	#model.add(Dropout(0.5))
-	model.add(Dense(1, kernel_initializer='normal', activation='hard_sigmoid'))
+	model.add(Dense(14,input_dim=10, kernel_initializer='normal', activation='relu'))
+	model.add(Dropout(0.5))
+	model.add(Dense(7, kernel_initializer='normal', activation='relu'))
+	model.add(Dropout(0.5))
+	model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
 	#Sukompiliavimas. Naudojant logarithmic loss function bei rmsprop gradient optimizer.
-	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+	model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 	return model
 
 	
@@ -57,7 +57,7 @@ print("Results: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 
 '''
 model = create_model()
-model.fit(X, encoded_Y, epochs=100, batch_size=50, verbose=1, validation_split=0.3)
+model.fit(X, encoded_Y, epochs=10, batch_size=50, verbose=1, validation_split=0.3)
 '''
 
 #plot_model(model, to_file='model.png', show_shapes=True)

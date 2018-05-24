@@ -77,7 +77,7 @@ Darbo tikslas: Patikrinti daugiasluoksnio perceptrono neuroninio tinklo, kaip į
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
 \item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui.
-\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir daugiasluoksnio perceprtono tipo dirbtinio neuroninio tinklo naudojant surinktus duomenis.
+\item Palyginti efektyvumą tarp sprendimų medžio besimokančios sistemos ir daugiasluoksnio perceprtono tipo dirbtinio neuroninio tinklo naudojant surinktus duomenis.
 \item Atlikti duomenų analizę duomenų rinkiniui siekiant pašalinti perteklines reikšmes.
 \item Palyginti daugiasluoksnio perceptrono tipo dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį pritaikius skirtingus atributų atrinkimo metodus.
 \end{enumerate}
@@ -85,15 +85,15 @@ Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai
 Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
 \begin{itemize}
 \item[] 1-ame skyriuje bus apžvelgiama keletas programinės įrangos matavimo būdų stengiantis rasti ar pagrįsti ryšį su programinės įrangos defektyvumu.
-\item[] 2-ame skyriuje programinės įrangos metrikos turinčios ryšį su programų defektyvumu apdorojomos keletu skirtingų besimokančių mašinų ir palyginami jų tikslumo rezultatai.
-\item[] 3-iame skyriuje duomenų rinkiniams atliekami duomenų atrinkimo procesai siekiant pašalinti besimokančioms mašinoms efekto neturinčius duomenis.
-\item[] 4-ame skyriuje pateikiami rezultatai naujų besimokančių mašinų pritaikytų dirbti su atnaujintais duomenų rinkiniais bei palyginami jų rezultatai.
+\item[] 2-ame skyriuje programinės įrangos metrikos turinčios ryšį su programų defektyvumu apdorojomos keletu skirtingų besimokančių sistemų ir palyginami jų tikslumo rezultatai.
+\item[] 3-iame skyriuje duomenų rinkiniams atliekami duomenų atrinkimo procesai siekiant pašalinti besimokančioms sistemoms efekto neturinčius duomenis.
+\item[] 4-ame skyriuje pateikiami rezultatai naujų besimokančių sistemų pritaikytų dirbti su atnaujintais duomenų rinkiniais bei palyginami jų rezultatai.
 \end{itemize}
  
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
 Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programinės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. 
 
-Visų pirma reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduoti: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
+Visų pirma reikėtų pasirinkti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. Reikia rasti salyginai lengvai surenkamas programinės įrangos metrikas, kurios suteiktų detalią informaciją apie programinės įrangos būklę ir turėtų ryšį su šios defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos, kurias būtų įmanoma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduoti: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. Net ir patys autoriai savo publikacijose teigia, jog aukštas kodo sudėtingumas veda prie defektyvaus kodo.
 
 Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{MetricsinEvaluatingSoftwareDefects:2013}.
 
@@ -145,13 +145,13 @@ Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apska
 
 Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei operandų nustatymo būdų, dažnai kritikos susilaukia ir tai, jog matuojamas tekstu pagrįstas sudėtingumas, t.y. kaip sunku skaityti kodą, o ne sudėtingumas pagrįstas kodo struktūra ar logika.
 
-\section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}
+\section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią sistemą}
 
 Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau yra ir smarkiai neefektyvus bei prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus.
 
-Jeigu pažvelgsime į turmą problemą iš kitos pusės turime duomenų rinkinį, bei vieną iš dviejų reikšmių galimų priskirti tam duomenų rinkiniui: defektyvu arba ne defektyvu. Tai labai primena binarinio klasifikavimo problemą, kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina, dažniausiai dirbtiniu neuroniniu tinklu pvz. daugiasluoksniu perceptronu. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytas dirbtinis neuroninis tinklas.
+Jeigu pažvelgsime į turmą problemą iš kitos pusės turime duomenų rinkinį, bei vieną iš dviejų reikšmių galimų priskirti tam duomenų rinkiniui: defektyvu arba ne defektyvu. Tai labai primena binarinio klasifikavimo problemą, kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia sistemą, dažniausiai dirbtiniu neuroniniu tinklu pvz. daugiasluoksniu perceptronu. Šiame tyrime bus naudojamos dviejų tipų besimokančios sistemos: sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytas dirbtinis neuroninis tinklas.
 
-Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai mašinai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
+Apmokyti šias besimokančiasias sistemas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai sistemai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
 \begin{itemize} 
 \item[] loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
 \item[] v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
@@ -183,12 +183,12 @@ PC1 duomenų rinkinys sudarytas iš 1109 duomenų eilučių, surinktų iš kodo 
 
 CM1 duomenų rinkinys sudarytas iš 498 duomenų eilučių, surinktų iš kodo parašyto C programavimo kalba. Programinė įranga iš kurios surinkti šie duomenys yra pagalbinė įranga vienam iš NASA erdvėlaivių. Duomenų rinkinys pasidalina į 90.16\% duomenų eilučių kurios atspindi atvejį, kai užfiksuotas vienas ar daugiau defektų bei 9.83\% duomenų eilučių atspindinčių, kai nebuvo užfiksuota defektų.
 
-\subsection{Sprendimų medžio metodu paremta besimokanti mašina}
+\subsection{Sprendimų medžio metodu paremta besimokanti sistema}
 Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas \ref{img:tree} pav. pirmame priede. 
 
 Su tradiciniais duomenų rinkiniais sprendimų medis turi nemažai privalumų. Sprendimo medžiai yra lengvai suprantami, net daug techninių žinių neturintiems žmonėms ir pateikus sprendimų medį grafiškai pačiam galima pereiti per viršūnes tikrinant duomenų rinkinio eilutės grąžinamą rezultatą. Taip pat palyginus su kitais prediktyviaisiais modeliais sprendimo medžiai reikalauja salyginai nedidelio kiekio duomenų pertvarkymo prieš naudojant juos šiame modelyje. Iki tam tikro laipsnio smarkiai išsiskiriančios reikšmės ar trūkstami įrašai nedaro didelės įtakos sprendimų medžiams. Sprendimų medžiai neskiria ir gali priimti tiek skaitines tiek logines reikšmes, todėl galima naudoti didesnę įvairovę duomenų rinkinių.
 
-Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, ginčytinai, paprasčiausias besimokančios mašinos modelis jis yra ir pats netiksliausias. Modelio paprastumas su dideliais duomenų rinkiniais gali privesti prie per sudėtingo medžio sugeneravimo, kuomet nebeatpažystami ryšiai tarp atributų bei galutinio rezultato. Tai dažnai vadinama permokymu (angl. overfitting).
+Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, ginčytinai, paprasčiausias besimokančios sistemos modelis jis yra ir pats netiksliausias. Modelio paprastumas su dideliais duomenų rinkiniais gali privesti prie per sudėtingo medžio sugeneravimo, kuomet nebeatpažystami ryšiai tarp atributų bei galutinio rezultato. Tai dažnai vadinama permokymu (angl. overfitting).
 
 Įprastai sprendimų medžio prediktyvusis modelis naudojamas salyginai paprastų duomenų rinkinių problemoms spręsti. Žemo lygio klasifikatoriams bei prediktyviesiems modeliams, kaip Iriso gėlės skirtingų rūšių klasifikavimo problema.
 
@@ -201,11 +201,11 @@ Rezultatai taip pat buvo apskaičiuoti keletu scikit-learn pateiktų bibliotekų
 \[Recall = \frac{\Sigma Tikras Pozityvas}{\Sigma Tikras Pozityvas + \Sigma Netikras Negatyvas},\]
 kur „Tikrasis pozityvas“ yra teisingai nustatyta pozityvi reikšmė, „Tikrasis negatyvas“ yra teisingai nustatyta negatyvi reikšmė, „Netikras pozityvas“ yra klaidingai nustatyta pozityvi reikšmė, o „Netikras negatyvas“ yra neteisingai nustatyta negatyvi reiškmė. Accuracy metrikos atveju Pozityvai aprėpia tiek teisingai, tiek neteisingai nuspėtas pozityvias reikšmes, o negatyvai - negatyvias.
 
-Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų spėtų reikšmių buvo atspėta teisinga reikšmė. Precision parodo kiek iš atspėtų teigiamų reikšmių yra tikrų pozityvų, t.y. teisingai nuspėtų teigiamių reikšmių. O Recall parodo kiek tarp iš viso buvusių teigiamų reikšmių jų buvo atspėta.
+Besimokančių sistemų kontekste Accuracy reiškia kiek procentaliai iš visų spėtų reikšmių buvo atspėta teisinga reikšmė. Precision parodo kiek iš atspėtų teigiamų reikšmių yra tikrų pozityvų, t.y. teisingai nuspėtų teigiamių reikšmių. O Recall parodo kiek tarp iš viso buvusių teigiamų reikšmių jų buvo atspėta.
 
 \begin{table}[H]\footnotesize
 \centering
-\caption{Sprendimų medžio mašinos rezultatai}
+\caption{Sprendimų medžio sistemos rezultatai}
 \label{tab:Tree_result}
 \begin{tabular}{lllll}
 \cline{1-4}
@@ -222,6 +222,8 @@ Sprenimo medžiu paremtas prediktyvus modelis panašu, jog nėra optimaliausias 
 
 \subsection{Daugiasluoksnis perceptronas}
 Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas daugiasluoksio perceptrono klasifikatoriumi. Daugiasluoksnis perceptronas yra tiesinio tipo dirbtinis neuroninis tinklas, kurio ryšiai tarp viršūnių (vaizduojant modelį grafu) n nukreipti į vieną pusę, t.y. ne rekurentiniai. Ir duomenys tiesiškai keliauja nuo įvesties sluoksnio per paslėptuosius sluoksnius iki gaunamas rezultatas.
+
+Kadangi nėra taisyklių ar geriausių praktikų daugiasluoksnių perceptronų, ar kitų dirbtinių neuroninių tinklų aprašymui pasirinkta ieškoti salyginai efektyviausio tinklo modelio pasirinktiems duomenų rinkiniams atliekant keletą eksperimentų. Visų pirma pasirinkta vieno paslėpto sluoksnio modelio struktūra bei pasirinktas 100 epochų kiekis modelio treniravimui. Epocha - viena iteracija per visą duomenų rinkinį. Taip treniruotas modelis turėjo accuracy reikšmę 89.76\% treniravimui bei testavimui naudojant CM1 duomenų rinkinį. Toliau toks pat eksperimentas atlikas su 1000 epochų treniravimo ciklu, tačiau galutinis accuracy rezultatas grąžintas nepasikeitęs. Toliau modelis buvo atnaujintas paslėptąjį sluoksnį sumažinant trečdaliu, t.y. iki 14 viršūnių. Treniruojant tokį modelį tiek 100 epochų, tiek 1000 epochų buvo gautas tas pat accuracy rezultatas - 89.98\%. Remiantis šiais rezultatais pasirinktas daugiasluoksnio perceptrono modelis su dviem paslėptais sluoksniais.
 
 Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
 
@@ -296,7 +298,7 @@ Po šio duomenų atrinkimo metodo duomenų rinkinio atributai atrodo taip:
 
 \subsection{Duomenų analizė naudojant įrankį Weka}
 
-Weka tai darbo su dideliais duomenų rinkiniais įrankis, savyje turintis mašininio mokymosi algoritmų duomenų analizės užtuotims vykdyti. Šie algoritmai gali būti pritaikyti tiesiai duomenų rinkinius atidarius per Weka grafinę sąsają, arba iškviesti Java kodu ir apdoroti naudojantis Weka bibliotekomis.  Šio tyrimo metu buvo naudotasi Weka grafine sąsaja.
+Weka tai darbo su dideliais duomenų rinkiniais įrankis, savyje turintis sistemų mokymosi algoritmų duomenų analizės užtuotims vykdyti. Šie algoritmai gali būti pritaikyti tiesiai duomenų rinkinius atidarius per Weka grafinę sąsają, arba iškviesti Java kodu ir apdoroti naudojantis Weka bibliotekomis.  Šio tyrimo metu buvo naudotasi Weka grafine sąsaja.
 
 Duomenų analizės įrankis Weka \cite{hall09:_weka_data_minin_softw} turi daug su duomenų analize susijusių paskirčių, kaip vizualus duomenų lentelių atvaizdavimas, duomenų atrinkimas ir kt. Tyrimo kontekste bus panauodoti keletas Weka viduje esančių atributų atrinkimo algoritmų, kuriuos apžvelgus bus atrinkti nauji, sumažinti, duomenų rinkinai.
 
@@ -362,7 +364,7 @@ Realiu atveju rekomenduotina naudoti tiek rankinio atrinkimo tiek algoritminio a
 
 \section{Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
 
-Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu dirbtiniu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes, nors ir esant 90\% tikimybei, jog neurininis tinklas programinės įrangos modulį, kaip defektyvų klasifikuos sėkmingai, egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
+Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis sistemomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu dirbtiniu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio sistemoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes, nors ir esant 90\% tikimybei, jog neurininis tinklas programinės įrangos modulį, kaip defektyvų klasifikuos sėkmingai, egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
 
 Rezultatams gerinti priimtas sprendimas atlikti atributų išrinkimą dviem būdais. Pirmasis būdas buvo skirtas išrinkti duomenis kurie tarpusavyje neturi koreliacijos ir yra visiškai individualios reikšmės palyginus su kitais atributais. Kadangi duomenų rinkiniai sudaryti pagal McCabe ir Halstead metrikas išimti pradiniai atributai iš kurių išvestos reikšmės, taip pašalinant beveik puse visų buvusių atributų tokių kaip unikalių operandų kiekis ar kodo eilučių kiekis. Antrasis būdas buvo įvykdytas automatiškai, duomenų rinkinį įkėlus į duomenų analizės programą ir pasirinkus analizės algoritmą, kurio rezultatas svarbos reikšmės kiekvienam iš atributų. Taip pasirenkant apytiksliai puse vsų buvusių atributų.
 
@@ -415,7 +417,7 @@ Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar g
 
 Esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau metrikas parinkti pritaikius esamai situacijai. 
 
-2. Atlikti du eksperimentai. Su surinktomis kodo metrikomis bei apskaičiuotomis sudėtingumo reikšmėmis buvo apmokytos dvi besimokančios mašinos viena paremta sprendimų medžio modeliu, kita daugiasluoksnio perceptrono dirbtiniu neuroniniu tinklu. Accuracy metrikos visais atvejais, kaip vaizduojama \ref{img:chart} ir \ref{img:chart2} pav., aukštos, tačiau palyginus gautuosius rezultatus matome, jog naudojantis abejais duomenų rinkiniais sprendimų medžio atveju įvyko persimokymo reiškinys, kai padavus naujų duomenų rinkinį modelis nebesugeba atspėti reikšmės.
+2. Atlikti du eksperimentai. Su surinktomis kodo metrikomis bei apskaičiuotomis sudėtingumo reikšmėmis buvo apmokytos dvi besimokančios sistemos viena paremta sprendimų medžio modeliu, kita daugiasluoksnio perceptrono dirbtiniu neuroniniu tinklu. Accuracy metrikos visais atvejais, kaip vaizduojama \ref{img:chart} ir \ref{img:chart2} pav., aukštos, tačiau palyginus gautuosius rezultatus matome, jog naudojantis abejais duomenų rinkiniais sprendimų medžio atveju įvyko persimokymo reiškinys, kai padavus naujų duomenų rinkinį modelis nebesugeba atspėti reikšmės.
 
 \begin{figure}[H]
     \centering
@@ -478,11 +480,11 @@ santrumpos.
 % kompaktiniame diske. Priedai taip pat numeruojami ir vadinami. Darbo tekstas
 % su priedais susiejamas nuorodomis.
 
-\section{Sprendimų medžio besimokanti mašina}
+\section{Sprendimų medžio besimokanti sistema}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.24, angle=90]{img/tree}
-    \caption{Sprendimų medžio tipo besimokanti mašina sudaryta naudojant PC1 duomenų rinkinio poaibį. Sugeneruota automatiškai naudojant pydot biblioteką.}
+    \caption{Sprendimų medžio tipo besimokanti sistema sudaryta naudojant PC1 duomenų rinkinio poaibį. Sugeneruota automatiškai naudojant pydot biblioteką.}
     \label{img:tree}
 \end{figure}
 

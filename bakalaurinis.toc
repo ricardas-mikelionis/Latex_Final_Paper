@@ -6,13 +6,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.}Programinio kodo sudėtingumo ir defektyvumo sąsajos}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}McCabe sudėtingumo metrikos}{6}
+\contentsline {subsection}{\numberline {1.1.}McCabe sudėtingumo metrikos}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.}Halstead sudėtingumo metrikos}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}{10}
+\contentsline {section}{\numberline {2.}Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią sistemą}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti mašina}{11}
+\contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti sistema}{11}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{13}
 \defcounter {refsection}{0}\relax 
@@ -32,6 +32,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\MakeUppercase {Priedai}}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{26}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti sistema}{26}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{27}
