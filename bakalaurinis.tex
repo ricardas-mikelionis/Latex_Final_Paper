@@ -60,7 +60,7 @@ Santrauka anglų kalba. Santraukos apimtis ne didesnė nei 0,5 puslapio.
 \tableofcontents
 
 \sectionnonum{Įvadas}
-Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuoti daugiau per trumpesnį laiko tarpą. Paprastas sprendimas šiai problemai būtų be abejo nuolat besisukantis automatinių testų paketas, tačiau automatiniais testais padengti programinį kodą 100\% praktiškai neįmanoma. 100\% padengimas įmanomas tik pagal kokią nors specifinę metriką, o vaikytis tikrojo 100\% padengtumo testais pagal kiekvieną metriką ar funkcinę sritį prilygsta šviesos geičio vaikymuisi, kuo arčiau esame tikslo tuo daugiau pastangų ir resursų reikia norint pasistūmėti į priekį. Todėl, žinoma, vis dar išlieka poreikis rankiniam testavimui. Norint išleisti programinės įrangos versiją kuo dažniau ištestuoti visko kiekvieną kartą neįmanoma. Taip šis problemos sprendimas iškelia dar vieną, mažesnę, problemą: kaip efektyviai pasirinkti testavimo sritis kiekvienai naujai programos laidai (angl. release). 
+Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuoti daugiau per trumpesnį laiko tarpą. Tai kelią didelę problemą testuotojams, kurie nori padengti kuo daugiau programinės įrangos funkcionalumo testais kiekvienos trumpos iteracijos metu. Paprastas sprendimas šiai problemai būtų be abejo nuolat besisukantis automatinių testų paketas, tačiau automatiniais testais padengti programinį kodą 100\% praktiškai neįmanoma. 100\% padengimas įmanomas tik pagal kokią nors specifinę metriką, o vaikytis tikrojo 100\% padengtumo testais pagal kiekvieną metriką ar funkcinę sritį prilygsta šviesos geičio vaikymuisi, kuo arčiau esame tikslo tuo daugiau pastangų ir resursų reikia norint pasistūmėti į priekį. Todėl, žinoma, vis dar išlieka poreikis rankiniam testavimui. Norint išleisti programinės įrangos versiją kuo dažniau ištestuoti visko kiekvieną kartą neįmanoma netgi kombinuojant automatinius bei rankinius testus. Taip iškyla dar viena, mažesnė, problema: kaip efektyviai pasirinkti testavimo sritis kiekvienai naujai programos laidai (angl. release). 
 
 Alan M. Davis \cite{Davis:1995:PSD:203406} tegia, jog pareto principą galima pritaikyti ir programinės įrangos testavime: čia 80\% kode esančių defektų surandami 20\% viso kodo. Tobulame pasaulyje iteracijai pasirinktos testavimo sritys ir apims tuos 20\% problematiškojo kodo. Tačiau dažnai net remiantis visa turima istorine informacija testuotojui atsakingam už testavimo sričių parinkimą yra sunku efektyviai atrinkti testavimo sritis, kuriose atliktas darbas turės didžiausią įtaką programinės įrangos kokybei.
 
@@ -70,9 +70,9 @@ Dažnai turint mažai laiko testuoti, modulių prioritetiavimas sueikvoja nemaž
 
 Šiame darbe aprašomas tyrimas skirtas patikrinti ar įmanoma ir ar tai efektyvu naudoti duomenis surinktus apie programinės įrangos laidą, kaip įvestį į dirbtinį neuroninį tinklą apmokytą nuspėti modulio defektyvumui, taip iš esmės automatizuojant modulių prioritetizavimo testavimo ciklui procesą.
 
-Tyrimui atlikti naudojama programinė įranga Weka skirta duomenų analizei bei darbui su duomenimis, Keras bei Scikit-Learn python bibliotekų paketai skirti besimokančių mašinų modeliams aprašyti.
+Tyrimui atlikti naudojama programinė įranga Weka skirta duomenų analizei bei darbui su duomenimis, Python programavimo kalba, Keras bei Scikit-Learn python bibliotekų paketai skirti darbui su duomenimis, bei panaudoti sprendimų medžio bei daugiasluoksnio perceptrono dirbtinio neuroninio tinklo modeliams aprašyti.
 
-Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrinkimo sprendimą pasitelkiant kodo analizės metodus bei dirbtinius neuroninius tinklus.
+Darbo tikslas: Patikrinti daugiasluoksnio perceptrono neuroninio tinklo, kaip įrankio programinės įrangos defektyvumui nuspėti, efektyvumą
 
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
@@ -129,17 +129,19 @@ McCabe taip pat apibėžė ir keletą kitų metrikų skirtų pamatuoti progamini
 
 Tarkime programinis kodas su dideliu ciklomatiniu sudėtingumu yra sunkiau ištestuojamas, tačiau esant nedideliam esminiam sudėtingumui reiškia, jog mes šį programinį kodą galime suskaidyti į mažesnius vienetus, kurie yra lengviau skaitomi ir testuojami atskirai. Didelis esminis sudėtingumas parodo, kad programinį kodą yra sunkiau skaityti bei prižiūrėti, t.y. programinis kodas yra žemesnės kokybės bei kyla didesnė defektyvumo rizika.
 
+Thomas J. McCabe 1989-aisiais išpletė savo sudėtingumo metrikų publikaciją kartu su Charles W. Butler. Čia publikacijoje apibrėžiama nauja sudėtingumo metrika - dizaino sudėtingumas. Dizaino sudėtingumas tai ciklomatinis sudėtingumas redukuotam programos kodo grafui. Grafas redukuojamas siekiant pašalinti sudėtingus darinius kurie nedaro įtakos dizaino moduliams. Dizaino sudėtingumas parodo kodo modulio sąveikos su kitais moduliais sudėtingumą \cite{McCabe:1989:DCM:76380.76382}. Metrika padeda atskirti tarp kodo modulių kurių buvimas programoje smarkiai padidina šios sudėtingumą ir tarp modulių, kurie paprasčiausiai savo viduje turi sudėtingos logikos elementų.
+
 \subsection{Halstead sudėtingumo metrikos}
 1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to, kaip kodas parašytas ir yra skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos \cite{Halstead:1977:ESS:540137}.
 
-Halstead metrikos paremtos šiais matavimo vienetais:
+Halstead metrikos paremtos kodo įsivaizdavimo kaip įvykių seką, kur kiekvienas įvykis yra operatorius arba operandas. Tuomet skaičiuojami šiais matavimo vienetais:
 \begin{itemize}  
 \item[]\(n_1\) - unikalių operatorių kiekis,
 \item[]\(n_2\) - unikalių operandų kiekis,
 \item[]\(N_1\) - visų operatorių kiekis,
 \item[]\(N_2\) - visų operandų kiekis.
 \end{itemize} 
-Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, \[N = N_1 + N_2\]formule skaičiuojamas programos dydis, \[V = N * log_2n\]formule skaičiuojama programos apimtis, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule skaičiuojamas programos sudėtingumas, o formule \[E = D * V\] - pastangos. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
+Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, reiškiantis unikalių operatoriu bei operandų kiekį, \[N = N_1 + N_2\]formule skaičiuojamas programos dydis, reiškiantis visų operatorių ir operandų kiekį, \[V = N * log_2n\]formule skaičiuojama programos apimtis, tai programos informacinis turinys išmatuotas matematiškai, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule skaičiuojamas programos sudėtingumas, dar reiškiantis galimą defektyvumą, o formule \[E = D * V\] - pastangos skirtos skaityti ar suprasti kodą. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
 
 Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei operandų nustatymo būdų, dažnai kritikos susilaukia ir tai, jog matuojamas tekstu pagrįstas sudėtingumas, t.y. kaip sunku skaityti kodą, o ne sudėtingumas pagrįstas kodo struktūra ar logika.
 

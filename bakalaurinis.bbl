@@ -176,6 +176,53 @@
     \field{year}{2009}
   \endentry
 
+  \entry{McCabe:1989:DCM:76380.76382}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MTJ}{%
+         family={McCabe},
+         familyi={M\bibinitperiod},
+         given={Thomas\bibnamedelima J.},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BCW}{%
+         family={Butler},
+         familyi={B\bibinitperiod},
+         given={Charles\bibnamedelima W.},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \keyw{Complexity classes, complexity measures, software development,
+  software quality assurance, systems analysis and design, systems development,
+  test generation, testing, trees}
+    \strng{namehash}{MTJBCW1}
+    \strng{fullhash}{MTJBCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{MB89}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1145/76380.76382
+    \endverb
+    \field{issn}{0001-0782}
+    \field{number}{12}
+    \field{pages}{1415\bibrangedash 1425}
+    \field{title}{Design Complexity Measurement and Testing}
+    \verb{url}
+    \verb http://doi.acm.org/10.1145/76380.76382
+    \endverb
+    \field{volume}{32}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{journaltitle}{Commun. ACM}
+    \field{month}{12}
+    \field{year}{1989}
+  \endentry
+
   \entry{McCabe:1976:CM:800253.807712}{inproceedings}{}
     \name{author}{1}{}{%
       {{hash=MTJ}{%
