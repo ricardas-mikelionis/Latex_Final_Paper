@@ -219,7 +219,9 @@ Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikš
 Sprenimo medžiu paremtas prediktyvus modelis panašu, jog nėra optimaliausias sprendimas programos modulių defektyvumui nuspėti. Tiek su CM1, tiek su PC1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
-Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio perceptrono klasifikatoriumi. Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
+Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas daugiasluoksio perceptrono klasifikatoriumi. Daugiasluoksnis perceptronas yra tiesinio tipo dirbtinis neuroninis tinklas, kurio ryšiai tarp viršūnių (vaizduojant modelį grafu) n nukreipti į vieną pusę, t.y. ne rekurentiniai. Ir duomenys tiesiškai keliauja nuo įvesties sluoksnio per paslėptuosius sluoksnius iki gaunamas rezultatas.
+
+Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
 
 \begin{figure}[H]
     \centering
@@ -256,11 +258,13 @@ Dirbtiniam neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kart
 \end{tabular}
 \end{table}
 
-Taigi, lentelė \ref{tab:MLP_result} atvaizduoja abiejų eksperimentų su pilnų duomenų rinkiniu rezultatus, ir iš karto galime pamatyti, jog jau vien accuracy reikšmė keletu procentų aukštesnė, nei sprendimų medžio, abejais atvejais, Tačiau abi pasirinktosios metrikos naudojamos šiame tyrime turi nemažai tiesiogiai vieni kitiems proporcingų reikšmių, kurias pašalinus būtų galima dar labiau padidinti dirbtinio neuroninio tinklo efektyvumą sukuriant glaudesnius ryšius tarp mažesnio atributų skaičiaus.
+Taigi, lentelė \ref{tab:MLP_result} atvaizduoja abiejų eksperimentų su pilnų duomenų rinkiniu rezultatus, ir iš karto galime pamatyti, jog jau vien accuracy reikšmė keletu procentų aukštesnė, nei sprendimų medžio vaizduojamo lentelėje \ref{tab:Tree_result}, abejais atvejais, Tačiau abi pasirinktosios metrikos naudojamos šiame tyrime turi nemažai tiesiogiai vieni kitiems proporcingų reikšmių, kurias pašalinus būtų galima dar labiau padidinti dirbtinio neuroninio tinklo efektyvumą sukuriant glaudesnius ryšius tarp mažesnio atributų skaičiaus.
 
 \section{Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}
 
 Neatrūšiuoti duomenys skirti apmokyti dirbtinius neuroninius tinklus, sudaryti iš didelės įvairovės atributų, kurių tik dalis daro įtaką. Atributų atrinkimas (angl. feature selection) yra dažna praktika skirta padidinti dirbtinio neuroninio tinklo efektyvumą bei išvengti tinklo permokymo.
+
+Turint platų dirbtinį neuroninį tinklą, t.y. tinklą priimantį didelį kiekį skirtingų atributų, ypač, tokį kuriame nėra daug paslėptų sluoksnių, sudaromos salygos apmokymo metu tinklą išmokyti prisiminti, vietoj to, ko iš jo tikimasi - generalizuoti. Toks dirbtinis neuroninis tinklas galiausiai gali puikiu tikslumu grąžinti spėjimą duomenims su kuriais buvo apmokytas, tačiau atsiradus naujiems duomenims atlikti duomenų klasifikavimo jau nebesugeba.
 
 Tęsiant tyrimą bus vykdomi du skirtingi atributų atrinkimo metodai. Pradedant su pilnu duomenų rinkiniu susidedančiu iš 21 atributo rankinius būdu bus atrinkti atributai, kurie tiesiogiai susiję su kitais, t.y. jei Halstead metrikos išvedamos naudojant unikalių operandų bei operatorių kiekius, šie abu atributai bus išimami iš duomenų rinkinio, o palikti tik iš jų abiejų išvesti duomenys.
 
@@ -290,7 +294,7 @@ Po šio duomenų atrinkimo metodo duomenų rinkinio atributai atrodo taip:
 
 \subsection{Duomenų analizė naudojant įrankį Weka}
 
-Weka tai darbo su dideliais duomenų rinkiniais įrankis, savyje turintis mašininio mokymosi algoritmų duomenų analizės užtuotims vykdyti. Šie algoritmai gali būti pritaikyti tiesiai duomenų rinkinius atidarius per Weka grafinę sąsają, arba iškviesti Java kodu ir apdoroti naudojantis Weka bibliotekomis.
+Weka tai darbo su dideliais duomenų rinkiniais įrankis, savyje turintis mašininio mokymosi algoritmų duomenų analizės užtuotims vykdyti. Šie algoritmai gali būti pritaikyti tiesiai duomenų rinkinius atidarius per Weka grafinę sąsają, arba iškviesti Java kodu ir apdoroti naudojantis Weka bibliotekomis.  Šio tyrimo metu buvo naudotasi Weka grafine sąsaja.
 
 Duomenų analizės įrankis Weka \cite{hall09:_weka_data_minin_softw} turi daug su duomenų analize susijusių paskirčių, kaip vizualus duomenų lentelių atvaizdavimas, duomenų atrinkimas ir kt. Tyrimo kontekste bus panauodoti keletas Weka viduje esančių atributų atrinkimo algoritmų, kuriuos apžvelgus bus atrinkti nauji, sumažinti, duomenų rinkinai.
 
@@ -350,11 +354,13 @@ Galutiniai duomenų rinkiniai bus sudaryti iš viso iš 11 stulpelių, kur pasku
 \item[] defects - Binarinė reikšmė. True arba False.
 \end{itemize}
 
-Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Čia kaip matome didelę svarbą vis tiek turi eilučių, komentarų skaičiai, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti dirbtinio neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio, todėl geriausia būtų naudoti šių dviejų technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
+Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Kaip paaiškėjo po duomenų analizės, abu algoritmai didelę svarbą vis tiek teikia eilučių, komentarų metrikoms, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti dirbtinio neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio.
+
+Realiu atveju rekomenduotina naudoti tiek rankinio atrinkimo tiek algoritminio atrinkimo technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
 
 \section{Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}
 
-Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu dirbtiniu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
+Atlikti du eksperimentai su dviemis skirtingomis besimokančiomis mašinomis, viena paremta sprendimų medžiu, o kita paremta daugiasluoksnio percetrono modeliu atvaizduotu dirbtiniu neuroniniu tinklu. Gavus rezultatus pastebėta, jog su pilnu duomenų rinkinu sprendimų medžio mašinoje įvyksta persimokymas, o daugiasluoksnio perceptrono rezultatai, nors ir geresni, tačiau ne visai tenkina, nes, nors ir esant 90\% tikimybei, jog neurininis tinklas programinės įrangos modulį, kaip defektyvų klasifikuos sėkmingai, egzistuoja 10\% tikimybė, jog duomenys bus indentifikuoti klaidingai.
 
 Rezultatams gerinti priimtas sprendimas atlikti atributų išrinkimą dviem būdais. Pirmasis būdas buvo skirtas išrinkti duomenis kurie tarpusavyje neturi koreliacijos ir yra visiškai individualios reikšmės palyginus su kitais atributais. Kadangi duomenų rinkiniai sudaryti pagal McCabe ir Halstead metrikas išimti pradiniai atributai iš kurių išvestos reikšmės, taip pašalinant beveik puse visų buvusių atributų tokių kaip unikalių operandų kiekis ar kodo eilučių kiekis. Antrasis būdas buvo įvykdytas automatiškai, duomenų rinkinį įkėlus į duomenų analizės programą ir pasirinkus analizės algoritmą, kurio rezultatas svarbos reikšmės kiekvienam iš atributų. Taip pasirenkant apytiksliai puse vsų buvusių atributų.
 
@@ -398,14 +404,14 @@ Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM
 \end{tabular}
 \end{table}
 
-Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su \ref{tab:MLB_result} pav.. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins dirbtinio neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
+Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėlgi nėra ekstremalaus pokyčio palyginus su pirmojo eksperimentu su daugiasluoksniu perceptrono rezultatais vaizduojamais \ref{tab:MLP_result} lentelėje. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins dirbtinio neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
 
 \sectionnonum{Rezultatai ir išvados}
 
 
 1. Išrinktas kodo metrikų rinkinys. Atlikus literatūros analizę pasirinktios Halstead bei McCabe kodo metrikos, matuojančios kodo sudėtingumą tiek logine prasme, McCabe kelių per grafu vaizduojamą kodą kiekis, tiek kodo skaitomumo prasme Halstead metrikose. Pasirinktos būtent šios dvi metrikos, nes šios metrikos gali būti surinktos ir paskaičiuotos statinės analizės metu, todėl jas salyginai lengva surinkti ir su jomis eksperimentuoti.
 
-Esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau pritaikyti esamai situacijai. 
+Esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau metrikas parinkti pritaikius esamai situacijai. 
 
 2. Atlikti du eksperimentai. Su surinktomis kodo metrikomis bei apskaičiuotomis sudėtingumo reikšmėmis buvo apmokytos dvi besimokančios mašinos viena paremta sprendimų medžio modeliu, kita daugiasluoksnio perceptrono dirbtiniu neuroniniu tinklu. Accuracy metrikos visais atvejais, kaip vaizduojama \ref{img:chart} ir \ref{img:chart2} pav., aukštos, tačiau palyginus gautuosius rezultatus matome, jog naudojantis abejais duomenų rinkiniais sprendimų medžio atveju įvyko persimokymo reiškinys, kai padavus naujų duomenų rinkinį modelis nebesugeba atspėti reikšmės.
 
