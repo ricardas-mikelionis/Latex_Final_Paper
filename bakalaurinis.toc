@@ -18,20 +18,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.}Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{17}
+\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{18}
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{20}
+\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{22}
+\contentsline {section}{Rezultatai ir išvados}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{25}
+\contentsline {section}{Literatūra}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{26}
+\contentsline {section}{Santrumpos}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{26}
+\contentsline {section}{\MakeUppercase {Priedai}}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti sistema}{27}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti sistema}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{28}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{29}

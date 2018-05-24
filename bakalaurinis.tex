@@ -54,7 +54,7 @@ Darbas susideda iš keturių esminių dalių. Pirmoje apžvelgiamos kodo matavim
 \raktiniaizodziai{dirbtiniai neuroniniai tinklai, Halstead, McCabe, daugiasluoksnis perceptronas}   
 
 \sectionnonumnocontent{Summary}
-The paper analyzes the viability of a artificial neural network trained to predict software defects as a tool in software testing process.
+The paper analyzes the viability of using an artificial neural network trained to predict software defects as a tool in software testing process.
 
 The paper consists of four main parts. Firstly an an overview of code measures and their relation to software defect proneness is conducted. After collecting the data an experiment is conducted where the results of several learning machines are compared. Mainly using dataset described in the first part two models are trained and tested, one basen on a decision tree the other one on a multilayer perceptron artificial neural network. Next are data analysis and feature selection. Two types of data analyses are carried out, one manually by removing redundant and directly proportionate values from dataset, the other one is done automatically by using a data analysis tool Weka. Finally the newly formed datasets are used to traina and test modified versions of the multilayer perceptron artificial network and the results are compared.
 \keywords{artificial neural network, Halstead, McCabe, multilayer perceptron}
@@ -313,9 +313,27 @@ Neatrūšiuoti duomenys skirti apmokyti dirbtinius neuroninius tinklus, sudaryti
 
 Turint platų dirbtinį neuroninį tinklą, t.y. tinklą priimantį didelį kiekį skirtingų atributų, ypač, tokį kuriame nėra daug paslėptų sluoksnių, sudaromos salygos apmokymo metu tinklą išmokyti prisiminti, vietoj to, ko iš jo tikimasi - generalizuoti. Toks dirbtinis neuroninis tinklas galiausiai gali puikiu tikslumu grąžinti spėjimą duomenims su kuriais buvo apmokytas, tačiau atsiradus naujiems duomenims atlikti duomenų klasifikavimo jau nebesugeba.
 
+Atributų atrinkimas tai procesas kurio metu atrenkami konkrečiam dirbtinio neuroninio tinklo modeliui svarbūs duomenų rinkiniai. Atributų atrinkimas gali pagelbėti konstruojant dirbtinio neuroninio tinklo modelį. Įvykdžius atributų atrinkimą modeliu gaunamas toks pat ar potencialiai geresnis rezultatas su daug mažiau duomenų.
+
+Atributų atrinkimo metodai gali būti naudojami atrinkti nereikalingus, perteklinius bei beprasmius duomenis iš duomenų rinkinio, kurie neprisideda prie modelio tikslumo gerinimo, o gali ir būti priežastimi dėl žemo modelio tikslumo.
+
+Mažesnis atributų kiekis taip pat padeda sudaryti mažesnius bei ne tokius sudėtingus modelius, kurios lengviau prižiūrėti bei suprasti.
+
+Automatiniam atributų atrinkimui yra keletas pagrindinių algoritmų: filtro metodai, grupių metodai ir vidiniai metodai.
+
+Filtro atributų atrinkimo algoritmai (angl. Filter Methods) vykdo statistinę duomenų analizę, po kurios kiekvienam iš atributų priskiriamas svoris. Tuomet visi atributai rūšiuojami pagal jų svorio rezultatus ir priklausomai nuo ribinio svorio išimami arba paliekami duomenų rinkinyje.
+Keletas tokio algoritmo pavyzdžių būtų Information Gain algoritmas bei Correlation coefficiet score algoritmas.
+
+Grupių atributų atrinkimo algoritmai (angl. Wrapper methods) atributų atrinkimą vykdo kaip paieškos uždavinį, kur daugybė skirtingų atributų kombinacijų parenkamos, įvertinamos bei lyginamos su kitomis. Perdiktyvusis modelis naudojamas kiekvieno duomenų poaibio vertinimui ir atributų rinkinio įverinimo rezultatas sutampa su modelio accuracy metrika. 
+Tokio algoritmo pavyzdys - rekursyvus atributų atmetimo algoritmas.
+
+Vidiniai atributų atrinkimo algoritmai (angl. Embedded methods) atlieka duomenų analizę ir atributų atrinkimą modelio kūrimo metu. Dažniausiai pasitaikantys vidiniai atributų atrinkimo metodai yra reguliarizavimo metodai.
+
+Reguliarizavimo metodai dar dažnai vadinami drausmės metodais, tai toks metodas, kuris modelio apmokymo metu prideda papildomų apribojimų prediktyviajam algoritmui. Toks procesas padeda sugeneruoti mažesnį sudėtingumą turintį modelį. Keletas tokių algoritmų pavyzdžių yra LASSO bei Ridge Regression.
+
 Tęsiant tyrimą bus vykdomi du skirtingi atributų atrinkimo metodai. Pradedant su pilnu duomenų rinkiniu susidedančiu iš 21 atributo rankinius būdu bus atrinkti atributai, kurie tiesiogiai susiję su kitais, t.y. jei Halstead metrikos išvedamos naudojant unikalių operandų bei operatorių kiekius, šie abu atributai bus išimami iš duomenų rinkinio, o palikti tik iš jų abiejų išvesti duomenys.
 
-Kitas duomenų atrinkimo metodas bus atliktas automatiškai, naudojant duomenų analizės įrankį „Weka“. Išbandžius keletą atrinkimo metodų bei algoritmų bus sudaryti nauji duomenų rinkiniai - senojo poiaibiai.
+Kitas duomenų atrinkimo metodas bus atliktas automatiškai, naudojant duomenų analizės įrankį „Weka“. Išbandžius keletą atrinkimo metodų bei filtro atributų atrinkimo algoritmų bus sudaryti nauji duomenų rinkiniai - senojo poaibiai.
 
 \subsection{Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}
 
