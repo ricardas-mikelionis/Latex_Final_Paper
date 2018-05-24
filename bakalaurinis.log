@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  24 MAY 2018 23:21
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  25 MAY 2018 00:13
  restricted system commands enabled.
  file:line:error style messages enabled.
 **bakalaurinis.tex
@@ -36,7 +36,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.103 seconds
+luaotfload | main : initialization completed in 0.109 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./VUMIFPSbakalaurinis.cls
 Document Class: VUMIFPSbakalaurinis 2015/02/03 1.0 VU MIF SE bachelor thesis cla
@@ -488,10 +488,10 @@ File: gloss-lithuanian.ldf polyglossia: module for lithuanian
 Module polyglossia Info: Language data for lithuanian
 (polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-lt.tex
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            synonyms	table: 0x7fbfe1b36e10
 (polyglossia)            patterns	hyph-lt.pat.txt
-(polyglossia)            synonyms	table: 0x7fc018956bb0
 (polyglossia)            righthyphenmin	2
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns: hyph-lt.pat.txt on input line 8
 Module polyglossia Info: Language lithuanian was not yet loaded; created with id
  4 on input line 8
@@ -1588,10 +1588,10 @@ Here is how much of LuaTeX's memory you used:
  731 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 20 attribute, 95 glue_spec, 20 attr
 ibute_list, 1 write nodes
-   avail lists: 1:2,2:662,3:161,4:69,5:272,6:31,7:4408,8:66,9:187,10:35,11:733
+   avail lists: 1:2,2:662,3:161,4:69,5:272,6:31,7:4412,8:66,9:187,10:35,11:733
  28433 multiletter control sequences out of 65536+600000
  112 fonts using 19969487 bytes
- 67i,12n,99p,1199b,2552s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 67i,12n,99p,1203b,2552s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></Users/ricardas_mikelionis_mac/Library/Fonts/Palem-it.ttf></Users/ricardas_mi
 kelionis_mac/Library/Fonts/Palem-bd.ttf></Users/ricardas_mikelionis_mac/Library/
@@ -1601,7 +1601,7 @@ ts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb>
-Output written on bakalaurinis.pdf (29 pages, 2903639 bytes).
+Output written on bakalaurinis.pdf (29 pages, 2903621 bytes).
 
 PDF statistics: 155 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream
