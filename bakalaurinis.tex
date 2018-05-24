@@ -23,12 +23,12 @@
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
 \papertype{Bakalauro darbas}
-\title{Neuroninių tinklų panaudojimas testavimo proceso gerinimui}
-\titleineng{Using Neural Networks to Improve the Testing Process}
+\title{Dirbtinių neuroninių tinklų panaudojimas testavimo proceso gerinimui}
+\titleineng{Using an Artificial Neural Network in the Software Testing Process}
 \author{Ričardas Mikelionis}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
-\supervisor{asist. dr. Vytautas Valaitis}
-\reviewer{partn. prof., dr. Aldas Glemža}
+\supervisor{asist., dr. Vytautas Valaitis}
+\reviewer{partn. prof., dr. Aldas Glemža}
 \date{Vilnius – \the\year}
 
 % Nustatymai
@@ -74,10 +74,10 @@ Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrin
 
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
-\item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui
-\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir dirbtinio neuroninio tinklo naudojant surinktus duomenis
-\item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui
-\item Naudojantis mažesniu atributų kiekiu iš naujo apmokyti dirbtinį neuroninį tinklą ir palyginti rezultatus su pilnų duomenų rinkinių apmokyto direbtinio neuroninio tinklo
+\item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui.
+\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir dirbtinio neuroninio tinklo naudojant surinktus duomenis.
+\item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui.
+\item Palyginti dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį pritaikius skirtingus atributų atrinkimo metodus.
 \end{enumerate}
 
 Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
@@ -102,19 +102,19 @@ Tokių metrikų pasirinkimas paremtas tuo, jog jų rinkimas, net atliekamas nuol
 \subsection{McCabe sudėtingumo metrikos}
 1976-aisiais Thomas J, McCabe išleido tyrimą kuriame pasiūlė naują programinės įrangos kodo sudėtingumo matavimo būdą, pavadintą Ciklomatiniu sudėtingumu (angl. Cyclomatic Complexity). Šis matavimo vienetas kiekybiškai matuoja nepriklausomų kelių per kodo elementus kiekį.
 
-Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tiesiškai nepriklausomų kelių kiekis. Pavyzdžiui jei kode nėra jokių eiliškumo kontrolės sakinių (angl. Control flow statements), kaip sąlygninai „if“ sakiniai, tuomet kodo ciklomatinis sudėtingumas būtų 1. Su vienu „if“ sąlyginiu sakiniu, po kurio įvykdymo galimi du keliai: jei grąžinta „TRUE“ bei jei grąžinta „FALSE“, kodo ciklomatinis sudėtingumas būtų 2. Du vieną sąlygą turintys „if“ sakiniai ar vienas toks sakinys su dviem salygomis sudarytų grafą kurio ciklomatinis sudėtingmas būtų lygus 3 ir t.t. \cite{McCabe:1976:CM:800253.807712}
+Ciklomatnis sudėtingumas apibrėžiamas, kaip kodo vykdyme egzistuojančių tiesiškai nepriklausomų kelių kiekis. Pavyzdžiui jei kode nėra jokių eiliškumo kontrolės sakinių (angl. Control flow statements), kaip sąlygninai „if“ sakiniai, tuomet kodo ciklomatinis sudėtingumas būtų 1. Su vienu „if“ sąlyginiu sakiniu, po kurio įvykdymo galimi du keliai: jei grąžinta „TRUE“ bei jei grąžinta „FALSE“, kodo ciklomatinis sudėtingumas būtų 2. Du vieną sąlygą turintys „if“ sakiniai ar vienas toks sakinys su dviem salygomis sudarytų grafą kurio ciklomatinis sudėtingmas būtų lygus 3 ir t.t. \cite{McCabe:1976:CM:800253.807712}.
 
 Ciklomatinis sudėtingumas skaičiuojamas naudojant orientuotą grafą, kuris vaizduoją programos kodą. Tokiu atveju grafo viršūnės atspindi komandų, kurios vykdomos kartu, grupes, o kraštinė su kryptimi sujungia dvi viršūnes jei jos gali būti vykdomos viena po kitos. Tokį ciklomatinio sudėtingumo skaičiavimo metodą galima taikyti ir aukštesnės abstrakcijos progaminio kodo vienetams kaip funkcijos, metodai, klasės ar kt.
 
-Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \[M = E - N + 2P\]. Kur šios metrikos atvaizduojamos taip:
-\begin{description}  
-\item E = grafo kraštinių kiekis,
-\item N = grafo viršūnių kiekis,
-\item P = apjungtų komponentų kiekis.
-\end{description} 
-Dar cikomatinis sudėtingumas skaičiuojamas ir formule \[M = E - N + P\]. Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
+Matematiškai ciklomatinis sudėtingumas M apskaičiuojamas formule \[M = E - N + 2P.\] Kur šios metrikos atvaizduojamos taip:
+\begin{itemize}  
+\item[] E = grafo kraštinių kiekis,
+\item[] N = grafo viršūnių kiekis,
+\item[] P = apjungtų komponentų kiekis.
+\end{itemize} 
+Dar cikomatinis sudėtingumas skaičiuojamas ir formule \[M = E - N + P.\] Šiuo atveju kodas vaizduojamas grafu kurio pradinio ir paskutinio modulio grafo viršūnės yra sujungtos, taip sudarant stipriai apjungtą grafą, ir kodo ciklomatinis sudėtingumas prilygsta grafo ciklomatiniam skaičiui.
 
-Pavyzdžiui, turint programą, kaip pavaizduota pav. \ref{img:Cyclomatic_graph_1} kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą galime panaudoti McCabe formulę ir apskaičiuoti kodo ciklomatinį sudėtingumą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie kartu sudaro vieną apjungtąjį komponentą, tuomet tokios programos ciklomatinis sudėtingumas būtų \(9 - 8 + 2 * 1 = 3\).
+Pavyzdžiui, turint programą, kaip pavaizduota \ref{img:Cyclomatic_graph_1} pav. kurios veikimas prasideda nuo modulio atvaizduoto raudona viršūne, o kodo vykdymas pabaigiamas įvykdžius mėlyna viršūne atvaizduotą kodą galime panaudoti McCabe formulę ir apskaičiuoti kodo ciklomatinį sudėtingumą. Toks grafas sudarytas iš devynių kraštinių bei aštuonių viršūnių, kurie kartu sudaro vieną apjungtąjį komponentą, tuomet tokios programos ciklomatinis sudėtingumas būtų \(9 - 8 + 2 * 1 = 3\).
 
 \begin{figure}[H]
     \centering
@@ -123,27 +123,21 @@ Pavyzdžiui, turint programą, kaip pavaizduota pav. \ref{img:Cyclomatic_graph_1
     \label{img:Cyclomatic_graph_1}
 \end{figure}
 
+McCabe taip pat apibėžė ir keletą kitų metrikų skirtų pamatuoti progaminio kodo sudėtingumą, viena tokių metrikų - esminis sudėtingumas. Esminis sudėtingumas - metrika parodanti programinės įrangos sudėtingumą pašalinant (suskaidant) logines struktūras, grafe vaizduojamas, kaip turinčias vieną viršūnę įvesčiai bei vieną rezultatams. Tokio tipo struktūrų pavyzdžiai būtų if-then-else sąlyginių sakinių dariniai ar while tipo ciklas.
 
+Tarkime programinis kodas su dideliu ciklomatiniu sudėtingumu yra sunkiau ištestuojamas, tačiau esant nedideliam esminiu sudėtingumui reiškia, jog mes šį programinį kodą galime suskaidyti į mažesnius vienetus, kurie yra lengviau skaitomi ir testuojami atskirai. Didelis esminis sudėtingumas parodo, kad programinį kodą yra sunkiau skaityti bei prižiūrėti, t.y. programinis kodas yra žemesnės kokybės
 
 \subsection{Halstead sudėtingumo metrikos}
-1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to, kaip kodas parašytas ir yra skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos.\cite{Halstead:1977:ESS:540137}
+1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to, kaip kodas parašytas ir yra skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos \cite{Halstead:1977:ESS:540137}.
 
 Halstead metrikos paremtos šiais matavimo vienetais:
-\begin{description}  
-\item\(n_1\) - unikalių operatorių kiekis,
-\item\(n_2\) - unikalių operandų kiekis,
-\item\(N_1\) - visų operatorių kiekis,
-\item\(N_2\) - visų operandų kiekis.
-\end{description} 
-Iš šių matų šskaičiuojami šios metrikos:
-\begin{description}  
-\item\(n =  n_1 + n_2\) - Programos žodynas,
-\item\(N = N_1 + N_2\) - programos dydis,
-\item\(V = N * log_2n\) - programos apimtis,
-\item\(D = \frac{n_1}{2} * \frac{N_1}{n_2}\) - programos sudėtingumas,
-\item\(E = D * V\) - pastangos.
-\end{description} 
-Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
+\begin{itemize}  
+\item[]\(n_1\) - unikalių operatorių kiekis,
+\item[]\(n_2\) - unikalių operandų kiekis,
+\item[]\(N_1\) - visų operatorių kiekis,
+\item[]\(N_2\) - visų operandų kiekis.
+\end{itemize} 
+Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, \[N = N_1 + N_2\]formule programos dydis, \[V = N * log_2n\]formule programos apimtis, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule programos sudėtingumas, o formule \[E = D * V\] - pastangos. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
 
 Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei operandų nustatymo būdų, dažnai kritikos susilaukia ir tai, jog matuojamas tekstu pagrįstas sudėtingumas, t.y. kaip sunku skaityti kodą, o ne sudėtingumas pagrįstas kodo struktūra ar logika.
 
@@ -152,30 +146,30 @@ Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei opera
 Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: Sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytą dirbtinį neuroninį tinklą.
 
 Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai mašinai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
-\begin{description} 
-\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
-\item v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
-\item ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
-\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
-\item n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
-\item v - Skaitinė reikšmė. Halstead programos apimtis.
-\item l - Skaitinė reikšmė. Halstead programos ilgis.
-\item d - Skaitinė reikšmė Halstead sudėtingumas.
-\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
-\item e - Skaitinė reikšmė. Halstead pastangos.
-\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
-\item t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
-\item lOCode - Skaitinė reikšmė. Halstead kodo eilučių kiekis.
-\item lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
-\item lOBlank - Skaitinė reikšmė. Halstead tuščių eilučių kiekis.
-\item lOCodeAndComment - Skaitinė reikšmė. Komentarų bei kodo eilučių kiekių sumą.
-\item uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
-\item uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
-\item total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
-\item total\_Opnd - Skaitinė reikšmė. Visų operandų kiekis.
-\item branchCount - Skaitinė reikšmė. Grafu atvaizduojamo kodo kelių kiekis.
-\item defects - Binarinė reikšmė. True arba False.
-\end{description} 
+\begin{itemize} 
+\item[] loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item[] v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
+\item[] ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
+\item[] iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item[] n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
+\item[] v - Skaitinė reikšmė. Halstead programos apimtis.
+\item[] l - Skaitinė reikšmė. Halstead programos ilgis.
+\item[] d - Skaitinė reikšmė Halstead sudėtingumas.
+\item[] i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item[] e - Skaitinė reikšmė. Halstead pastangos.
+\item[] b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item[] t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
+\item[] lOCode - Skaitinė reikšmė. Halstead kodo eilučių kiekis.
+\item[] lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
+\item[] lOBlank - Skaitinė reikšmė. Halstead tuščių eilučių kiekis.
+\item[] lOCodeAndComment - Skaitinė reikšmė. Komentarų bei kodo eilučių kiekių sumą.
+\item[] uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
+\item[] uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
+\item[] total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
+\item[] total\_Opnd - Skaitinė reikšmė. Visų operandų kiekis.
+\item[] branchCount - Skaitinė reikšmė. Grafu atvaizduojamo kodo kelių kiekis.
+\item[] defects - Binarinė reikšmė. True arba False.
+\end{itemize} 
 
 Tyrimo tikslui pasiekti buvo nuspręsta panaudoti keletą jau surinktų duomenų rinkinių. Siekiant surinkti pakankamą kiekį prasmingų duomenų (500-1000 skirtingų testuotų programinės įrangos versijų (angl. build)) šio tyrimo kontekste užimtų per daug laiko. Tyrime bus naudojami  „CM1“ bei „PC1“ duomenų rinkiniai iš  „Promise“ duomeų rinkinių duomenų bazės \cite{Sayyad-Shirabad+Menzies:2005}. Tiek „CM1“, tiek „PC1“ pateikti NASA ir sudaryti jų 2004-aisiais vykdytos „NASA Metrics Data Program“ progamos, skirtos kurti defektus nuspėjančią programinę įrangą, metu.
 
@@ -184,7 +178,7 @@ PC1 duomenų rinkinys sudarytas iš 1109 duomenų eilučių, surinktų iš kodo 
 CM1 duomenų rinkinys sudarytas iš 498 duomenų eilučių, surinktų iš kodo parašyto C programavimo kalba. Programinė įranga iš kurios surinkti šie duomenys yra pagalbinė įranga vienam iš NASA erdvėlaivių. Duomenų rinkinys pasidalina į 90.16\% duomenų eilučių kurios atspindi atvejį, kai užfiksuotas vienas ar daugiau defektų bei 9.83\% duomenų eilučių atspindinčių, kai nebuvo užfiksuota defektų.
 
 \subsection{Sprendimų medžio metodu paremta besimokanti mašina}
-Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas pav. \ref{img:tree} pirmame priede. 
+Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas \ref{img:tree} pav. pirmame priede. 
 
 Su tradiciniais duomenų rinkiniais sprendimų medis turi nemažai privalumų. Sprendimo medžiai yra lengvai suprantami, net daug techninių žinių neturintiems žmonėms ir pateikus sprendimų medį grafiškai pačiam galima pereiti per viršūnes tikrinant duomenų rinkinio eilutės grąžinamą rezultatą. Taip pat palyginus su kitais prediktyviaisiais modeliais sprendimo medžiai reikalauja salyginai nedidelio kiekio duomenų pertvarkymo prieš naudojant juos šiame modelyje. Iki tam tikro laipsnio smarkiai išsiskiriančios reikšmės ar trūstami įrašai nedaro didelės įtakos sprendimų medžiams. Sprendimų medžiai neskiria ir gali priimti tiek skaitines tiek logines reikšmes, todėl galima naudoti didesnę įvairovę duomenų rinkinių.
 
@@ -195,11 +189,10 @@ Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, gin
 Šio tyrimo metu sprendimų medžio modelis ir klasifikatorius buvo aprašyti ir įgyvedinti Python kalba paraštu scriptu naudojant medžio biblioteką pateiktą Scikit-learn \cite{scikit-learn}.
 
 Rezultatai taip pat buvo apskaičiuoti keletu scikit-learn pateiktų bibliotekų, kurių viduje jie apskaičiuojami keletu formulių:
-\begin{description} 
-\item \(Precision = \frac{\Sigma Tikras pozityvas}{\Sigma Tikras pozityvas + \Sigma Netikras pozityvas}\)
-\item \(Accuracy = \frac{\Sigma Tikras pozityvas + \Sigma Tikras negatyvas}{\Sigma Tikras pozityvas  + \Sigma Tikras nNegatyvas + \Sigma Netikras pozityvas + \Sigma Netikas negatyvas}\)
-\item \(Recall = \frac{\Sigma Tikras pozityvas}{\Sigma Tikras pozityvas + \Sigma Netikras negatyvas}\)
-\end{description}
+
+\[Precision = \frac{\Sigma Tikras Pozityvas}{\Sigma Tikras Pozityvas + \Sigma Netikras Pozityvas},\]
+\[Accuracy = \frac{\Sigma Tikras Pozityvas + \Sigma Tikras Negatyvas}{\Sigma Pozityvai+ \Sigma Negatyvai},\]
+\[Recall = \frac{\Sigma Tikras Pozityvas}{\Sigma Tikras Pozityvas + \Sigma Netikras Negatyvas},\]
 kur „Tikrasis pozityvas“ yra teisingai nustatyta pozityvi reikšmė, „Tikrasis negatyvas“ yra teisingai nustatyta negatyvi reikšmė, „Netikras pozityvas“ yra klaidingai nustatyta pozityvi reikšmė, o „Netikras negatyvas“ yra neteisingai nustatyta negatyvi reiškmė.
 
 Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų spėtų reikšmių buvo atspėta teisinga reikšmė. Precision parodo kiek iš atspėtų teigiamų reikšmių yra tikrų pozityvų, t.y. teisingai nuspėtų teigiamių reikšmių. O Recall parodo kiek tarp iš viso buvusių teigiamų reikšmių jų buvo atspėta.
@@ -222,7 +215,7 @@ Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikš
 Sprenimo medžiu paremtas prediktyvus modelis daug nežada. Su CM1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
-Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio perceptrono klasifikatoriumi. Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą dešinėje pav. \ref{img:dropout}
+Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio perceptrono klasifikatoriumi. Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
 
 \begin{figure}[H]
     \centering
@@ -231,7 +224,7 @@ Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio percep
     \label{img:dropout}
 \end{figure}
 
-Toliau šiame tyrime naudojamas daugiasluoksnio perceptrono modelis atrodys taip, kaip vaizduojama pav. \ref{img:model}, kur įvesties (angl. input) sluoksnyje turime 21 atributą, kaip ir duomenų rinkinyje, toliau du užslėptus sluoksnius, su trečdaliu mažiau įvesčių siekiant sukurti glaudesnius ir prasmingenius ryšius tarp modelio viršūnių, kas kart apmažinant ryšių kiekį siekiant išvengti modelio permokymo.
+Toliau šiame tyrime naudojamas daugiasluoksnio perceptrono modelis atrodys taip, kaip vaizduojama \ref{img:model} pav., kur įvesties (angl. input) sluoksnyje turime 21 atributą, kaip ir duomenų rinkinyje, toliau du užslėptus sluoksnius, su trečdaliu mažiau įvesčių siekiant sukurti glaudesnius ir prasmingenius ryšius tarp modelio viršūnių, kas kart apmažinant ryšių kiekį siekiant išvengti modelio permokymo.
 
 \begin{figure}[H]
     \centering
@@ -276,19 +269,19 @@ Duomenų atrinkimas buvo pradėtas nuo Halstead reikšmių, kurios nors ir patei
 Taip pat išimtos visos žemesnio lygio reikšmės skirtos apskaičiuoti tiek McCabe metrikas tiek papildomai pridėtos duomenų rinkinyje. Taip paliekant 10-ies atributų duomenų rinkinį sudarytą vien iš išvestinių reikšmių, kurios buvo tiesiogiai proporcingos nuo išimtųjų, tačiau tarpusavyje tokio ryšio neturi.
 
 Po šio duomenų atrinkimo metodo duomenų rinkinio atributai atrodo taip:
-\begin{description} 
-\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
-\item v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
-\item ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
-\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
-\item v - Skaitinė reikšmė. Halstead programos apimtis.
-\item d - Skaitinė reikšmė Halstead sudėtingumas.
-\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
-\item e - Skaitinė reikšmė. Halstead pastangos.
-\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
-\item t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
-\item defects - Binarinė reikšmė. True arba False.
-\end{description} 
+\begin{itemize} 
+\item[] loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item[] v(g) - Skaitinė reikšmė. McCabe ciklomatinis sudėtingumas.
+\item[] ev(g) - Skaitinė reikšmė. McCabe esminis sudėtingumas.
+\item[] iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item[] v - Skaitinė reikšmė. Halstead programos apimtis.
+\item[] d - Skaitinė reikšmė Halstead sudėtingumas.
+\item[] i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item[] e - Skaitinė reikšmė. Halstead pastangos.
+\item[] b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item[] t - Skaitinė reikšmė. Halstead laiko suprogramuoti metrika.
+\item[] defects - Binarinė reikšmė. True arba False.
+\end{itemize} 
 
 
 \subsection{Duomenų analizė naudojant įrankį Weka}
@@ -339,19 +332,19 @@ uniq\_op & uniq\_opnd & total\_op & total\_opnd & branchCount \\ \hline
 Koreliacijos algoritmui renkantis reikšmes iki 0.2, o informacijos svarbos algoritmui iki 0.04 galima atrinkti ir palyginti reikšmes. Abejais atvejais gaunamas gana panašus duomenų rinkinys. Kuriuos apjungus gaunami 10 svarbiausių atributų.
 
 Galutiniai duomenų rinkiniai bus sudaryti iš viso iš 11 stulpelių, kur paskutiniame saugomi rezultatai, o kti 10 yra pradinio duomenų rinkinio poaibis ir atrodo taip:
-\begin{description} 
-\item loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
-\item iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
-\item n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
-\item v - Skaitinė reikšmė. Halstead programos apimtis.
-\item i - Skaitinė reikšmė. Halstead protingo turinio metrika.
-\item b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
-\item lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
-\item uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
-\item uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
-\item total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
-\item defects - Binarinė reikšmė. True arba False.
-\end{description}
+\begin{itemize} 
+\item[] loc - Skaitinė reikšmė. McCabe eilučių kode kiekis.
+\item[] iv(g) - Skaitinė reikšmė. McCabe dizaino sudėtingumas.
+\item[] n - Skaitinė reikšmė. Halstead visų operatoriu bei operandų suma (programos dydis).
+\item[] v - Skaitinė reikšmė. Halstead programos apimtis.
+\item[] i - Skaitinė reikšmė. Halstead protingo turinio metrika.
+\item[] b - Skaitinė reikšmė. Halstead defektų kiekio spėjimas.
+\item[] lOComment - Skaitinė reikšmė. Halstead komentarų eilučių kiekis.
+\item[] uniq\_Op - Skaitinė reikšmė. Unikalių operatorių kiekis.
+\item[] uniq\_Opnd - Skaitinė reikšmė. Unikalių operandų kiekis.
+\item[] total\_Op - Skaitinė reikšmė. Visų operatorių kiekis.
+\item[] defects - Binarinė reikšmė. True arba False.
+\end{itemize}
 
 Žinoma tokia analizė nėra visiškai tiksli ir smarkiai priklauso no to koks bus pasirinktas analizės algoritmas ir kaip stuktūrizuoti bei pasiskirstę duomenys. Čia kaip matome didelę svarbą vis tiek turi eilučių, komentarų skaičiai, kurios rankiniu būdu atrenkant atributus buvo pašalintos. Šių duomenų kontekste šios reikšmės turi didelę svarbą ir padės pagerinti dirbtinio neuroninio tinklo rezultatus, tačiau realybėje tarp jų ir kodo defektyvumo nėra jokio glaudaus ryšio, todėl geriausia būtų naudoti šių dviejų technikų kombinaciją ir atrinkti reikšmes rankiniu būdu jas dar išanalizuoti automatiškai arba atvirkščiai.
 
@@ -367,7 +360,7 @@ Tęsiant tyrimą nebenaudosime sprendimų medžio metodo, nes vien su mažiau ef
 
 Tiesiogiai daugiasluoksnio perceptrono tinklo modeliui pritaikyti naujų duomenų rinkinių negalima. Eksperimentui su pilnu duomenų rinkiniu sukurtas daugiasluoksnis perceptronas priima tik pilną duomenų rinkinį. t.y. duomenų eilutes sudarytas iš 21 atributo. Tokiu atveju reikia atnaujinti visą modelį.
 
-Eksperimento kontekste, norint palyginti dvi reikšmes, jos turėtu turėti tą patį pradą, t.y. būti sugeneruotos to paties modelio. Šiuo atveju modelį reikia keisti, tačiau tik pirmąjį, įvesties, sluoksnį. Pakeitus šį sluoksnį ir pritaikius naujiesiems duomenų rinkiniams eksperimentas bus vykdomas su modeliu vaizduojamu pav. \ref{img:model_adj} esančiame priede nr. 2.
+Eksperimento kontekste, norint palyginti dvi reikšmes, jos turėtu turėti tą patį pradą, t.y. būti sugeneruotos to paties modelio. Šiuo atveju modelį reikia keisti, tačiau tik pirmąjį, įvesties, sluoksnį. Pakeitus šį sluoksnį ir pritaikius naujiesiems duomenų rinkiniams eksperimentas bus vykdomas su modeliu vaizduojamu \ref{img:model_adj} pav. esančiame priede nr. 2.
 
 Didžiausia šio modelio problema kurią realiame gyvenime galima būtų ištaisyti, tačiau tyrimo kontekste reikia palikti modelyje esantį išsiplėtimą iš 10-ies į 14-a reikšmių tarp įvesties ir pirmojo paslėpto sluoknsių. Siekiant dar geresnio modelio efektyvumo antrajame sluoksnyje galima būtų sumažinti įvesčių kiekį iki 10 ar mažiau, tačiau tokiu atveju tai būtų jau visiškai kitoks modelis, ir rezultatų palyginimas tarp 21 atributo modelio bei modelio skirto 10 atributų būtų neteisingas.
 
@@ -385,7 +378,7 @@ Pirma atnaujintas modelis buvo apmokytas ir ištestuotas naudojant duomenų rink
 \end{tabular}
 \end{table}
 
-Eksperimento rezultatai vaizduojami pav. \ref{tab:MLP_result_1}, kaip ir tikėtasi yra geresni, nei naudojant pilną duomenų rinkinį. Tačiau tikslumo pagerėjimas nėra akivaizdus ir siekia vos mažą dalelytę, galima sakyti rezultatai bene tokie pat, kaip pirmo eksperimento metu, kaip pavaizduoti pav. \ref{tab:MLP_result}.
+Eksperimento rezultatai vaizduojami \ref{tab:MLP_result_1} pav., kaip ir tikėtasi yra geresni, nei naudojant pilną duomenų rinkinį. Tačiau tikslumo pagerėjimas nėra akivaizdus ir siekia vos mažą dalelytę, galima sakyti rezultatai bene tokie pat, kaip pirmo eksperimento metu, kaip pavaizduoti \ref{tab:MLP_result} pav..
 
 Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM1\_A. Čia taip pat duomenys dalijami į dvi dalis, 70\% apimties poaibį skirtą modelio apmokymui bei 30\% poaibį skirtą modelio testavimui.
 
@@ -401,7 +394,7 @@ Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM
 \end{tabular}
 \end{table}
 
-Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su pav. \ref{tab:MLB_result}. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins dirbtinio neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
+Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar geresni, nei rankiniu būdu atrinktų duomenų rinkinių. Tačiau vėl gi nėra ekstremalaus pokyčio palyginus su \ref{tab:MLB_result} pav.. Galima drąsiai teigti, jog atributų išrinkimas, priklausomai nuo atrinkimui naudojamo metodo, padidins dirbtinio neuroninio modelio tikslumą atspėjant programinės įrangos defektus. Tačiau šių duomenų rinkinių kontekste dėl keleto dešimtųjų procento, kurių nebūtų galima pavadinti smarkiu pagerėjimu, investuoti daugiau laiko ar resursų nebūtų verta.
 
 \sectionnonum{Rezultatai ir išvados}
 
@@ -479,7 +472,7 @@ santrumpos.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.24, angle=90]{img/tree}
-    \caption{Sprendimų medžio tipo besimokanti mašina sudaryta naudojant PC1 duomenų rinkinio poaibį}
+    \caption{Sprendimų medžio tipo besimokanti mašina sudaryta naudojant PC1 duomenų rinkinio poaibį. Sugeneruota automatiškai naudojant pydot biblioteką.}
     \label{img:tree}
 \end{figure}
 
@@ -488,7 +481,7 @@ santrumpos.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.9]{img/model_adjusted}
-    \caption{Daugiasluoksnio perceptrono struktūra atnaujinta atrinktiems atributams}
+    \caption{Daugiasluoksnio perceptrono struktūra atnaujinta atrinktiems atributams. Sugeneruota automatiškai keras.utils.plot\_model bibliotekos pagalba.}
     \label{img:model_adj}
 \end{figure}
 

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  23 MAY 2018 10:50
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  23 MAY 2018 21:20
  restricted system commands enabled.
  file:line:error style messages enabled.
 **bakalaurinis.tex
@@ -486,11 +486,11 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
 File: gloss-lithuanian.ldf polyglossia: module for lithuanian
 Module polyglossia Info: Language data for lithuanian
-(polyglossia)            loader	loadhyph-lt.tex
-(polyglossia)            hyphenation	
-(polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	table: 0x7fc89a4de1f0
+(polyglossia)            synonyms	table: 0x7f86553ba6e0
 (polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            loader	loadhyph-lt.tex
+(polyglossia)            righthyphenmin	2
 (polyglossia)            patterns	hyph-lt.pat.txt
 (polyglossia)            patterns: hyph-lt.pat.txt on input line 8
 Module polyglossia Info: Language lithuanian was not yet loaded; created with id
@@ -1452,64 +1452,64 @@ File: img/Cyclomatic_graph_1.png Graphic file (type png)
 <use img/Cyclomatic_graph_1.png>
 Package luatex.def Info: img/Cyclomatic_graph_1.png  used on input line 121.
 (luatex.def)             Requested size: 307.60155pt x 144.9928pt.
- [7] [8<./img/Cyclomatic_graph_1.png>] [9
+ [7] [8<./img/Cyclomatic_graph_1.png>] [9] [10
 
-] [10]
-<img/dropout.png, id=46, 846.16125pt x 452.69125pt>
+] [11]
+<img/dropout.png, id=47, 846.16125pt x 452.69125pt>
 File: img/dropout.png Graphic file (type png)
 <use img/dropout.png>
-Package luatex.def Info: img/dropout.png  used on input line 229.
+Package luatex.def Info: img/dropout.png  used on input line 220.
 (luatex.def)             Requested size: 423.07959pt x 226.34506pt.
- [11]
-<img/model.png, id=50, 329.23pt x 629.35126pt>
+ [12]
+<img/model.png, id=51, 329.23pt x 629.35126pt>
 File: img/model.png Graphic file (type png)
 <use img/model.png>
-Package luatex.def Info: img/model.png  used on input line 238.
+Package luatex.def Info: img/model.png  used on input line 229.
 (luatex.def)             Requested size: 164.6146pt x 314.67485pt.
- [12<./img/dropout.png><./img/model.png>] [13] [14
+ [13<./img/dropout.png><./img/model.png>] [14] [15
 
 ]
-Overfull \hbox (20.39098pt too wide) in paragraph at lines 308--314
+Overfull \hbox (20.39098pt too wide) in paragraph at lines 299--305
  [][] 
  []
 
 
-Overfull \hbox (11.4437pt too wide) in paragraph at lines 320--326
+Overfull \hbox (11.4437pt too wide) in paragraph at lines 311--317
  [][] 
  []
 
-[15] [16] [17
+[16] [17] [18
 
 ]
 
-LaTeX Warning: Reference `tab:MLB_result' on page 18 undefined on input line 404
+LaTeX Warning: Reference `tab:MLB_result' on page 19 undefined on input line 395
 .
 
-[18]
-<img/chart.png, id=74, 602.25pt x 372.39125pt>
+[19]
+<img/chart.png, id=75, 602.25pt x 372.39125pt>
 File: img/chart.png Graphic file (type png)
 <use img/chart.png>
-Package luatex.def Info: img/chart.png  used on input line 417.
+Package luatex.def Info: img/chart.png  used on input line 408.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
-<img/chart-2.png, id=75, 602.25pt x 372.39125pt>
+<img/chart-2.png, id=76, 602.25pt x 372.39125pt>
 File: img/chart-2.png Graphic file (type png)
 <use img/chart-2.png>
-Package luatex.def Info: img/chart-2.png  used on input line 424.
+Package luatex.def Info: img/chart-2.png  used on input line 415.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
- [19
+ [20
 
 <./img/chart.png><./img/chart-2.png>]
-<img/chart-3.png, id=79, 602.25pt x 372.39125pt>
+<img/chart-3.png, id=81, 602.25pt x 372.39125pt>
 File: img/chart-3.png Graphic file (type png)
 <use img/chart-3.png>
-Package luatex.def Info: img/chart-3.png  used on input line 441.
+Package luatex.def Info: img/chart-3.png  used on input line 432.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
-<img/chart-4.png, id=80, 602.25pt x 372.39125pt>
+<img/chart-4.png, id=82, 602.25pt x 372.39125pt>
 File: img/chart-4.png Graphic file (type png)
 <use img/chart-4.png>
-Package luatex.def Info: img/chart-4.png  used on input line 448.
+Package luatex.def Info: img/chart-4.png  used on input line 439.
 (luatex.def)             Requested size: 301.12425pt x 186.19516pt.
- [20<./img/chart-3.png>] [21<./img/chart-4.png>]
+ [21<./img/chart-3.png>] [22<./img/chart-4.png>]
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1552,25 +1552,25 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[22
+[23
 
-] [23
+] [24
 
 ]
-<img/tree.png, id=96, 2601.72pt x 1803.3774pt>
+<img/tree.png, id=97, 2601.72pt x 1803.3774pt>
 File: img/tree.png Graphic file (type png)
 <use img/tree.png>
-Package luatex.def Info: img/tree.png  used on input line 481.
+Package luatex.def Info: img/tree.png  used on input line 472.
 (luatex.def)             Requested size: 624.42557pt x 432.81943pt.
- [24
+ [25
 
 <./img/tree.png>]
-<img/model_adjusted.png, id=100, 329.23pt x 629.35126pt>
+<img/model_adjusted.png, id=101, 329.23pt x 629.35126pt>
 File: img/model_adjusted.png Graphic file (type png)
 <use img/model_adjusted.png>
-Package luatex.def Info: img/model_adjusted.png  used on input line 490.
+Package luatex.def Info: img/model_adjusted.png  used on input line 481.
 (luatex.def)             Requested size: 296.30424pt x 566.41089pt.
- [25
+ [26
 
 <./img/model_adjusted.png>]
 (./bakalaurinis.aux
@@ -1586,29 +1586,27 @@ Package logreq Info: Writing requests to 'bakalaurinis.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 25159 strings out of 494413
+ 25158 strings out of 494413
  125171,1144653 words of node,token memory allocated
- 692 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 9 attribute, 96 glue_spec, 9 attrib
-ute_list, 1 write nodes
-   avail lists: 1:2,2:594,3:138,4:49,5:253,6:34,7:4340,8:115,9:187,10:35,11:705
- 28424 multiletter control sequences out of 65536+600000
+ 719 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 17 attribute, 95 glue_spec, 17 attr
+ibute_list, 1 write nodes
+   avail lists: 1:2,2:594,3:138,4:48,5:252,6:34,7:4340,8:66,9:191,10:35,11:705
+ 28423 multiletter control sequences out of 65536+600000
  112 fonts using 19969487 bytes
- 67i,11n,99p,1206b,2544s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 67i,12n,99p,1206b,2544s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></Users/ricardas_mikelionis_mac/Library/Fonts/Palem-it.ttf></Users/ricardas_mi
 kelionis_mac/Library/Fonts/Palem-bd.ttf></Users/ricardas_mikelionis_mac/Library/
 Fonts/Palem-nm.ttf></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
->
-Output written on bakalaurinis.pdf (26 pages, 2901133 bytes).
+/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb>
+Output written on bakalaurinis.pdf (27 pages, 2885251 bytes).
 
-PDF statistics: 150 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+PDF statistics: 145 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
