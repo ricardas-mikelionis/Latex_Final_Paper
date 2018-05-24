@@ -14,24 +14,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.}Sprendimų medžio metodu paremta besimokanti mašina}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{12}
+\contentsline {subsection}{\numberline {2.2.}Daugiasluoksnis perceptronas}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}{15}
+\contentsline {section}{\numberline {3.}Halstead bei McCabe sudėtingumo metrikų analizė dibtinių neuroninių tinklų kontekste}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{15}
+\contentsline {subsection}{\numberline {3.1.}Duomenų analizė rankiniu būdu, ieškant atributų, kurie yra tiesiogiai proporcingi kitiems atributams}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{16}
+\contentsline {subsection}{\numberline {3.2.}Duomenų analizė naudojant įrankį Weka}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{18}
+\contentsline {section}{\numberline {4.}Dirbtinio neuroninio tinklo efektyvumo gerinimas naudojant atrinktus duomenis}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{20}
+\contentsline {section}{Rezultatai ir išvados}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{23}
+\contentsline {section}{Literatūra}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{24}
+\contentsline {section}{Santrumpos}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{24}
+\contentsline {section}{\MakeUppercase {Priedai}}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{25}
+\contentsline {subsection}{1 priedas.\nobreakspace {}Sprendimų medžio besimokanti mašina}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{26}
+\contentsline {subsection}{2 priedas.\nobreakspace {}Atrinktiems rezultatams pritaikyto daugiasluoksnio perceptrono struktūra}{27}

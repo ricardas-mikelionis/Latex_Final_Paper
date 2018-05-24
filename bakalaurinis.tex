@@ -60,13 +60,15 @@ Santrauka anglų kalba. Santraukos apimtis ne didesnė nei 0,5 puslapio.
 \tableofcontents
 
 \sectionnonum{Įvadas}
-Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuoti daugiau per trumpesnį laiko tarpą. Paprastas sprendimas šiai problemai būtų be abejo nuolat besisukantis automatinių testų paketas, tačiau automatiniais testais padengti programinį kodą 100\% praktiškai neįmanoma. 100\% padengimas įmanomas tik pagal kokią nors specifinę metriką, o vaikytis tikrojo 100\% padengtumo testais pagal kiekvieną metriką ar funkcinę sritį prilygsta šviesos geičio vaikymuisi, kuo arčiau esame tikslo tuo daugiau pastangų ir resursų reikia pasistūmėti į priekį. Todėl, žinoma, vis dar išlieka poreikis rankiniam testavimui. Norint išleisti programinės įrangos versiją kuo dažniau ištestuoti visko kiekvieną kartą neįmanoma. Taip šis problemos sprendimas iškelia dar vieną, mažesnę, problemą: kaip efektyviai pasirinkti testavimo sritis kiekvienai naujai programos laidai (angl. release). Alan M. Davis \cite{Davis:1995:PSD:203406} tegia, jog pareto principą galima pritaikyti ir programinės įrangos testavime: čia 80\% kode esančių defektų surandami 20\% viso kodo.
+Smarkiai augant Continuous Delivery principų populiarumui auga poreikis testuoti daugiau per trumpesnį laiko tarpą. Paprastas sprendimas šiai problemai būtų be abejo nuolat besisukantis automatinių testų paketas, tačiau automatiniais testais padengti programinį kodą 100\% praktiškai neįmanoma. 100\% padengimas įmanomas tik pagal kokią nors specifinę metriką, o vaikytis tikrojo 100\% padengtumo testais pagal kiekvieną metriką ar funkcinę sritį prilygsta šviesos geičio vaikymuisi, kuo arčiau esame tikslo tuo daugiau pastangų ir resursų reikia norint pasistūmėti į priekį. Todėl, žinoma, vis dar išlieka poreikis rankiniam testavimui. Norint išleisti programinės įrangos versiją kuo dažniau ištestuoti visko kiekvieną kartą neįmanoma. Taip šis problemos sprendimas iškelia dar vieną, mažesnę, problemą: kaip efektyviai pasirinkti testavimo sritis kiekvienai naujai programos laidai (angl. release). 
 
-Tobulame pasaulyje iteracijai pasirinktos testavimo sritys ir apims tuos 20\% problematiškojo kodo. Tačiau dažnai net remiantis visa turima istorine informacija testuotojui atsakingam už testavimo sričių parinkimą yra sunku efektyviai atrinkti testavimo sritis, kuriose atliktas darbas turės didžiausią įtaką programinės įrangos kokybei.
+Alan M. Davis \cite{Davis:1995:PSD:203406} tegia, jog pareto principą galima pritaikyti ir programinės įrangos testavime: čia 80\% kode esančių defektų surandami 20\% viso kodo. Tobulame pasaulyje iteracijai pasirinktos testavimo sritys ir apims tuos 20\% problematiškojo kodo. Tačiau dažnai net remiantis visa turima istorine informacija testuotojui atsakingam už testavimo sričių parinkimą yra sunku efektyviai atrinkti testavimo sritis, kuriose atliktas darbas turės didžiausią įtaką programinės įrangos kokybei.
 
 Pagrindiniai kriteriai pagal kuriuos dabar įparstai prioritetizuojami programinės įrangos moduliai testavimui yra: paskutinis modulio testavimo laikas, kuo ilgensį laiko tarpą netestuota tuo aukštesnę pirmenybę modulis įgauna, modulio naujumas, visiškai nauji programinės įrangos moduliai privalo būti testuojami, modulio atnaujinimas, jei modulis išplėstas ar sumažintas funkcionalumo prasme jis turi aukštą pirmenybę būti testuojamas ir galiausiai praeityje defektyvūs moduliai, tai tokie moduliai kurie praeityje turėjo defektų ir šie buvo ištaisyti.
 
-Dažnai turint mažai laiko testuoti, modulių prioritetiavimas sueikvoja nemažą dalį laiko, kurį būtų galima testuoti, taip pat dažnai tenka palikti daug aukšto prioriteto modulių nepilnai ištestuotus ar visai netestuotus. Tai didina programinės įrangos riziką būti nekokybiška. Ypač kai defektai lieka nesurasti keletą laidų (angl. release) ir po to tenka aiškintis ar defektas reiškia įvykusią regresiją ar jis visuomet egzistavo testuotame modulyje.
+Dažnai turint mažai laiko testuoti, modulių prioritetiavimas sueikvoja nemažą dalį laiko, kurį būtų galima skirti testavimui, taip pat dažnai tenka palikti daug aukšto prioriteto modulių nepilnai ištestuotus ar visai netestuotus. Tai didina programinės įrangos riziką būti nekokybiška. Ypač problematiška situacija, kai defektai lieka nesurasti keletą laidų (angl. release) ir po to tenka aiškintis ar defektas reiškia įvykusią regresiją ar jis visuomet egzistavo testuotame modulyje.
+
+Šiame darbe aprašomas tyrimas skirtas patikrinti ar įmanoma ir ar tai efektyvu naudoti duomenis surinktus apie programinės įrangos laidą, kaip įvestį į dirbtinį neuroninį tinklą apmokytą nuspėti modulio defektyvumui, taip iš esmės automatizuojant modulių prioritetizavimo testavimo ciklui procesą.
 
 Tyrimui atlikti naudojama programinė įranga Weka skirta duomenų analizei bei darbui su duomenimis, Keras bei Scikit-Learn python bibliotekų paketai skirti besimokančių mašinų modeliams aprašyti.
 
@@ -75,9 +77,9 @@ Darbo tikslas: pateikti laiką ir pastangas taupantį testuojamų sričių atrin
 Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai:
 \begin{enumerate}
 \item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui.
-\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir dirbtinio neuroninio tinklo naudojant surinktus duomenis.
-\item Atrinkti bei atmesti duomenis turinčius mažiausią įtaką galutiniam spėjimui.
-\item Palyginti dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį pritaikius skirtingus atributų atrinkimo metodus.
+\item Palyginti efektyvumą tarp sprendimų medžio besimokančios mašinos ir daugiasluoksnio perceprtono tipo dirbtinio neuroninio tinklo naudojant surinktus duomenis.
+\item Atlikti duomenų analizę duomenų rinkiniui siekiant pašalinti perteklines reikšmes.
+\item Palyginti daugiasluoksnio perceptrono tipo dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį pritaikius skirtingus atributų atrinkimo metodus.
 \end{enumerate}
 
 Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
@@ -91,13 +93,13 @@ Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais pertei
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
 Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programinės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. 
 
-Visų pirma reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduotii: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
+Visų pirma reikėtų sukurti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. O gal būt užtenka pritaikyti egzistuojančias programinio kodo metrikas randant koreliaciją su programų defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos kurias būtų įmanojma tiesiogiai susieti su programinio kodo defektyvumu egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduoti: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. 
 
 Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{MetricsinEvaluatingSoftwareDefects:2013}.
 
-Tokių metrikų pasirinkimas paremtas tuo, jog jų rinkimas, net atliekamas nuolat nereikalauja daug papildomo laiko, išteklių ar pastangų. Tai statinės kodo metrikos, kurias gana paprasta surinkti su kodo analizės įrankiais ir kurios sąlyginai tikliai parodo kodo defektyvumą.
+Tokių metrikų pasirinkimas paremtas tuo, jog jų rinkimas, net atliekamas nuolat nereikalauja daug papildomo laiko, išteklių ar pastangų. Tai statinės kodo metrikos, kurias gana paprasta surinkti su kodo analizės įrankiais ir kurios sąlyginai tiksliai parodo kodo defektyvumą.
 
-Šiame dokumente aprašomame tyrime bus naudojamos visos Halstead ir McCabe metrikos kartu, bei keletas šių atributų poaibių susiaurintų tiek rankiniu būdų tiek duomenų analizės įrankiais.
+Šiame dokumente aprašomame tyrime bus naudojamos visos Halstead ir McCabe metrikos kartu, bei keletas šių atributų poaibių susiaurintų tiek rankiniu būdų tiek duomenų analizės įrankiais siekiant optimizuoti duomenų rinkinius pašalinant perteklines reikšmes.
 
 \subsection{McCabe sudėtingumo metrikos}
 1976-aisiais Thomas J, McCabe išleido tyrimą kuriame pasiūlė naują programinės įrangos kodo sudėtingumo matavimo būdą, pavadintą Ciklomatiniu sudėtingumu (angl. Cyclomatic Complexity). Šis matavimo vienetas kiekybiškai matuoja nepriklausomų kelių per kodo elementus kiekį.
@@ -125,7 +127,7 @@ Pavyzdžiui, turint programą, kaip pavaizduota \ref{img:Cyclomatic_graph_1} pav
 
 McCabe taip pat apibėžė ir keletą kitų metrikų skirtų pamatuoti progaminio kodo sudėtingumą, viena tokių metrikų - esminis sudėtingumas. Esminis sudėtingumas - metrika parodanti programinės įrangos sudėtingumą pašalinant (suskaidant) logines struktūras, grafe vaizduojamas, kaip turinčias vieną viršūnę įvesčiai bei vieną rezultatams. Tokio tipo struktūrų pavyzdžiai būtų if-then-else sąlyginių sakinių dariniai ar while tipo ciklas.
 
-Tarkime programinis kodas su dideliu ciklomatiniu sudėtingumu yra sunkiau ištestuojamas, tačiau esant nedideliam esminiu sudėtingumui reiškia, jog mes šį programinį kodą galime suskaidyti į mažesnius vienetus, kurie yra lengviau skaitomi ir testuojami atskirai. Didelis esminis sudėtingumas parodo, kad programinį kodą yra sunkiau skaityti bei prižiūrėti, t.y. programinis kodas yra žemesnės kokybės
+Tarkime programinis kodas su dideliu ciklomatiniu sudėtingumu yra sunkiau ištestuojamas, tačiau esant nedideliam esminiam sudėtingumui reiškia, jog mes šį programinį kodą galime suskaidyti į mažesnius vienetus, kurie yra lengviau skaitomi ir testuojami atskirai. Didelis esminis sudėtingumas parodo, kad programinį kodą yra sunkiau skaityti bei prižiūrėti, t.y. programinis kodas yra žemesnės kokybės bei kyla didesnė defektyvumo rizika.
 
 \subsection{Halstead sudėtingumo metrikos}
 1977-aisiais Maurice H. Halstead, knygoje „Elements of Software science“ pateikė kodo sudėtingumo metrikas kaip būdą programinės įrangos kūrimą paversti empiriniu mokslu. Halstead metrikos tiesiogiai priklauso nuo to, kaip kodas parašytas ir yra skaičiuojamos statiškai, pagal operatorius bei operandus. Pasak M. H. Halstead kompiuterinė programa yra tiesiog algoritmo realizacija, sudaryta iš operatorių bei operandų sekos \cite{Halstead:1977:ESS:540137}.
@@ -137,13 +139,15 @@ Halstead metrikos paremtos šiais matavimo vienetais:
 \item[]\(N_1\) - visų operatorių kiekis,
 \item[]\(N_2\) - visų operandų kiekis.
 \end{itemize} 
-Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, \[N = N_1 + N_2\]formule programos dydis, \[V = N * log_2n\]formule programos apimtis, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule programos sudėtingumas, o formule \[E = D * V\] - pastangos. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
+Iš šių matų išskaičiuojami šios metrikos: \[n =  n_1 + n_2\]formule apskaičiuojamas programos žodynas, \[N = N_1 + N_2\]formule skaičiuojamas programos dydis, \[V = N * log_2n\]formule skaičiuojama programos apimtis, \[D = \frac{n_1}{2} * \frac{N_1}{n_2}\]formule skaičiuojamas programos sudėtingumas, o formule \[E = D * V\] - pastangos. Čia programos sudėtingumas reiškia sudėtingumą skaitant ar rašant tolesnį kodą pvz. atliekant kodo peržiūrą.
 
 Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei operandų nustatymo būdų, dažnai kritikos susilaukia ir tai, jog matuojamas tekstu pagrįstas sudėtingumas, t.y. kaip sunku skaityti kodą, o ne sudėtingumas pagrįstas kodo struktūra ar logika.
 
 \section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią mašiną}
 
-Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau ir prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus. Iš to turime problemą kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: Sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytą dirbtinį neuroninį tinklą.
+Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau yra ir smarkiai neefektyvus bei prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus.
+
+Jeigu pažvelgsime į turmą problemą iš kitos pusės turime duomenų rinkinį, bei vieną iš dviejų reikšmių galimų priskirti tam duomenų rinkiniui: defektyvu arba ne defektyvu. Tai labai primena binarinio klasifikavimo problemą, kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia mašina, dažniausiai dirbtiniu neuroniniu tinklu pvz. daugiasluoksniu perceptronu. Šiame tyrime bus naudojamos dviejų tipų besimokančios mašinos: sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytas dirbtinis neuroninis tinklas.
 
 Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai mašinai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
 \begin{itemize} 
@@ -171,7 +175,7 @@ Apmokyti šias besimokančiasias mašinas bus naudojama kombinacija atributų ga
 \item[] defects - Binarinė reikšmė. True arba False.
 \end{itemize} 
 
-Tyrimo tikslui pasiekti buvo nuspręsta panaudoti keletą jau surinktų duomenų rinkinių. Siekiant surinkti pakankamą kiekį prasmingų duomenų (500-1000 skirtingų testuotų programinės įrangos versijų (angl. build)) šio tyrimo kontekste užimtų per daug laiko. Tyrime bus naudojami  „CM1“ bei „PC1“ duomenų rinkiniai iš  „Promise“ duomeų rinkinių duomenų bazės \cite{Sayyad-Shirabad+Menzies:2005}. Tiek „CM1“, tiek „PC1“ pateikti NASA ir sudaryti jų 2004-aisiais vykdytos „NASA Metrics Data Program“ progamos, skirtos kurti defektus nuspėjančią programinę įrangą, metu.
+Tyrimo tikslui pasiekti buvo nuspręsta panaudoti keletą jau surinktų duomenų rinkinių. Siekiant surinkti pakankamą kiekį prasmingų duomenų (500-1000 skirtingų testuotų programinės įrangos versijų (angl. build)) šio tyrimo kontekste užimtų per daug laiko. Tyrime bus naudojami  „CM1“ bei „PC1“ duomenų rinkiniai iš  „Promise“ duomenų rinkinių duomenų bazės \cite{Sayyad-Shirabad+Menzies:2005}. Tiek „CM1“, tiek „PC1“ pateikti NASA ir sudaryti jų 2004-aisiais vykdytos „NASA Metrics Data Program“ progamos, skirtos kurti defektus nuspėjančią programinę įrangą, metu.
 
 PC1 duomenų rinkinys sudarytas iš 1109 duomenų eilučių, surinktų iš kodo parašyto C programavimo kalba. Programinė įranga iš kurios surinkti šie duomenys skirta orbitoje skraidančiam palydovui kontroliuoti. Duomenų rinkinys pasidalina į 6.94\% duomenų eilučių kurios atspindi atvejį, kai užfiksuotas vienas ar daugiau defektų bei 93.06\% duomenų eilučių atspindinčių, kai nebuvo užfiksuota defektų.
 
@@ -180,20 +184,20 @@ CM1 duomenų rinkinys sudarytas iš 498 duomenų eilučių, surinktų iš kodo p
 \subsection{Sprendimų medžio metodu paremta besimokanti mašina}
 Pirmasis prediktyvusis modelis paremtas sprendimų medžio klasifikatoriumi. Toks modelis yra laisvai suprantamas ir skaitomas net ir paprastam žmogui. Vienas tokių modelių sugeneruotas naudojant PC1 duomenų rinkinio poaibį pavaizduotas \ref{img:tree} pav. pirmame priede. 
 
-Su tradiciniais duomenų rinkiniais sprendimų medis turi nemažai privalumų. Sprendimo medžiai yra lengvai suprantami, net daug techninių žinių neturintiems žmonėms ir pateikus sprendimų medį grafiškai pačiam galima pereiti per viršūnes tikrinant duomenų rinkinio eilutės grąžinamą rezultatą. Taip pat palyginus su kitais prediktyviaisiais modeliais sprendimo medžiai reikalauja salyginai nedidelio kiekio duomenų pertvarkymo prieš naudojant juos šiame modelyje. Iki tam tikro laipsnio smarkiai išsiskiriančios reikšmės ar trūstami įrašai nedaro didelės įtakos sprendimų medžiams. Sprendimų medžiai neskiria ir gali priimti tiek skaitines tiek logines reikšmes, todėl galima naudoti didesnę įvairovę duomenų rinkinių.
+Su tradiciniais duomenų rinkiniais sprendimų medis turi nemažai privalumų. Sprendimo medžiai yra lengvai suprantami, net daug techninių žinių neturintiems žmonėms ir pateikus sprendimų medį grafiškai pačiam galima pereiti per viršūnes tikrinant duomenų rinkinio eilutės grąžinamą rezultatą. Taip pat palyginus su kitais prediktyviaisiais modeliais sprendimo medžiai reikalauja salyginai nedidelio kiekio duomenų pertvarkymo prieš naudojant juos šiame modelyje. Iki tam tikro laipsnio smarkiai išsiskiriančios reikšmės ar trūkstami įrašai nedaro didelės įtakos sprendimų medžiams. Sprendimų medžiai neskiria ir gali priimti tiek skaitines tiek logines reikšmes, todėl galima naudoti didesnę įvairovę duomenų rinkinių.
 
 Didžiausi sprendimų medžio trūkumai yra tikslumo trūkumas, kadangi tai, ginčytinai, paprasčiausias besimokančios mašinos modelis jis yra ir pats netiksliausias. Modelio paprastumas su dideliais duomenų rinkiniais gali privesti prie per sudėtingo medžio sugeneravimo, kuomet nebeatpažystami ryšiai tarp atributų bei galutinio rezultato. Tai dažnai vadinama permokymu (angl. overfitting).
 
 Įprastai sprendimų medžio prediktyvusis modelis naudojamas salyginai paprastų duomenų rinkinių problemoms spręsti. Žemo lygio klasifikatoriams bei prediktyviesiems modeliams, kaip Iriso gėlės skirtingų rūšių klasifikavimo problema.
 
-Šio tyrimo metu sprendimų medžio modelis ir klasifikatorius buvo aprašyti ir įgyvedinti Python kalba paraštu scriptu naudojant medžio biblioteką pateiktą Scikit-learn \cite{scikit-learn}.
+Šio tyrimo metu sprendimų medžio modelis ir klasifikatorius buvo aprašyti ir įgyvedinti Python kalba parašytu kodu naudojant medžio biblioteką pateiktą Scikit-learn \cite{scikit-learn} python bibliotekų rinkinį skirtą duomenų rinkimui bei analizei.
 
 Rezultatai taip pat buvo apskaičiuoti keletu scikit-learn pateiktų bibliotekų, kurių viduje jie apskaičiuojami keletu formulių:
 
 \[Precision = \frac{\Sigma Tikras Pozityvas}{\Sigma Tikras Pozityvas + \Sigma Netikras Pozityvas},\]
 \[Accuracy = \frac{\Sigma Tikras Pozityvas + \Sigma Tikras Negatyvas}{\Sigma Pozityvai+ \Sigma Negatyvai},\]
 \[Recall = \frac{\Sigma Tikras Pozityvas}{\Sigma Tikras Pozityvas + \Sigma Netikras Negatyvas},\]
-kur „Tikrasis pozityvas“ yra teisingai nustatyta pozityvi reikšmė, „Tikrasis negatyvas“ yra teisingai nustatyta negatyvi reikšmė, „Netikras pozityvas“ yra klaidingai nustatyta pozityvi reikšmė, o „Netikras negatyvas“ yra neteisingai nustatyta negatyvi reiškmė.
+kur „Tikrasis pozityvas“ yra teisingai nustatyta pozityvi reikšmė, „Tikrasis negatyvas“ yra teisingai nustatyta negatyvi reikšmė, „Netikras pozityvas“ yra klaidingai nustatyta pozityvi reikšmė, o „Netikras negatyvas“ yra neteisingai nustatyta negatyvi reiškmė. Accuracy metrikos atveju Pozityvai aprėpia tiek teisingai, tiek neteisingai nuspėtas pozityvias reikšmes, o negatyvai - negatyvias.
 
 Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų spėtų reikšmių buvo atspėta teisinga reikšmė. Precision parodo kiek iš atspėtų teigiamų reikšmių yra tikrų pozityvų, t.y. teisingai nuspėtų teigiamių reikšmių. O Recall parodo kiek tarp iš viso buvusių teigiamų reikšmių jų buvo atspėta.
 
@@ -212,7 +216,7 @@ Besimokančių mašinų kontekste Accuracy reiškia kiek procentaliai iš visų 
 
 Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikšmes gautas iš sprendimų medžiu paremto modelio. Modeliui apmokyti ir testuoti abiem atvejais buvo panaudotas visas duomenų rinkinys su 21 atributu, kur 50\% atsitiktinai atrinktų reikšmių buvo panaudotos, kaip mokomieji duomenys, o kiti 50\%, kaip testiniai.
 
-Sprenimo medžiu paremtas prediktyvus modelis daug nežada. Su CM1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
+Sprenimo medžiu paremtas prediktyvus modelis panašu, jog nėra optimaliausias sprendimas programos modulių defektyvumui nuspėti. Tiek su CM1, tiek su PC1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
 Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas Daugiasluoksio perceptrono klasifikatoriumi. Siekiant didelio efektyvumo šiame modelyje pridėti du sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
@@ -401,7 +405,7 @@ Antrojo eksperimento su atrinktų atributų duomenų rinkiniais rezultatai dar g
 
 1. Išrinktas kodo metrikų rinkinys. Atlikus literatūros analizę pasirinktios Halstead bei McCabe kodo metrikos, matuojančios kodo sudėtingumą tiek logine prasme, McCabe kelių per grafu vaizduojamą kodą kiekis, tiek kodo skaitomumo prasme Halstead metrikose. Pasirinktos būtent šios dvi metrikos, nes šios metrikos gali būti surinktos ir paskaičiuotos statinės analizės metu, todėl jas salyginai lengva surinkti ir su jomis eksperimentuoti.
 
-Padaryta išvada, jog esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau pritaikyti esamai situacijai. 
+Esant dideliam kodo skaitomumo sudėtingumui ar loginiam sudėtingumui didėja defektų atsiradimo rizika. Nors ir yra abejojančių, ypač Halstead metrikų, sąryšiu su kodo defektyvumu, vis vien siūloma ne atsisakyti šių metrikų, o geriau pritaikyti esamai situacijai. 
 
 2. Atlikti du eksperimentai. Su surinktomis kodo metrikomis bei apskaičiuotomis sudėtingumo reikšmėmis buvo apmokytos dvi besimokančios mašinos viena paremta sprendimų medžio modeliu, kita daugiasluoksnio perceptrono dirbtiniu neuroniniu tinklu. Accuracy metrikos visais atvejais, kaip vaizduojama \ref{img:chart} ir \ref{img:chart2} pav., aukštos, tačiau palyginus gautuosius rezultatus matome, jog naudojantis abejais duomenų rinkiniais sprendimų medžio atveju įvyko persimokymo reiškinys, kai padavus naujų duomenų rinkinį modelis nebesugeba atspėti reikšmės.
 
@@ -419,31 +423,29 @@ Padaryta išvada, jog esant dideliam kodo skaitomumo sudėtingumui ar loginiam s
     \label{img:chart2}
 \end{figure}
 
-Padaryta išvada, jog sprendimų medžio modelis tokiam uždaviniui spręsti nėra tinkamas, jeigu turima duomenų rinkiniai su daug atributų, šiuo atveju 21.
+Iš rezultatų paaiškėjo, jog prendimų medžio modelis šiam uždaviniui spręsti nebuvo tinkamas. Dėl didelio atributų kiekio, šiuo atveju 21 atributas, įvyko modelio permokymas.
 
 3. Atlikta duomenų analizė siekiant sumažinti perteklinių, tiesiogiai proporcinų bei kitų neigiamą įtaką dirbtiniam neuroniniam tinkkui galinčių padaryti reikšmių kiekį. Duomenims atrinkti naudoti du metodai: rankinis atrinkimas remiantis Halstead ir McCabe metrikų formulėmis, kai duomenų rinkinyje paliekamos tik išvestosios reikšmės, o metrikų iš kurių tos reikšmės išvedamos stulpeliai pašalinami bei duomenų atrinkimas naudojantis duomenų analizės įrankiu Weka, kai reikšmės paskirstomos pagal jų daromą įtaką galutiniam rezultatui.
 
-Padaryta išvada, jog kombinuojant visas Halstead bei McCabe metrikas gauname daugybe panašių, bei tiesiogiai proporcingų vienų kitoms metrikų, kurios nors ir padeda susidaryti geresnį įspūdį apie kodo kokybę metrikas peržiūrint, tačiau tik apkrauna dirbtinį neuroninį tinklą pertekliniais duomenimis, kurie gali privesti prie persimokymo.
+Kombinuojant visas Halstead bei McCabe metrikas gauname daugybe panašių, bei tiesiogiai proporcingų vienų kitoms metrikų, kurios nors ir padeda susidaryti geresnį įspūdį apie kodo kokybę metrikas peržiūrint, tačiau tik apkrauna dirbtinį neuroninį tinklą pertekliniais duomenimis, kurie gali privesti prie persimokymo.
 
 4. Atlikti du eksperimentai, naudojant šiek tiek pakeistą dirbtinį neuroninį tinklą, kuriame buvo atnaujintas įvesties sluoksnis, pritaikytas mažesniam atributų kiekiui. Eksperimento metu lyginti dirbtinio neuroninio tinklo mokymosi bei reikšmių nuspėjimo rezultatai naudojantis du modifikuotus duomenų rinkinius. Kur pirmuoju atveju, PC1\_R bei CM1\_R, iš duomenų rinkinio išimti visi atributai simbolizuojantys reikšmes iš kurių išvedamos Halstead bei McCabe reikšmės, ir paliktos tik išvestosios. Antruoju atveju, PC1\_A bei CM1\_A, duomenys atrinkti automatiškai, naudojant duomenų analizės įrankį Weka, pasirinkus algoritmą atributus paskirstantį pagal galutiniam rezultatui daromą įtaką.
-
-
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{img/chart-3}
-    \caption{Rezultatų palyginimas su duomenų rinkinu CM1}
+    \caption{Rezultatų palyginimas su duomenų rinkinio PC1 poaibiais}
     \label{img:chart3}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{img/chart-4}
-    \caption{Rezultatų palyginimas su duomenų rinkinu CM1}
+    \caption{Rezultatų palyginimas su duomenų rinkinio CM1 poaibiais}
     \label{img:chart4}
 \end{figure}
 
-Padaryta Išvada, kad abejais atvejais tiek accuracy tiek precision bei recall savybės dirbtiniame neuroniniame tinkle pagerėjo turint kuruotą duomenų rinkinį, tačiau didelę įtaką darančio skirtumo tarp rankiniu būdu atrinktų atributų, bei išanalizuotų tam skirtu įrankiu nėra, kaip vaizduojama \ref{img:chart3} ir \ref{img:chart4} pav.. Geresnis sprendimas būtų užuot renkantis vieną iš metodų duomenų atrinkimą rankiniu būdų kombinuoti su duomenų analize tam specializuotais įrankiais, priklausomai nuo duomenų rinkinio. 
+Abejais atvejais tiek accuracy tiek precision bei recall savybės dirbtiniame neuroniniame tinkle pagerėjo turint kuruotą duomenų rinkinį, tačiau didelę įtaką darančio skirtumo tarp rankiniu būdu atrinktų atributų, bei išanalizuotų tam skirtu įrankiu nėra, kaip vaizduojama \ref{img:chart3} ir \ref{img:chart4} pav.. Geresnis sprendimas būtų užuot renkantis vieną iš metodų duomenų atrinkimą rankiniu būdų kombinuoti su duomenų analize tam specializuotais įrankiais, priklausomai nuo duomenų rinkinio. 
 
 Galiausiai, atlikus keletą eksperimentų, galima teigti, jog programinės įrangos testavimo prioritetų parinkimas renkant duomenis kodo statine analize bei juos panaudojant apmokant bei atliekant spėjimus dirbtiniu neuroniniu tinklu yra įgyvendinamas sprendimas. Toks procesas padės prioritetizuoti testuotinus programinės įrangos modulius, kai aukšto prioriteto modulių yra daug ir neįmanoma jų visų įtraukti į testavimo ciklą, taip smarkiai pagerinant kuriamos programinės įrangos kokybę.
 
