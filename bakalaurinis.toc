@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Literatūra}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{27}
+\contentsline {section}{Sąvokų apibrėžimai}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\MakeUppercase {Priedai}}{27}
 \defcounter {refsection}{0}\relax 

@@ -48,7 +48,7 @@
 \sectionnonumnocontent{Santrauka}
 Darbe analizuojamas dirbtinio neuroninio tinklo, apmokyto nuspėti programinės įrangos defektyvumą, kaip įrankio testavimo procese efektyvumas.
 
-Darbas susideda iš keturių esminių dalių. Pirmoje apžvelgiamos kodo matavimo metrikos bei jų ryšys su programinio kodo defektuvumu. Toliau vykdomas eksperimentas bei palyginami rezultatai apmokant bei testuojant sprendimų medžio modelio besimokančią sistemą bei daugiasluoksnio perceptrono dirbtinį neuroninį tinklą naudojantis pirmoje dalyje apžvelgtas metrikas, kaip įvestį. Siekiant pagerinti tinklo efektyvumą peržvelgiamos metrikos siekiant sudaryti glaustesnį duomenų rinkinį be perteklinių reikšmių. Tam padaryti vykdomi du eksperimentai: vieno metu duomenų rinkinys analizuojamas rankiniu būdų, o kito - naudojant duomenų analizės programinę įrangą. Galiausiai naudojantis naujai sudarytais duomenų rinkiniais adaptuojami bei testuojami daugiasluoksnio perceptrono tipo neuroniniai tinklai.
+Darbas susideda iš keturių esminių dalių. Pirmoje apžvelgiamos kodo matavimo metrikos bei jų ryšys su programinio kodo defektuvumu. Toliau vykdomas eksperimentas bei palyginami rezultatai apmokant bei testuojant sprendimų medžio modelio besimokančią sistemą bei daugiasluoksnio perceptrono dirbtinį neuroninį tinklą naudojantis pirmoje dalyje apžvelgtas metrikas, kaip įvestį. Siekiant pagerinti tinklo efektyvumą peržvelgiamos metrikos siekiant sudaryti glaustesnį duomenų rinkinį be perteklinių reikšmių. Tam padaryti vykdomi du eksperimentai: vieno metu duomenų rinkinys analizuojamas rankiniu būdų, o kito - naudojant duomenų analizės programinę įrangą. Galiausiai naudojantis naujai sudarytais duomenų rinkiniais adaptuojami bei testuojami daugiasluoksnio perceptrono tipo dirbtiniai neuroniniai tinklai skirti atspėti programinės įrangos defektyvumą.
 % Nurodomi iki 5 svarbiausių temos raktinių žodžių (terminų).
 % Vienas terminas gali susidėti iš kelių žodžių.
 \raktiniaizodziai{dirbtiniai neuroniniai tinklai, Halstead, McCabe, daugiasluoksnis perceptronas}   
@@ -56,7 +56,7 @@ Darbas susideda iš keturių esminių dalių. Pirmoje apžvelgiamos kodo matavim
 \sectionnonumnocontent{Summary}
 The paper analyzes the viability of using an artificial neural network trained to predict software defects as a tool in software testing process.
 
-The paper consists of four main parts. Firstly an an overview of code measures and their relation to software defect proneness is conducted. After collecting the data an experiment is conducted where the results of several learning machines are compared. Mainly using dataset described in the first part two models are trained and tested, one basen on a decision tree the other one on a multilayer perceptron artificial neural network. Next are data analysis and feature selection. Two types of data analyses are carried out, one manually by removing redundant and directly proportionate values from dataset, the other one is done automatically by using a data analysis tool Weka. Finally the newly formed datasets are used to traina and test modified versions of the multilayer perceptron artificial network and the results are compared.
+The paper consists of four main parts. Firstly an an overview of code measures and their relation to software defect proneness is conducted. After collecting the data an experiment is conducted where the results of several learning machines are compared. Mainly using dataset described in the first part two models are trained and tested, one basen on a decision tree the other one on a multilayer perceptron artificial neural network. Next are data analysis and feature selection. Two types of data analyses are carried out, one manually by removing redundant and directly proportionate values from dataset, the other one is done automatically by using a data analysis tool Weka. Finally the newly formed datasets are used to traina and test modified versions of the multilayer perceptron artificial neural network and the results are compared.
 \keywords{artificial neural network, Halstead, McCabe, multilayer perceptron}
 
 \tableofcontents
@@ -81,7 +81,7 @@ Siekiant sėkmingai įgyvendinti darbo tikslą bus įgyvendinti šie uždaviniai
 \item Išrinkti kodo metrikas darančias įtaką programinės įrangos defektyvumui.
 \item Palyginti efektyvumą tarp sprendimų medžio besimokančios sistemos ir daugiasluoksnio perceprtono tipo dirbtinio neuroninio tinklo naudojant surinktus duomenis.
 \item Atlikti duomenų analizę duomenų rinkiniui siekiant pašalinti perteklines reikšmes.
-\item Palyginti daugiasluoksnio perceptrono tipo dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį pritaikius skirtingus atributų atrinkimo metodus.
+\item Palyginti daugiasluoksnio perceptrono tipo dirbtinio neuroninio tinklo efektyvumą naudojant tą patį duomenų rinkinį jam pritaikius skirtingus atributų atrinkimo metodus.
 \end{enumerate}
 
 Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais perteikiančiais tyrimo vykdymo eigą:
@@ -95,7 +95,7 @@ Atsižvelgiant į užduotis darbas išskirstytais skyriais bei poskyriais pertei
 \section{Programinio kodo sudėtingumo ir defektyvumo sąsajos}
 Kiekvieną kartą renkatis testuojamas programinės įrangos vietas, žinoma, jei nėra testuojamas visas programinės įrangos funkcionalumas, reikia turėti atskaitos tašką, kuris leistų nuspręsti kurios programinės įrangos kodo vietos, ar programų paketo moduliai turi didžiausią riziką būti defektyvūs. Į šią kategoriją dažnai pakliūva seniai testuoti, nauji, atnaujinti bei anksčiau daug defektų turėję programinės įrangos moduliai. Didelė problema, su kuria vis dažniau susiduriama yra ką daryti, jei nėra laiko ištestuoti visiems šiems moduliams ir kaip tuomet pasirinkti atitinkamus progaminės įrangos modulius testavimui, kad nešvaistydami laiko padarytumėme didžiausią įmanomą įtaką programinės įrangos kokybės užtikrinimui. 
 
-Visų pirma reikėtų pasirinkti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. Reikia rasti salyginai lengvai surenkamas programinės įrangos metrikas, kurios suteiktų detalią informaciją apie programinės įrangos būklę ir turėtų ryšį su šios defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos, kurias būtų įmanoma tiesiogiai susieti su programinio kodo defektyvumu jau egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduoti: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. Net ir patys autoriai savo publikacijose teigia, jog aukštas kodo sudėtingumas veda prie defektyvaus kodo.
+Visų pirma reikėtų pasirinkti detalesnę programinės įrangos metrikų sistemą nei, „naujumas“ ar „prieš tai buvusių defektų kiekis“, kuri tiesiogiai atspindėtų būsimą (ar esamą) programinės įrangos defektyvumą. Reikia surinkti sąlyginai lengvai surenkamas programinės įrangos metrikas, kurios suteiktų detalią informaciją apie programinės įrangos būklę ir turėtų ryšį su šios defektyvumu. Ir iš tiesų, būtų galima teigti, jog programinės kokybės metrikos, kurias būtų įmanoma tiesiogiai susieti su programinio kodo defektyvumu jau egzituoja. Arčiausiai tokių metrikų yra programino kodo sudėtingumo metrikos. Be abejo yra ne vienas būdas matuoti programos kodo sudėtingumą, tačiau, šiam tyrimui pasirinktos dvi, galima būtų sakyti, populiariausios metrikos kodo sudėtingumui atvaizduoti: Maurice H. Halstead aprašytosios 1977-aisiais \cite{Halstead:1977:ESS:540137} bei Thomas J. McCabe aprašytosios 1976-aisiais \cite{McCabe:1976:CM:800253.807712}. Net ir patys autoriai savo publikacijose teigia, jog aukštas kodo sudėtingumas veda prie defektyvaus kodo.
 
 Ryšys tarp kodo sudėtingumo bei defektų buvimo jame, o gal būt derėtų sakyti defektų buvimo galimybės kode, atrodytų, gana logiškas: kuo sudėtingesnis kodas, tuo sunkiau jį skaityti, kuo sunkiau kodas skaitomas tuo sunkiau jį plėsti, todėl kyla rizika defektų atsiradimui. Tokia prielaida tiriama nuo pat sudėtingumo metrikų aprašymo. Žinoma, dėl kodo sudėtingumo tiksliai defektų kiekui daromo efekto kyla nestuarimų. Atsiranda teigiančių, jog Halstead metrikos neturi jokio įrodomo ryšio su defektų buvimu, tačiau yra ir tyrimų pagrindžiančių kodo sudėtingumo bei defektų buvimo jame koreliaciją \cite{Schroeder1999APG}. Dažniausiai tyrėjai lieka šio argumento viduryje nei visiškai neigdami, nei patvirtindami šią koreliaciją. Gana dažnas sprendimas yra pamažinti metrikų kiekį ir patikrinti metrikas priklausomai nuo situacijos, taip užtikrinant, kad pasirinktosios metrikos tikrai korelioja su tyrimo metu ieškomu fenomenu, šiuo atveju kodo defektyvumu \cite{MetricsinEvaluatingSoftwareDefects:2013}.
 
@@ -175,9 +175,9 @@ Halstead metrikos dažnai kritikuojamas dėl neapibrėžto operatorių bei opera
 
 \section{Sudėtingumo metrikų panaudojimas aprašant programinės įrangos defektyvumą nuspėjančią besimokančią sistemą}
 
-Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nuspriandžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau yra ir smarkiai neefektyvus bei prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus.
+Turint aiškiai apibrėžtas metrikas programinės įrangos kodui apibūdinti galima būtų vesti žurnalą kiekvienam programinės įrangos moduliui ir kiekvieną kartą renkantis programinės įrangos sritis, kurias reikia testuoti, palyginti esamos kodo laidos (angl. release) metrikas su žurnale esančiomis taip nusprendžiant ar išanalizuotą sriti reikia testuoti dabar ar sričiai priskirti žemesnę pirmenybę. Tačiau toks procesas atliekamas rankiniu būdu ne tik, kad ne taupo laiko, tačiau yra ir smarkiai neefektyvus bei prideda papildomų rūpesčių testuotojams sprendžiantiems testų prioritetus.
 
-Jeigu pažvelgsime į turmą problemą iš kitos pusės turime duomenų rinkinį, bei vieną iš dviejų reikšmių galimų priskirti tam duomenų rinkiniui: defektyvu arba ne defektyvu. Tai labai primena binarinio klasifikavimo problemą, kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia sistemą, dažniausiai dirbtiniu neuroniniu tinklu pvz. daugiasluoksniu perceptronu. Šiame tyrime bus naudojamos dviejų tipų besimokančios sistemos: sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytas dirbtinis neuroninis tinklas.
+Jeigu pažvelgsime į turimą problemą iš kitos pusės, tuomet turime duomenų rinkinį, bei vieną iš dviejų reikšmių galimų priskirti tam duomenų rinkiniui: defektyvu arba ne defektyvu. Tai labai primena binarinio klasifikavimo problemą, kuri dažnai sprendžiama automatizuojant ir viską aprašant besimokančia sistema, dažniausiai dirbtiniu neuroniniu tinklu pvz. daugiasluoksniu perceptronu. Šiame tyrime bus naudojamos dviejų tipų besimokančios sistemos: sprendimų medžio spėjamasis modelis bei daugiasluoksniu perceptronu aprašytas dirbtinis neuroninis tinklas.
 
 Apmokyti šias besimokančiasias sistemas bus naudojama kombinacija atributų gautų kodo statinės analizės metu, ir Halstead bei McCabe metrikų apskaičiuotų naudojant statinės analizės metu surinktus duomenis. Iš viso duomenų lentelė kuri bus pateikta besimokančiai sistemai susidės iš 22 stulpelių: 21 atributo bei 1 stulpelio reiškiančio defektų egzistavimą. Reikšmės žymimos taip:
 \begin{itemize} 
@@ -244,14 +244,14 @@ Besimokančių sistemų kontekste Accuracy reiškia kiek procentaliai iš visų 
 \end{tabular}
 \end{table}
 
-Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikšmes gautas iš sprendimų medžiu paremto modelio. Modeliui apmokyti ir testuoti abiem atvejais buvo panaudotas visas duomenų rinkinys su 21 atributu, kur 50\% atsitiktinai atrinktų reikšmių buvo panaudotos, kaip mokomieji duomenys, o kiti 50\%, kaip testiniai.
+Lentelė \ref{tab:Tree_result} atvaizduoja accuracy, percision bei recall reikšmes gautas iš sprendimų medžiu paremto modelio. Modeliui apmokyti ir testuoti abiem atvejais buvo panaudotas visas duomenų rinkinys su 21 atributu, kur 70\% atsitiktinai atrinktų reikšmių buvo panaudotos, kaip mokomieji duomenys, o kiti 30\%, kaip testiniai.
 
 Sprenimo medžiu paremtas prediktyvus modelis panašu, jog nėra optimaliausias sprendimas programos modulių defektyvumui nuspėti. Tiek su CM1, tiek su PC1 duomenų rinkiniu turime didelį, bet toli gražu ne patį geriausią accuracy, o visais atvejais tiek precision tiek recall reikšmės nesiekė 50\%. Galima būtų kelti hipotezę, jog didžiausią problemą sukelia duomenų rinkiniai turintys 21 atributą ir labai nelygų duomenų pasiskirstymą, kodėl čia išvydome „permokymo“ reiškinį. Tačiau pirmiausia reikėtų patikrinti ar su tokiais pat, ne modifikuotais, duomenimis galima gauti gerensius rezultatus naudojant kitokį klasifikatorių.
 
 \subsection{Daugiasluoksnis perceptronas}
-Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas daugiasluoksio perceptrono klasifikatoriumi. Daugiasluoksnis perceptronas yra tiesinio tipo dirbtinis neuroninis tinklas, kurio ryšiai tarp viršūnių (vaizduojant modelį grafu) n nukreipti į vieną pusę, t.y. ne rekurentiniai. Ir duomenys tiesiškai keliauja nuo įvesties sluoksnio per paslėptuosius sluoksnius iki gaunamas rezultatas.
+Antrasis prediktyvusis modelis tyrimo metu buvo aprašytas daugiasluoksio perceptrono klasifikatoriumi. Daugiasluoksnis perceptronas yra tiesinio tipo dirbtinis neuroninis tinklas, kurio ryšiai tarp viršūnių (vaizduojant modelį grafu) yra nukreipti į vieną pusę, t.y. ne rekurentiniai. Ir duomenys tiesiškai keliauja nuo įvesties sluoksnio per paslėptuosius sluoksnius iki gaunamas rezultatas.
 
-Kadangi nėra taisyklių ar geriausių praktikų daugiasluoksnių perceptronų, ar kitų dirbtinių neuroninių tinklų aprašymui pasirinkta ieškoti salyginai efektyviausio tinklo modelio pasirinktiems duomenų rinkiniams atliekant keletą eksperimentų. Visų pirma pasirinkta vieno paslėpto sluoksnio modelio struktūra bei pasirinktas 100 epochų kiekis modelio treniravimui. Epocha - viena iteracija per visą duomenų rinkinį. Taip treniruotas modelis turėjo accuracy reikšmę 89.76\% treniravimui bei testavimui naudojant CM1 duomenų rinkinį. Toliau toks pat eksperimentas atlikas su 1000 epochų treniravimo ciklu, tačiau galutinis accuracy rezultatas grąžintas nepasikeitęs. Toliau modelis buvo atnaujintas paslėptąjį sluoksnį sumažinant trečdaliu, t.y. iki 14 viršūnių. Treniruojant tokį modelį tiek 100 epochų, tiek 1000 epochų buvo gautas tas pat accuracy rezultatas - 89.98\%. Remiantis šiais rezultatais pasirinktas daugiasluoksnio perceptrono modelis su dviem paslėptais sluoksniais.
+Kadangi nėra taisyklių ar geriausių praktikų daugiasluoksnių perceptronų, ar kitų dirbtinių neuroninių tinklų aprašymui pasirinkta ieškoti salyginai efektyviausio tinklo modelio pasirinktiems duomenų rinkiniams atliekant keletą eksperimentų. Visų pirma pasirinkta vieno paslėpto sluoksnio modelio struktūra bei pasirinktas 100 epochų kiekis modelio treniravimui. Epocha - viena iteracija per visą duomenų rinkinį. Taip treniruotas modelis turėjo accuracy reikšmę 89.76\% treniravimui bei testavimui naudojant CM1 duomenų rinkinį. Toliau toks pat eksperimentas atlikas su 1000 epochų treniravimo ciklu, tačiau galutinis accuracy rezultatas grąžintas nepasikeitęs. Toliau modelis buvo atnaujintas paslėptąjį sluoksnį sumažinant trečdaliu, t.y. iki 14 viršūnių. Treniruojant tokį modelį tiek 100 epochų, tiek 1000 epochų buvo gautas tas pat accuracy rezultatas - 89.98\%. Remiantis šiais rezultatais pasirinktas daugiasluoksnio perceptrono modelis su dviem paslėptais sluoksniais siekiant salyginai nesudėtingo, tačiau efektyvaus dirtinio neuroninio tinklo.
 
 \begin{table}[H]
 \centering
@@ -268,7 +268,7 @@ Du sluoksniai (14 ir 7 viršūnės) & 100 & 90.16\% \\ \hline
 \end{tabular}
 \end{table}
 
-Siekiant didelio efektyvumo šiame modelyje pridėti du paslėpti sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Pasirinktos reikšmės 14 viršūnių pirmam paslėptam skluoksniui bei 7 viršūbės antrajam. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris apmažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo galimybę \cite{JMLR:v15:srivastava14a}. Tokiu atveju tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
+Siekiant didelio efektyvumo šiame modelyje pridėti du paslėpti sluoksniai su vis mažesniu kiekiu neuronų, taip bemokant modelį priverčiant jį atskirti svarbiausias reikšmes darančias didžiausią įtaką galutiniam rezultatui. Pasirinktos reikšmės 14 viršūnių pirmam paslėptam sluoksniui bei 7 viršūbės antrajam. Taip pat po kiekvieno iš paslėptųjų sluoksnių įterptas išmetimo sluoksnis, kuris sumažina praeitame sluoksnyje sukurtų ryšių kiekį taip mažinant tinklo permokymo riziką \cite{JMLR:v15:srivastava14a}. Tokiu atveju dirbtinis neuroninis tinklas tampa panašenis į tokį, vaizduojamą modeliu b \ref{img:dropout} pav..
 
 \begin{figure}[H]
     \centering
@@ -288,7 +288,7 @@ Toliau šiame tyrime naudojamas daugiasluoksnio perceptrono modelis atrodys taip
 
 Daugiasluoksnis perceptronas taip pat dažnai naudojamas paprastų duomenų rinkinių, atvaizduojamų lentele, analizei. Šio tyrimo kontekste toks dirbtinis neuroninis tinklas tinkamiausias, nes daugeliu kitų atvejų, pavyzdžiui konvoliucinio neuroninio tinklo, kuris savo struktūra yra sudėtingesnis bei daugeliu atvejų efektyvesnis, reikėtų adaptuoti bei transformuoti duomenų rinkinį, to buvo siekiama išvengti kuo tikslesniam palyginimui su sprendimų medžio modeliu.
 
-Daugiasluoksnis perceptronas buvo aprašytas Python programavimo kalbą pasinaudojus „Tensorflow“ paremtu python bibliotekų rinkiniu skirtu darbui su sekvenciniais neuroniniais tinklais „Keras“ \cite{chollet2015keras}. Kaip ir sprendimų medžio atveju buvo skaičiuojamos reikšmės matuojančios dirbtinio neuroninio tinklo accuracy, precision ir recall reikšmes.
+Daugiasluoksnis perceptronas buvo aprašytas Python programavimo kalbą pasinaudojus „Tensorflow“ paremtu python bibliotekų rinkiniu skirtu darbui su sekvenciniais neuroniniais tinklais - „Keras“ \cite{chollet2015keras}. Kaip ir sprendimų medžio atveju buvo skaičiuojamos reikšmės matuojančios dirbtinio neuroninio tinklo accuracy, precision ir recall reikšmes.
 
 Dirbtiniam neuroniniam tinklui apmokymas ir testavimas vyko du kart. Vieną kartą naudojant PC1 duomenų rinkinį, kitą kartą naudojant CM1. Abiejais atvejais buvo panaudotas pilnas duomenų rinkinys su 21 atributu, kur 30\% duomenų buvo skiriama apmokyto modelio testavimui, o 70\% duomenų buvo skirta modelio apmokymui.
 
@@ -457,7 +457,7 @@ Pirma atnaujintas modelis buvo apmokytas ir ištestuotas naudojant duomenų rink
 \end{tabular}
 \end{table}
 
-Eksperimento rezultatai vaizduojami \ref{tab:MLP_result_1} pav., kaip ir tikėtasi yra geresni, nei naudojant pilną duomenų rinkinį. Tačiau tikslumo pagerėjimas nėra akivaizdus ir siekia vos mažą dalelytę, galima sakyti rezultatai bene tokie pat, kaip pirmo eksperimento metu, kaip pavaizduoti \ref{tab:MLP_result} pav..
+Eksperimento rezultatai vaizduojami \ref{tab:MLP_result_1} lentelėje, kaip ir tikėtasi yra geresni, nei naudojant pilną duomenų rinkinį. Tačiau tikslumo pagerėjimas nėra akivaizdus ir siekia vos mažą dalelytę, galima sakyti rezultatai bene tokie pat, kaip pirmo eksperimento metu, kaip pavaizduoti \ref{tab:MLP_result} lentelėje.
 
 Toliau kartojamas ekperimentas su kitais dviem duomenų rinkiniais PC1\_A bei CM1\_A. Čia taip pat duomenys dalijami į dvi dalis, 70\% apimties poaibį skirtą modelio apmokymui bei 30\% poaibį skirtą modelio testavimui.
 
@@ -533,11 +533,15 @@ Galiausiai, atlikus keletą eksperimentų, galima teigti, jog programinės įran
 % necituoti savo kursinio darbo, nes tai nėra oficialus literatūros šaltinis.
 % Jei tokių nuorodų reikia, pateikti jas tekste.
 
-% \sectionnonum{Sąvokų apibrėžimai}
-\sectionnonum{Santrumpos}
-Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
-vartojami specialūs paaiškinimo reikalaujantys terminai ir rečiau sutinkamos
-santrumpos.
+\sectionnonum{Sąvokų apibrėžimai}
+%\sectionnonum{Santrumpos}
+\textbf{Continous delivery} - programinės įrangos kūrimo metodika, kurios metu komandos dirba mažomis iteracijomis, užtikrinant, kad programinė įranga būtų patikimai išleidžiama bet kuriuo metu.
+
+\textbf{Programos modulis} - nepriklausoma programų sistemos dalis.
+
+\textbf{Operatorius} - algoritminės kalbos simbolis, rodantis atliktiną operaciją.
+
+\textbf{Operandas} -  matematinės operacijos (funkcijos) argumentas, dydis, su kuriuo atliekamas veiksmas.
 
 \appendix  % Priedai
 % Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
