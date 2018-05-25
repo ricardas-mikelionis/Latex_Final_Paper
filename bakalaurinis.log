@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  25 MAY 2018 09:32
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.5.22)  25 MAY 2018 09:38
  restricted system commands enabled.
  file:line:error style messages enabled.
 **bakalaurinis.tex
@@ -36,7 +36,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.107 seconds
+luaotfload | main : initialization completed in 0.108 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./VUMIFPSbakalaurinis.cls
 Document Class: VUMIFPSbakalaurinis 2015/02/03 1.0 VU MIF SE bachelor thesis cla
@@ -486,12 +486,12 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
 File: gloss-lithuanian.ldf polyglossia: module for lithuanian
 Module polyglossia Info: Language data for lithuanian
-(polyglossia)            patterns	hyph-lt.pat.txt
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            synonyms	table: 0x7fcabccf0a60
 (polyglossia)            righthyphenmin	2
-(polyglossia)            hyphenation	
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            patterns	hyph-lt.pat.txt
 (polyglossia)            loader	loadhyph-lt.tex
-(polyglossia)            synonyms	table: 0x7fbb805863c0
+(polyglossia)            hyphenation	
 (polyglossia)            patterns: hyph-lt.pat.txt on input line 8
 Module polyglossia Info: Language lithuanian was not yet loaded; created with id
  4 on input line 8
@@ -1601,7 +1601,7 @@ ts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb>
-Output written on bakalaurinis.pdf (30 pages, 2906536 bytes).
+Output written on bakalaurinis.pdf (30 pages, 2906596 bytes).
 
 PDF statistics: 158 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
